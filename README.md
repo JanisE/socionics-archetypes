@@ -1,5 +1,10 @@
-# socionics-archetypes
-A starters diagram of basic socionics archetype properties
+# Socionics archetypes
+
+A starters diagram of basic socionics archetype properties.
+
+# Demo
+
+See demo at [../build/index.html](../build/index.html)
 
 # Development
 
