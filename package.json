@@ -17,10 +17,13 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "build-css": "less-watch-compiler --run-once --main-file=App.less src/ src/",
-    "watch-css": "npm run build-css && less-watch-compiler --main-file=App.less src/ src/"
+    "watch-css": "npm run build-css && less-watch-compiler --main-file=App.less src/ src/",
+    "predeploy": "npm run build-css && npm run build",
+    "deploy": "gh-pages -d build"
   },
   "devDependencies": {
     "css-loader": "^1.0.0",
+    "gh-pages": "^2.0.0",
     "less": "^3.8.1",
     "less-loader": "^4.1.0",
     "less-watch-compiler": "^1.11.3",

@@ -6,7 +6,7 @@ export default {
 		dichotomyAbbr: 'ENFj',
 		socialRole: 'skolotājs',
 		quadra: 'beta',
-		functions: ['Se', 'Ni', 'Te', 'Si', '', '', '', '']
+		functions: ['Fe', 'Ni', 'Te', 'Si', 'Ti', 'Se', 'Fi', 'Ne']
 	},
 	EII: {
 		epithet: 'dostojevskis',
@@ -14,7 +14,7 @@ export default {
 		dichotomyAbbr: 'INFj',
 		socialRole: 'humānists',
 		quadra: 'delta',
-		functions: ['Si', 'Ne', 'Ti', 'Se', '', '', '', '']
+		functions: ['Fi', 'Ne', 'Ti', 'Se', 'Te', 'Si', 'Fe', 'Ni']
 	},
 	ESE: {
 		epithet: 'igo',
@@ -22,7 +22,7 @@ export default {
 		dichotomyAbbr: 'ESFj',
 		socialRole: 'iedvesmotājs',
 		quadra: 'alpha',
-		functions: ['Fe', 'Si', 'Te', 'Ni', '', '', '', '']
+		functions: ['Fe', 'Si', 'Te', 'Ni', 'Ti', 'Ne', 'Fi', 'Se']
 	},
 	ESI: {
 		epithet: 'draizers',
@@ -30,7 +30,7 @@ export default {
 		dichotomyAbbr: 'ISFj',
 		socialRole: 'sargātājs',
 		quadra: 'gamma',
-		functions: ['Fi', 'Se', 'Ti', 'Ne', '', '', '', '']
+		functions: ['Fi', 'Se', 'Ti', 'Ne', 'Te', 'Ni', 'Fe', 'Si']
 	},
 	ILE: {
 		epithet: 'donkihots',
@@ -38,7 +38,7 @@ export default {
 		dichotomyAbbr: 'ENTp',
 		socialRole: 'meklētājs',
 		quadra: 'alpha',
-		functions: ['Ne', 'Ti', 'Se', 'Fi', '', '', '', '']
+		functions: ['Ne', 'Ti', 'Se', 'Fi', 'Si', 'Fe', 'Ni', 'Te']
 	},
 	ILI: {
 		epithet: 'balzaks',
@@ -46,7 +46,7 @@ export default {
 		dichotomyAbbr: 'INTp',
 		socialRole: 'kritiķis',
 		quadra: 'gamma',
-		functions: ['Ni', 'Te', 'Si', 'Fe', '', '', '', '']
+		functions: ['Ni', 'Te', 'Si', 'Fe', 'Se', 'Fi', 'Ne', 'Ti']
 	},
 	IEE: {
 		epithet: 'hakslijs',
@@ -54,7 +54,7 @@ export default {
 		dichotomyAbbr: 'ENFp',
 		socialRole: 'komunikators',
 		quadra: 'delta',
-		functions: ['Ne', 'Fi', 'Se', 'Ti', '', '', '', '']
+		functions: ['Ne', 'Fi', 'Se', 'Ti', 'Si', 'Te', 'Ni', 'Fe']
 	},
 	IEI: {
 		epithet: 'jeseņins',
@@ -62,7 +62,7 @@ export default {
 		dichotomyAbbr: 'INFp',
 		socialRole: 'motivētājs',
 		quadra: 'beta',
-		functions: ['Ni', 'Fe', 'Si', 'Te', '', '', '', '']
+		functions: ['Ni', 'Fe', 'Si', 'Te', 'Se', 'Ti', 'Ne', 'Fi']
 	},
 	LIE: {
 		epithet: 'džeks',
@@ -70,7 +70,7 @@ export default {
 		dichotomyAbbr: 'ENTj',
 		socialRole: 'uzņēmējs',
 		quadra: 'gamma',
-		functions: ['Te', 'Ni', 'Fe', 'Si', '', '', '', '']
+		functions: ['Te', 'Ni', 'Fe', 'Si', 'Fi', 'Se', 'Ti', 'Ne']
 	},
 	LII: {
 		epithet: 'robespjērs',
@@ -78,7 +78,7 @@ export default {
 		dichotomyAbbr: 'INTj',
 		socialRole: 'analītiķis',
 		quadra: 'alpha',
-		functions: ['Ti', 'Ne', 'Fi', 'Se', '', '', '', '']
+		functions: ['Ti', 'Ne', 'Fi', 'Se', 'Fe', 'Si', 'Te', 'Ni']
 	},
 	LSE: {
 		epithet: 'štirlics',
@@ -86,7 +86,7 @@ export default {
 		dichotomyAbbr: 'ESTj',
 		socialRole: 'administrētājs',
 		quadra: 'delta',
-		functions: ['Te', 'Si', 'Fe', 'Ni', '', '', '', '']
+		functions: ['Te', 'Si', 'Fe', 'Ni', 'Fi', 'Ne', 'Ti', 'Se']
 	},
 	LSI: {
 		epithet: 'maksims',
@@ -94,7 +94,7 @@ export default {
 		dichotomyAbbr: 'ISTj',
 		socialRole: 'sistematizētājs',
 		quadra: 'beta',
-		functions: ['Ti', 'Se', 'Fi', 'Ne', '', '', '', '']
+		functions: ['Ti', 'Se', 'Fi', 'Ne', 'Fe', 'Ni', 'Te', 'Si']
 	},
 	SLE: {
 		epithet: 'žukovs',
@@ -102,7 +102,7 @@ export default {
 		dichotomyAbbr: 'ESTp',
 		socialRole: 'rīkotājs',
 		quadra: 'beta',
-		functions: ['Se', 'Ti', 'Ne', 'Fi', '', '', '', '']
+		functions: ['Se', 'Ti', 'Ne', 'Fi', 'Ni', 'Fe', 'Si', 'Te']
 	},
 	SLI: {
 		epithet: 'gabēns',
@@ -110,7 +110,7 @@ export default {
 		dichotomyAbbr: 'ISTp',
 		socialRole: 'amatnieks',
 		quadra: 'delta',
-		functions: ['Si', 'Te', 'Ni', 'Fe', '', '', '', '']
+		functions: ['Si', 'Te', 'Ni', 'Fe', 'Ne', 'Fi', 'Se', 'Ti']
 	},
 	SEE: {
 		epithet: 'napoleons',
@@ -118,7 +118,7 @@ export default {
 		dichotomyAbbr: 'ESFp',
 		socialRole: 'politiķis',
 		quadra: 'gamma',
-		functions: ['Se', 'Fi', 'Ne', 'Ti', '', '', '', '']
+		functions: ['Se', 'Fi', 'Ne', 'Ti', 'Ni', 'Te', 'Si', 'Fe']
 	},
 	SEI: {
 		epithet: 'dimā',
@@ -126,6 +126,6 @@ export default {
 		dichotomyAbbr: 'ISFp',
 		socialRole: 'starpnieks',
 		quadra: 'alpha',
-		functions: ['Si', 'Fe', 'Ni', 'Te', '', '', '', '']
+		functions: ['Si', 'Fe', 'Ni', 'Te', 'Ne', 'Ti', 'Se', 'Fi']
 	}
 }
