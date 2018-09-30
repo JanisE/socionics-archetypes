@@ -1,0 +1,28 @@
+{
+  "name": "tipoju",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "http://vietne.lv/tipoju",
+  "dependencies": {
+    "node-less": "^1.0.0",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-scripts": "1.1.5",
+    "react-shapes": "^0.1.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "build-css": "less-watch-compiler --run-once --main-file=App.less src/ src/",
+    "watch-css": "npm run build-css && less-watch-compiler --main-file=App.less src/ src/"
+  },
+  "devDependencies": {
+    "css-loader": "^1.0.0",
+    "less": "^3.8.1",
+    "less-loader": "^4.1.0",
+    "less-watch-compiler": "^1.11.3",
+    "style-loader": "^0.23.0"
+  }
+}

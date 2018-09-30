@@ -1,0 +1,160 @@
+* {
+  box-sizing: border-box;
+}
+.App {
+  text-align: center;
+}
+.archetypes {
+  position: relative;
+}
+.archetypes ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.archetypes ul li {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+}
+.archetypes ul li .archetype-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  width: 8vw;
+  height: 8vw;
+  font-size: 0.85vw;
+}
+.archetypes ul li .archetype-info.dichotomy-N {
+  border: 0.6vw dotted #cccccc;
+  border-radius: 8vw;
+}
+.archetypes ul li .archetype-info.dichotomy-S {
+  border: 10px solid #cccccc;
+  border-radius: 8vw;
+}
+.archetypes ul li .archetype-info.dichotomy-T {
+  background: #777777;
+  color: #ffffff;
+}
+.archetypes ul li .archetype-info.dichotomy-F {
+  background: #f7f7f7;
+}
+.archetypes ul li .archetype-info .epithet {
+  font-weight: bold;
+}
+.archetypes ul li .archetype-info .socionicsAbbr,
+.archetypes ul li .archetype-info .dichotomyAbbr {
+  font-family: monospace;
+  font-size: 0.75vw;
+}
+.archetypes ul li .archetype-info svg {
+  position: absolute;
+  left: 0.5vw;
+  width: 1vw;
+  height: 1vw;
+}
+.archetypes ul li .archetype-info svg:nth-of-type(2) {
+  left: auto;
+  right: 0.5vw;
+}
+.archetypes ul li.pos-col-1 {
+  left: 0.75vw;
+}
+.archetypes ul li.pos-col-2 {
+  left: 7.25vw;
+}
+.archetypes ul li.pos-col-3 {
+  left: 13.75vw;
+}
+.archetypes ul li.pos-col-4 {
+  left: 23.25vw;
+}
+.archetypes ul li.pos-col-5 {
+  left: 29.75vw;
+}
+.archetypes ul li.pos-col-6 {
+  left: 36.25vw;
+}
+.archetypes ul li.pos-row-1 {
+  top: 0.75vw;
+}
+.archetypes ul li.pos-row-2 {
+  top: 7.25vw;
+}
+.archetypes ul li.pos-row-3 {
+  top: 13.75vw;
+}
+.archetypes ul li.pos-row-4 {
+  top: 23.25vw;
+}
+.archetypes ul li.pos-row-5 {
+  top: 29.75vw;
+}
+.archetypes ul li.pos-row-6 {
+  top: 36.25vw;
+}
+.archetypes .quadra-alpha-boundary,
+.archetypes .quadra-beta-boundary,
+.archetypes .quadra-gamma-boundary,
+.archetypes .quadra-delta-boundary {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 22.5vw;
+  height: 22.5vw;
+}
+.archetypes .quadra-alpha-boundary {
+  background: #e3fe5f;
+}
+.archetypes .quadra-beta-boundary {
+  background: #ffe4e1;
+  left: 22.5vw;
+}
+.archetypes .quadra-gamma-boundary {
+  background: #e6e6fa;
+  left: 22.5vw;
+  top: 22.5vw;
+}
+.archetypes .quadra-delta-boundary {
+  background: #eee8aa;
+  top: 22.5vw;
+}
+.archetypes .rational-marker,
+.archetypes .irrational-marker {
+  position: absolute;
+  border: 2px solid #666666;
+  background: #bbbbbb;
+  opacity: 0.2;
+}
+.archetypes .rational-marker {
+  display: none;
+  left: 9.84375vw;
+  height: 45vw;
+  width: 2.8125vw;
+  border-top: none;
+  border-bottom: none;
+}
+.archetypes .rational-marker.right {
+  left: 32.34375vw;
+}
+.archetypes .irrational-marker {
+  top: 9.84375vw;
+  width: 45vw;
+  height: 2.8125vw;
+  border-left: none;
+  border-right: none;
+}
+.archetypes .irrational-marker.bottom {
+  top: 32.34375vw;
+}
+.archetypes .intro-extra-boundary {
+  position: absolute;
+  left: 5.9vw;
+  top: 5.9vw;
+  border: 2px dashed #bbbbbb;
+  border-radius: 16.6vw;
+  width: 33.2vw;
+  height: 33.2vw;
+}
