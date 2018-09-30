@@ -39,7 +39,6 @@ export default class ArchetypeInfo extends Component {
 
 		return (
 			<div className={'archetype-info type-' + this.props.socionicsAbbr
-				+ ' quadra-' + this.props.quadra
 				+ ' dichotomy-' + this.props.dichotomyAbbr[0]
 				+ ' dichotomy-' + this.props.dichotomyAbbr[1]
 				+ ' dichotomy-' + this.props.dichotomyAbbr[2]

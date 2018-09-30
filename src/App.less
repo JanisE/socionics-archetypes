@@ -1,6 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:400,900&subset=latin-ext');
+
 * {
   box-sizing: border-box;
 }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, sans-serif;
+}
+
 
 .App {
   text-align: center;
@@ -9,10 +18,21 @@
 .archetypes {
   position: relative;
 
-  @typeInfoSize: 8vw;
-  @cellDiff: 1.5vw;
+  @zoom: 2.2;
+
+  @typeInfoSize: @zoom * 8vw;
+  @cellDiff: @zoom * 1.5vw;
   @cellSize: @typeInfoSize - @cellDiff;
   @quadraSpace: @cellDiff / 2;
+
+  @alphaColour: #e3fe5f;
+  @betaColour: #ffe4e1;
+  @gammaColour: #e6e6fa;
+  @deltaColour: #eee8aa;
+
+  @quadraSize: 2 * @cellSize + @typeInfoSize + 2 * abs(@cellSize - @typeInfoSize) / 2;
+
+  height: 2 * @quadraSize;
 
   ul {
     margin: 0;
@@ -32,15 +52,15 @@
 
         width: @typeInfoSize;
         height: @typeInfoSize;
-        font-size: 0.85vw;
+        font-size: @zoom * 0.85vw;
 
         &.dichotomy-N {
-          border: 0.6vw dotted #cccccc;
+          border: @zoom * 0.6vw dotted #cccccc;
           border-radius: @typeInfoSize;
         }
 
         &.dichotomy-S {
-          border: 10px solid #cccccc;
+          border: @zoom * 0.6vw solid #cccccc;
           border-radius: @typeInfoSize;
         }
 
@@ -54,25 +74,25 @@
         }
 
         .epithet {
-          font-weight: bold;
+          font-weight: 900;
         }
 
         .socionicsAbbr,
         .dichotomyAbbr {
-          font-family: monospace;
-          font-size: 0.75vw;
+          font-family: 'Roboto Mono', monospace;
+          font-size: @zoom * 0.75vw;
         }
 
         svg {
           position: absolute;
-          left: 0.5vw;
-          width: 1vw;
-          height: 1vw;
+          left: @zoom * 0.5vw;
+          width: @zoom * 1vw;
+          height: @zoom * 1vw;
         }
 
         svg:nth-of-type(2) {
           left: auto;
-          right: 0.5vw;
+          right: @zoom * 0.5vw;
         }
       }
 
@@ -123,10 +143,36 @@
       &.pos-row-6 {
         top: 5 * @quadraSpace + 5 * @cellSize;
       }
+
+      &.disabled {
+        .disabler {
+          opacity: 0.7;
+          position: absolute;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: @typeInfoSize;
+          background: #222222;
+        }
+
+        &.quadra-alpha .disabler {
+          background: @alphaColour;
+        }
+
+        &.quadra-beta .disabler {
+          background: @betaColour;
+        }
+
+        &.quadra-gamma .disabler {
+          background: @gammaColour;
+        }
+
+        &.quadra-delta .disabler {
+          background: @deltaColour;
+        }
+      }
     }
   }
-
-  @quadraSize: 2 * @cellSize + @typeInfoSize + 2 * abs(@cellSize - @typeInfoSize) / 2;
 
   .quadra-alpha-boundary,
   .quadra-beta-boundary,
@@ -140,22 +186,22 @@
   }
 
   .quadra-alpha-boundary {
-    background: #e3fe5f;
+    background: @alphaColour;
   }
 
   .quadra-beta-boundary {
-    background: #ffe4e1;
+    background: @betaColour;
     left: @quadraSize;
   }
 
   .quadra-gamma-boundary {
-    background: #e6e6fa;
+    background: @gammaColour;
     left: @quadraSize;
     top: @quadraSize;
   }
 
   .quadra-delta-boundary {
-    background: #eee8aa;
+    background: @deltaColour;
     top: @quadraSize;
   }
 
@@ -164,7 +210,7 @@
   .rational-marker,
   .irrational-marker {
     position: absolute;
-    border: 2px solid #666666;
+    border: @zoom * 0.15vw solid #666666;
     background: #bbbbbb;
     opacity: 0.2;
   }
@@ -199,15 +245,28 @@
 
   .intro-extra-boundary {
     @introExtraCenter: @quadraSize;
-    @introExtraRadius: 2 * @cellSize + abs(@cellSize - @typeInfoSize) * 2.4;
+    @introExtraRadius: 2 * @cellSize + abs(@cellSize - @typeInfoSize) * 2.5;
 
     position: absolute;
     left: @introExtraCenter - @introExtraRadius;
     top: @introExtraCenter - @introExtraRadius;
-    border: 2px dashed #bbbbbb;
+    border: @zoom * 0.2vw dashed #bbbbbb;
     border-radius: @introExtraRadius;
     width: 2 * @introExtraRadius;
     height: 2 * @introExtraRadius;
   }
 }
 
+.switches {
+  display: flex;
+  justify-content: space-evenly;
+
+  .pair {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .MuiIconButton-root-15, .jss15 {
+    padding: 4px 8px;
+  }
+}

@@ -39,11 +39,65 @@ export default class Archetypes extends Component {
 
 				<ul>
 					{Object.keys(types).map(type =>
-						<li className={'pos-col-' + types[type].pos.col + ' pos-row-' + types[type].pos.row}
-							key={types[type].socionicsAbbr}>
-							<ArchetypeInfo {...types[type]} />
-						</li>
-					)}
+					{
+						const enabled = this.props.properties.reduce((enabled, property) => {
+							if (enabled) {
+								switch (property.name) {
+								case 'introvert':
+									enabled = types[type].dichotomyAbbr[0] === 'I';
+									break;
+
+								case 'extrovert':
+									enabled = types[type].dichotomyAbbr[0] === 'E';
+									break;
+
+								case 'intuition':
+									enabled = types[type].dichotomyAbbr[1] === 'N';
+									break;
+
+								case 'sensing':
+									enabled = types[type].dichotomyAbbr[1] === 'S';
+									break;
+
+								case 'logic':
+									enabled = types[type].dichotomyAbbr[2] === 'T';
+									break;
+
+								case 'ethics':
+									enabled = types[type].dichotomyAbbr[2] === 'F';
+									break;
+
+								case 'irrational':
+									enabled = types[type].dichotomyAbbr[3] === 'p';
+									break;
+
+								case 'rational':
+									enabled = types[type].dichotomyAbbr[3] === 'j';
+									break;
+
+								case 'quadra':
+									enabled = types[type].quadra === property.value;
+									break;
+
+								default:
+									console.error('Archetypes: Unexpected property:', property);
+								}
+							} // Disabled if the type does not have any one of the properties.
+
+							return enabled;
+						}, true);
+
+						return (
+							<li className={'pos-col-' + types[type].pos.col + ' pos-row-' + types[type].pos.row
+							+ ' quadra-' + types[type].quadra
+							+ (enabled ? '' : ' disabled')}
+								key={types[type].socionicsAbbr}>
+								<ArchetypeInfo {...types[type]} />
+
+								<div className="disabler"> </div>
+							</li>
+						);
+					})}
 				</ul>
 			</div>
 		);
