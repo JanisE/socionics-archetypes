@@ -29,7 +29,7 @@ body {
 }
 .archetypes {
   position: relative;
-  height: 99vw;
+  height: 100vw;
 }
 .archetypes ul {
   margin: 0;
@@ -46,17 +46,17 @@ body {
   flex-direction: column;
   justify-content: center;
   position: relative;
-  width: 17.6vw;
-  height: 17.6vw;
+  width: 17.76666667vw;
+  height: 17.76666667vw;
   font-size: 1.87vw;
 }
 .archetypes ul li .archetype-info.dichotomy-N {
   border: 1.32vw dotted #cccccc;
-  border-radius: 17.6vw;
+  border-radius: 17.76666667vw;
 }
 .archetypes ul li .archetype-info.dichotomy-S {
   border: 1.32vw solid #cccccc;
-  border-radius: 17.6vw;
+  border-radius: 17.76666667vw;
 }
 .archetypes ul li .archetype-info.dichotomy-T {
   background: #777777;
@@ -87,37 +87,37 @@ body {
   left: 1.65vw;
 }
 .archetypes ul li.pos-col-2 {
-  left: 15.95vw;
+  left: 16.11666667vw;
 }
 .archetypes ul li.pos-col-3 {
-  left: 30.25vw;
+  left: 30.58333333vw;
 }
 .archetypes ul li.pos-col-4 {
-  left: 51.15vw;
+  left: 51.65vw;
 }
 .archetypes ul li.pos-col-5 {
-  left: 65.45vw;
+  left: 66.11666667vw;
 }
 .archetypes ul li.pos-col-6 {
-  left: 79.75vw;
+  left: 80.58333333vw;
 }
 .archetypes ul li.pos-row-1 {
   top: 1.65vw;
 }
 .archetypes ul li.pos-row-2 {
-  top: 15.95vw;
+  top: 16.11666667vw;
 }
 .archetypes ul li.pos-row-3 {
-  top: 30.25vw;
+  top: 30.58333333vw;
 }
 .archetypes ul li.pos-row-4 {
-  top: 51.15vw;
+  top: 51.65vw;
 }
 .archetypes ul li.pos-row-5 {
-  top: 65.45vw;
+  top: 66.11666667vw;
 }
 .archetypes ul li.pos-row-6 {
-  top: 79.75vw;
+  top: 80.58333333vw;
 }
 .archetypes ul li.disabled .disabler {
   opacity: 0.7;
@@ -125,7 +125,7 @@ body {
   top: 0;
   width: 100%;
   height: 100%;
-  border-radius: 17.6vw;
+  border-radius: 17.76666667vw;
   background: #222222;
 }
 .archetypes ul li.disabled.quadra-alpha .disabler {
@@ -147,24 +147,24 @@ body {
   position: absolute;
   left: 0;
   top: 0;
-  width: 49.5vw;
-  height: 49.5vw;
+  width: 50vw;
+  height: 50vw;
 }
 .archetypes .quadra-alpha-boundary {
   background: #e3fe5f;
 }
 .archetypes .quadra-beta-boundary {
   background: #ffe4e1;
-  left: 49.5vw;
+  left: 50vw;
 }
 .archetypes .quadra-gamma-boundary {
   background: #e6e6fa;
-  left: 49.5vw;
-  top: 49.5vw;
+  left: 50vw;
+  top: 50vw;
 }
 .archetypes .quadra-delta-boundary {
   background: #eee8aa;
-  top: 49.5vw;
+  top: 50vw;
 }
 .archetypes .rational-marker,
 .archetypes .irrational-marker {
@@ -175,33 +175,33 @@ body {
 }
 .archetypes .rational-marker {
   display: none;
-  left: 21.65625vw;
-  height: 99vw;
-  width: 6.1875vw;
+  left: 21.875vw;
+  height: 100vw;
+  width: 6.25vw;
   border-top: none;
   border-bottom: none;
 }
 .archetypes .rational-marker.right {
-  left: 71.15625vw;
+  left: 71.875vw;
 }
 .archetypes .irrational-marker {
-  top: 21.65625vw;
-  width: 99vw;
-  height: 6.1875vw;
+  top: 21.875vw;
+  width: 100vw;
+  height: 6.25vw;
   border-left: none;
   border-right: none;
 }
 .archetypes .irrational-marker.bottom {
-  top: 71.15625vw;
+  top: 71.875vw;
 }
 .archetypes .intro-extra-boundary {
   position: absolute;
-  left: 12.65vw;
-  top: 12.65vw;
+  left: 12.81666667vw;
+  top: 12.81666667vw;
   border: 0.44vw dashed #bbbbbb;
-  border-radius: 36.85vw;
-  width: 73.7vw;
-  height: 73.7vw;
+  border-radius: 37.18333333vw;
+  width: 74.36666667vw;
+  height: 74.36666667vw;
 }
 .switches {
   display: flex;

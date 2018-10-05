@@ -18,10 +18,12 @@ body {
 .archetypes {
   position: relative;
 
+  @quadraSize: 50vw;
   @zoom: 2.2;
-
-  @typeInfoSize: @zoom * 8vw;
   @cellDiff: @zoom * 1.5vw;
+
+  @typeInfoSize: (@quadraSize + @cellDiff) / 3;
+
   @cellSize: @typeInfoSize - @cellDiff;
   @quadraSpace: @cellDiff / 2;
 
@@ -30,7 +32,7 @@ body {
   @gammaColour: #e6e6fa;
   @deltaColour: #eee8aa;
 
-  @quadraSize: 2 * @cellSize + @typeInfoSize + 2 * abs(@cellSize - @typeInfoSize) / 2;
+
 
   height: 2 * @quadraSize;
 
