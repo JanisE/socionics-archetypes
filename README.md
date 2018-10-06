@@ -19,3 +19,8 @@ Compile React independently:
 ```
 npm start
 ```
+
+# To-Do
+
+* Changing the URL + [Enter] does not update the App.
+* History back does not work.

@@ -13,16 +13,33 @@ class App extends Component
 	{
 		super(props);
 
+		const initProperties = this.props.match.params.properties || '';
+
+		let initQuadra = '';
+
+		if (initProperties.indexOf('α') > -1) {
+			initQuadra = 'α'
+		}
+		else if (initProperties.indexOf('β') > -1) {
+			initQuadra = 'β'
+		}
+		else if (initProperties.indexOf('γ') > -1) {
+			initQuadra = 'γ'
+		}
+		else if (initProperties.indexOf('δ') > -1) {
+			initQuadra = 'δ'
+		}
+
 		this.state = {
-			quadra: '',
-			logic: false,
-			ethics: false,
-			introvert: false,
-			extrovert: false,
-			intuition: false,
-			sensing: false,
-			rational: false,
-			irrational: false
+			quadra: initQuadra,
+			introvert: initProperties.indexOf('I') > -1,
+			extrovert: initProperties.indexOf('E') > -1,
+			intuition: initProperties.indexOf('N') > -1,
+			sensing: initProperties.indexOf('S') > -1,
+			logic: initProperties.indexOf('T') > -1,
+			ethics: initProperties.indexOf('F') > -1,
+			rational: initProperties.indexOf('j') > -1,
+			irrational: initProperties.indexOf('p') > -1
 		};
 
 		this.onIntrovertSwitch = this.onIntrovertSwitch.bind(this);
@@ -35,7 +52,6 @@ class App extends Component
 		this.onIrrationalSwitch = this.onIrrationalSwitch.bind(this);
 		this.onQuadraSwitch = this.onQuadraSwitch.bind(this);
 	}
-
 
 	onIntrovertSwitch (event)
 	{
@@ -77,8 +93,48 @@ class App extends Component
 		this.setState({irrational: event.target.checked});
 	}
 
-	onQuadraSwitch (event) {console.log('setting quadra to ', event.target.value);
+	onQuadraSwitch (event) {
 		this.setState({quadra: event.target.value});
+	}
+
+	static getRoutePropertyStatus (state) {
+		return {
+			'E': state.extrovert,
+			'I': state.introvert,
+			'N': state.intuition,
+			'S': state.sensing,
+			'F': state.ethics,
+			'T': state.logic,
+			'j': state.rational,
+			'p': state.irrational,
+			'α': state.quadra === 'α',
+			'β': state.quadra === 'β',
+			'δ': state.quadra === 'δ',
+			'γ': state.quadra === 'γ'
+		}
+	}
+
+	static stateMatchesRoute (state, routeProperties) {
+		const actualRouteProperties = (routeProperties || '').split('').sort().join('');
+		const matchingRouteProperties = App.getRouteProperties(state).split('').sort().join('');
+
+		return actualRouteProperties === matchingRouteProperties;
+	}
+
+	static getRouteProperties (state) {
+		const propertyStatus = App.getRoutePropertyStatus(state);
+
+		return Object.keys(propertyStatus).filter(routeProperty => propertyStatus[routeProperty]).join('');
+	}
+
+	shouldComponentUpdate (nextParams, nextState, nextContext) {
+		// Update the URL/route.
+		if (!App.stateMatchesRoute(nextState, nextParams.match.params.properties)) {
+			this.props.history.push('/' + App.getRouteProperties(nextState));
+			return false;
+		}
+
+		return true;
 	}
 
 
@@ -144,10 +200,10 @@ class App extends Component
 							onChange={this.onQuadraSwitch}
 						>
 							<FormControlLabel value="" control={<Radio />} label="?" />
-							<FormControlLabel value="alpha" control={<Radio />} label="1. Alfa" />
-							<FormControlLabel value="beta" control={<Radio />} label="2. Beta" />
-							<FormControlLabel value="gamma" control={<Radio />} label="3. Gamma" />
-							<FormControlLabel value="delta" control={<Radio />} label="4. Delta" />
+							<FormControlLabel value="α" control={<Radio />} label="1. Alfa" />
+							<FormControlLabel value="β" control={<Radio />} label="2. Beta" />
+							<FormControlLabel value="γ" control={<Radio />} label="3. Gamma" />
+							<FormControlLabel value="δ" control={<Radio />} label="4. Delta" />
 						</RadioGroup>
 					</div>
 				</div>

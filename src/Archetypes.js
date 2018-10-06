@@ -3,6 +3,13 @@ import types from "./types";
 import ArchetypeInfo from "./ArchetypeInfo";
 import React from "react";
 
+const classNames = {
+	α: 'alpha',
+	β: 'beta',
+	γ: 'gamma',
+	δ: 'delta'
+};
+
 export default class Archetypes extends Component {
 	render() {
 		types.EIE.pos = {col: 6, row: 2};
@@ -89,7 +96,7 @@ export default class Archetypes extends Component {
 
 						return (
 							<li className={'pos-col-' + types[type].pos.col + ' pos-row-' + types[type].pos.row
-							+ ' quadra-' + types[type].quadra
+							+ ' quadra-' + classNames[types[type].quadra]
 							+ (enabled ? '' : ' disabled')}
 								key={types[type].socionicsAbbr}>
 								<ArchetypeInfo {...types[type]} />

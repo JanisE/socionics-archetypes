@@ -5,7 +5,7 @@ export default {
 		socionicsAbbr: 'EIE',
 		dichotomyAbbr: 'ENFj',
 		socialRole: 'skolotājs',
-		quadra: 'beta',
+		quadra: 'β',
 		functions: ['Fe', 'Ni', 'Te', 'Si', 'Ti', 'Se', 'Fi', 'Ne']
 	},
 	EII: {
@@ -13,7 +13,7 @@ export default {
 		socionicsAbbr: 'EII',
 		dichotomyAbbr: 'INFj',
 		socialRole: 'humānists',
-		quadra: 'delta',
+		quadra: 'δ',
 		functions: ['Fi', 'Ne', 'Ti', 'Se', 'Te', 'Si', 'Fe', 'Ni']
 	},
 	ESE: {
@@ -21,7 +21,7 @@ export default {
 		socionicsAbbr: 'ESE',
 		dichotomyAbbr: 'ESFj',
 		socialRole: 'iedvesmotājs',
-		quadra: 'alpha',
+		quadra: 'α',
 		functions: ['Fe', 'Si', 'Te', 'Ni', 'Ti', 'Ne', 'Fi', 'Se']
 	},
 	ESI: {
@@ -29,7 +29,7 @@ export default {
 		socionicsAbbr: 'ESI',
 		dichotomyAbbr: 'ISFj',
 		socialRole: 'sargātājs',
-		quadra: 'gamma',
+		quadra: 'γ',
 		functions: ['Fi', 'Se', 'Ti', 'Ne', 'Te', 'Ni', 'Fe', 'Si']
 	},
 	ILE: {
@@ -37,7 +37,7 @@ export default {
 		socionicsAbbr: 'ILE',
 		dichotomyAbbr: 'ENTp',
 		socialRole: 'meklētājs',
-		quadra: 'alpha',
+		quadra: 'α',
 		functions: ['Ne', 'Ti', 'Se', 'Fi', 'Si', 'Fe', 'Ni', 'Te']
 	},
 	ILI: {
@@ -45,7 +45,7 @@ export default {
 		socionicsAbbr: 'ILI',
 		dichotomyAbbr: 'INTp',
 		socialRole: 'kritiķis',
-		quadra: 'gamma',
+		quadra: 'γ',
 		functions: ['Ni', 'Te', 'Si', 'Fe', 'Se', 'Fi', 'Ne', 'Ti']
 	},
 	IEE: {
@@ -53,7 +53,7 @@ export default {
 		socionicsAbbr: 'IEE',
 		dichotomyAbbr: 'ENFp',
 		socialRole: 'komunikators',
-		quadra: 'delta',
+		quadra: 'δ',
 		functions: ['Ne', 'Fi', 'Se', 'Ti', 'Si', 'Te', 'Ni', 'Fe']
 	},
 	IEI: {
@@ -61,7 +61,7 @@ export default {
 		socionicsAbbr: 'IEI',
 		dichotomyAbbr: 'INFp',
 		socialRole: 'motivētājs',
-		quadra: 'beta',
+		quadra: 'β',
 		functions: ['Ni', 'Fe', 'Si', 'Te', 'Se', 'Ti', 'Ne', 'Fi']
 	},
 	LIE: {
@@ -69,7 +69,7 @@ export default {
 		socionicsAbbr: 'LIE',
 		dichotomyAbbr: 'ENTj',
 		socialRole: 'uzņēmējs',
-		quadra: 'gamma',
+		quadra: 'γ',
 		functions: ['Te', 'Ni', 'Fe', 'Si', 'Fi', 'Se', 'Ti', 'Ne']
 	},
 	LII: {
@@ -77,7 +77,7 @@ export default {
 		socionicsAbbr: 'LII',
 		dichotomyAbbr: 'INTj',
 		socialRole: 'analītiķis',
-		quadra: 'alpha',
+		quadra: 'α',
 		functions: ['Ti', 'Ne', 'Fi', 'Se', 'Fe', 'Si', 'Te', 'Ni']
 	},
 	LSE: {
@@ -85,7 +85,7 @@ export default {
 		socionicsAbbr: 'LSE',
 		dichotomyAbbr: 'ESTj',
 		socialRole: 'administrētājs',
-		quadra: 'delta',
+		quadra: 'δ',
 		functions: ['Te', 'Si', 'Fe', 'Ni', 'Fi', 'Ne', 'Ti', 'Se']
 	},
 	LSI: {
@@ -93,7 +93,7 @@ export default {
 		socionicsAbbr: 'LSI',
 		dichotomyAbbr: 'ISTj',
 		socialRole: 'sistematizētājs',
-		quadra: 'beta',
+		quadra: 'β',
 		functions: ['Ti', 'Se', 'Fi', 'Ne', 'Fe', 'Ni', 'Te', 'Si']
 	},
 	SLE: {
@@ -101,7 +101,7 @@ export default {
 		socionicsAbbr: 'SLE',
 		dichotomyAbbr: 'ESTp',
 		socialRole: 'rīkotājs',
-		quadra: 'beta',
+		quadra: 'β',
 		functions: ['Se', 'Ti', 'Ne', 'Fi', 'Ni', 'Fe', 'Si', 'Te']
 	},
 	SLI: {
@@ -109,7 +109,7 @@ export default {
 		socionicsAbbr: 'SLI',
 		dichotomyAbbr: 'ISTp',
 		socialRole: 'amatnieks',
-		quadra: 'delta',
+		quadra: 'δ',
 		functions: ['Si', 'Te', 'Ni', 'Fe', 'Ne', 'Fi', 'Se', 'Ti']
 	},
 	SEE: {
@@ -117,7 +117,7 @@ export default {
 		socionicsAbbr: 'SEE',
 		dichotomyAbbr: 'ESFp',
 		socialRole: 'politiķis',
-		quadra: 'gamma',
+		quadra: 'γ',
 		functions: ['Se', 'Fi', 'Ne', 'Ti', 'Ni', 'Te', 'Si', 'Fe']
 	},
 	SEI: {
@@ -125,7 +125,7 @@ export default {
 		socionicsAbbr: 'SEI',
 		dichotomyAbbr: 'ISFp',
 		socialRole: 'starpnieks',
-		quadra: 'alpha',
+		quadra: 'α',
 		functions: ['Si', 'Fe', 'Ni', 'Te', 'Ne', 'Ti', 'Se', 'Fi']
 	}
 }
