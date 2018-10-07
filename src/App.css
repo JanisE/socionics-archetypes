@@ -19,17 +19,29 @@
 * {
   box-sizing: border-box;
 }
+html {
+  font-size: 2.7vmin;
+}
 body {
   margin: 0;
   padding: 0;
   font-family: Roboto, sans-serif;
 }
 .App {
+  display: flex;
+  flex-direction: column;
   text-align: center;
 }
+@media (min-aspect-ratio: 1/1) {
+  .App {
+    flex-direction: row;
+  }
+}
 .archetypes {
+  flex: none;
   position: relative;
-  height: 100vw;
+  width: 100vmin;
+  height: 100vmin;
 }
 .archetypes ul {
   margin: 0;
@@ -46,17 +58,17 @@ body {
   flex-direction: column;
   justify-content: center;
   position: relative;
-  width: 17.76666667vw;
-  height: 17.76666667vw;
-  font-size: 1.87vw;
+  width: 17.76666667vmin;
+  height: 17.76666667vmin;
+  font-size: 1.87vmin;
 }
 .archetypes ul li .archetype-info.dichotomy-N {
-  border: 1.32vw dotted #cccccc;
-  border-radius: 17.76666667vw;
+  border: 1.32vmin dotted #cccccc;
+  border-radius: 17.76666667vmin;
 }
 .archetypes ul li .archetype-info.dichotomy-S {
-  border: 1.32vw solid #cccccc;
-  border-radius: 17.76666667vw;
+  border: 1.32vmin solid #cccccc;
+  border-radius: 17.76666667vmin;
 }
 .archetypes ul li .archetype-info.dichotomy-T {
   background: #777777;
@@ -71,53 +83,53 @@ body {
 .archetypes ul li .archetype-info .socionicsAbbr,
 .archetypes ul li .archetype-info .dichotomyAbbr {
   font-family: 'Roboto Mono', monospace;
-  font-size: 1.65vw;
+  font-size: 1.65vmin;
 }
 .archetypes ul li .archetype-info svg {
   position: absolute;
-  left: 1.1vw;
-  width: 2.2vw;
-  height: 2.2vw;
+  left: 1.1vmin;
+  width: 2.2vmin;
+  height: 2.2vmin;
 }
 .archetypes ul li .archetype-info svg:nth-of-type(2) {
   left: auto;
-  right: 1.1vw;
+  right: 1.1vmin;
 }
 .archetypes ul li.pos-col-1 {
-  left: 1.65vw;
+  left: 1.65vmin;
 }
 .archetypes ul li.pos-col-2 {
-  left: 16.11666667vw;
+  left: 16.11666667vmin;
 }
 .archetypes ul li.pos-col-3 {
-  left: 30.58333333vw;
+  left: 30.58333333vmin;
 }
 .archetypes ul li.pos-col-4 {
-  left: 51.65vw;
+  left: 51.65vmin;
 }
 .archetypes ul li.pos-col-5 {
-  left: 66.11666667vw;
+  left: 66.11666667vmin;
 }
 .archetypes ul li.pos-col-6 {
-  left: 80.58333333vw;
+  left: 80.58333333vmin;
 }
 .archetypes ul li.pos-row-1 {
-  top: 1.65vw;
+  top: 1.65vmin;
 }
 .archetypes ul li.pos-row-2 {
-  top: 16.11666667vw;
+  top: 16.11666667vmin;
 }
 .archetypes ul li.pos-row-3 {
-  top: 30.58333333vw;
+  top: 30.58333333vmin;
 }
 .archetypes ul li.pos-row-4 {
-  top: 51.65vw;
+  top: 51.65vmin;
 }
 .archetypes ul li.pos-row-5 {
-  top: 66.11666667vw;
+  top: 66.11666667vmin;
 }
 .archetypes ul li.pos-row-6 {
-  top: 80.58333333vw;
+  top: 80.58333333vmin;
 }
 .archetypes ul li.disabled .disabler {
   opacity: 0.7;
@@ -125,7 +137,7 @@ body {
   top: 0;
   width: 100%;
   height: 100%;
-  border-radius: 17.76666667vw;
+  border-radius: 17.76666667vmin;
   background: #222222;
 }
 .archetypes ul li.disabled.quadra-alpha .disabler {
@@ -147,71 +159,119 @@ body {
   position: absolute;
   left: 0;
   top: 0;
-  width: 50vw;
-  height: 50vw;
+  width: 50vmin;
+  height: 50vmin;
 }
 .archetypes .quadra-alpha-boundary {
   background: #e3fe5f;
 }
 .archetypes .quadra-beta-boundary {
   background: #ffe4e1;
-  left: 50vw;
+  left: 50vmin;
 }
 .archetypes .quadra-gamma-boundary {
   background: #e6e6fa;
-  left: 50vw;
-  top: 50vw;
+  left: 50vmin;
+  top: 50vmin;
 }
 .archetypes .quadra-delta-boundary {
   background: #eee8aa;
-  top: 50vw;
+  top: 50vmin;
 }
 .archetypes .rational-marker,
 .archetypes .irrational-marker {
   position: absolute;
-  border: 0.33vw solid #666666;
+  border: 0.33vmin solid #666666;
   background: #bbbbbb;
   opacity: 0.2;
 }
 .archetypes .rational-marker {
   display: none;
-  left: 21.875vw;
-  height: 100vw;
-  width: 6.25vw;
+  left: 21.875vmin;
+  height: 100vmin;
+  width: 6.25vmin;
   border-top: none;
   border-bottom: none;
 }
 .archetypes .rational-marker.right {
-  left: 71.875vw;
+  left: 71.875vmin;
 }
 .archetypes .irrational-marker {
-  top: 21.875vw;
-  width: 100vw;
-  height: 6.25vw;
+  top: 21.875vmin;
+  width: 100vmin;
+  height: 6.25vmin;
   border-left: none;
   border-right: none;
 }
 .archetypes .irrational-marker.bottom {
-  top: 71.875vw;
+  top: 71.875vmin;
 }
 .archetypes .intro-extra-boundary {
   position: absolute;
-  left: 12.81666667vw;
-  top: 12.81666667vw;
-  border: 0.44vw dashed #bbbbbb;
-  border-radius: 37.18333333vw;
-  width: 74.36666667vw;
-  height: 74.36666667vw;
+  left: 12.81666667vmin;
+  top: 12.81666667vmin;
+  border: 0.44vmin dashed #bbbbbb;
+  border-radius: 37.18333333vmin;
+  width: 74.36666667vmin;
+  height: 74.36666667vmin;
 }
 .switches {
   display: flex;
   justify-content: space-evenly;
 }
-.switches .pair {
+@media (min-aspect-ratio: 1/1) {
+  .switches {
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 3vmin;
+    min-width: 35vmin;
+  }
+}
+.switches .dichotomies {
+  min-width: 45vmin;
+}
+@media (min-aspect-ratio: 1/1) {
+  .switches .dichotomies {
+    min-width: auto;
+  }
+}
+.switches .dichotomies .pair {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+}
+.switches .dichotomies .pair .MuiFormControlLabel-root-1 {
+  flex: 1;
+  display: flex;
+}
+.switches .dichotomies .pair .MuiFormControlLabel-root-1:first-child {
+  flex-direction: row-reverse;
+}
+.switches .quadras {
+  min-width: 44vmin;
+}
+@media (min-aspect-ratio: 1/1) {
+  .switches .quadras {
+    margin-top: 5vmin;
+    min-width: auto;
+  }
+}
+.switches .quadras > div {
+  display: grid;
+  grid-template-columns: [left] 50% 50% [right];
+}
+.switches .quadras > div :first-child {
+  justify-content: center;
+  grid-column-start: left;
+  grid-column-end: right;
+}
+.switches .quadras > div :nth-child(2n) {
+  grid-column-start: left;
+  flex-direction: row-reverse;
+}
+.switches .MuiFormControlLabel-root-1 {
+  margin: 0;
 }
 .switches .MuiIconButton-root-15,
 .switches .jss15 {
-  padding: 4px 8px;
+  padding: 0.8vmin 1.5vmin;
 }

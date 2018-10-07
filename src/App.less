@@ -1,7 +1,14 @@
+// Portrait (mobile) by default.
+@landscape: ~'(min-aspect-ratio: 1/1)';
+
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:400,900&subset=latin-ext');
 
 * {
   box-sizing: border-box;
+}
+
+html {
+  font-size: 2.7vmin;
 }
 
 body {
@@ -12,15 +19,22 @@ body {
 
 
 .App {
+  display: flex;
+  flex-direction: column;
   text-align: center;
+
+  @media @landscape {
+    flex-direction: row;
+  }
 }
 
 .archetypes {
+  flex: none;
   position: relative;
 
-  @quadraSize: 50vw;
+  @quadraSize: 50vmin;
   @zoom: 2.2;
-  @cellDiff: @zoom * 1.5vw;
+  @cellDiff: @zoom * 1.5vmin;
 
   @typeInfoSize: (@quadraSize + @cellDiff) / 3;
 
@@ -34,6 +48,7 @@ body {
 
 
 
+  width: 100vmin;
   height: 2 * @quadraSize;
 
   ul {
@@ -54,15 +69,15 @@ body {
 
         width: @typeInfoSize;
         height: @typeInfoSize;
-        font-size: @zoom * 0.85vw;
+        font-size: @zoom * 0.85vmin;
 
         &.dichotomy-N {
-          border: @zoom * 0.6vw dotted #cccccc;
+          border: @zoom * 0.6vmin dotted #cccccc;
           border-radius: @typeInfoSize;
         }
 
         &.dichotomy-S {
-          border: @zoom * 0.6vw solid #cccccc;
+          border: @zoom * 0.6vmin solid #cccccc;
           border-radius: @typeInfoSize;
         }
 
@@ -82,19 +97,19 @@ body {
         .socionicsAbbr,
         .dichotomyAbbr {
           font-family: 'Roboto Mono', monospace;
-          font-size: @zoom * 0.75vw;
+          font-size: @zoom * 0.75vmin;
         }
 
         svg {
           position: absolute;
-          left: @zoom * 0.5vw;
-          width: @zoom * 1vw;
-          height: @zoom * 1vw;
+          left: @zoom * 0.5vmin;
+          width: @zoom * 1vmin;
+          height: @zoom * 1vmin;
         }
 
         svg:nth-of-type(2) {
           left: auto;
-          right: @zoom * 0.5vw;
+          right: @zoom * 0.5vmin;
         }
       }
 
@@ -212,7 +227,7 @@ body {
   .rational-marker,
   .irrational-marker {
     position: absolute;
-    border: @zoom * 0.15vw solid #666666;
+    border: @zoom * 0.15vmin solid #666666;
     background: #bbbbbb;
     opacity: 0.2;
   }
@@ -252,7 +267,7 @@ body {
     position: absolute;
     left: @introExtraCenter - @introExtraRadius;
     top: @introExtraCenter - @introExtraRadius;
-    border: @zoom * 0.2vw dashed #bbbbbb;
+    border: @zoom * 0.2vmin dashed #bbbbbb;
     border-radius: @introExtraRadius;
     width: 2 * @introExtraRadius;
     height: 2 * @introExtraRadius;
@@ -263,12 +278,66 @@ body {
   display: flex;
   justify-content: space-evenly;
 
-  .pair {
-    display: flex;
-    justify-content: space-between;
+  @media @landscape {
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 3vmin;
+    min-width: 35vmin;
   }
 
+  .dichotomies {
+    min-width: 45vmin;
+
+    @media @landscape {
+      min-width: auto;
+    }
+
+    .pair {
+      display: flex;
+      justify-content: center;
+
+      .MuiFormControlLabel-root-1 {
+        flex: 1;
+        display: flex;
+
+        &:first-child {
+          flex-direction: row-reverse;
+        }
+      }
+    }
+  }
+
+  .quadras {
+    min-width: 44vmin;
+
+    @media @landscape {
+      margin-top: 5vmin;
+      min-width: auto;
+    }
+
+    > div {
+      display: grid;
+      grid-template-columns: [left] 50% 50% [right];
+
+      :first-child {
+        justify-content: center;
+        grid-column-start: left;
+        grid-column-end: right;
+      }
+
+      :nth-child(2n) {
+        grid-column-start: left;
+        flex-direction: row-reverse;
+      }
+    }
+  }
+
+  .MuiFormControlLabel-root-1 {
+    margin: 0; // Undo the negative margins.
+  }
+
+  // Checkbox and radiobutton padding.
   .MuiIconButton-root-15, .jss15 {
-    padding: 4px 8px;
+    padding: 0.8vmin 1.5vmin;
   }
 }
