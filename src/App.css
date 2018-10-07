@@ -20,7 +20,7 @@
   box-sizing: border-box;
 }
 html {
-  font-size: 2.7vmin;
+  font-size: 3vmin;
 }
 body {
   margin: 0;
@@ -224,11 +224,11 @@ body {
     flex-direction: column;
     justify-content: center;
     margin-left: 3vmin;
-    min-width: 35vmin;
+    min-width: 36vmin;
   }
 }
 .switches .dichotomies {
-  min-width: 45vmin;
+  min-width: 46vmin;
 }
 @media (min-aspect-ratio: 1/1) {
   .switches .dichotomies {
@@ -239,15 +239,17 @@ body {
   display: flex;
   justify-content: center;
 }
-.switches .dichotomies .pair .MuiFormControlLabel-root-1 {
+.switches .dichotomies .pair .MuiFormControlLabel-root-1,
+.switches .dichotomies .pair .jss1 {
   flex: 1;
   display: flex;
 }
-.switches .dichotomies .pair .MuiFormControlLabel-root-1:first-child {
+.switches .dichotomies .pair .MuiFormControlLabel-root-1:first-child,
+.switches .dichotomies .pair .jss1:first-child {
   flex-direction: row-reverse;
 }
 .switches .quadras {
-  min-width: 44vmin;
+  min-width: 46vmin;
 }
 @media (min-aspect-ratio: 1/1) {
   .switches .quadras {
@@ -268,7 +270,8 @@ body {
   grid-column-start: left;
   flex-direction: row-reverse;
 }
-.switches .MuiFormControlLabel-root-1 {
+.switches .MuiFormControlLabel-root-1,
+.switches .jss1 {
   margin: 0;
 }
 .switches .MuiIconButton-root-15,
