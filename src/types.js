@@ -1,5 +1,6 @@
 
-export default {
+module.exports = {
+//export default { Does not work in Node.
 	EIE: {
 		epithet: 'hamlets',
 		socionicsAbbr: 'EIE',
@@ -128,4 +129,4 @@ export default {
 		quadra: 'α',
 		functions: ['Si', 'Fe', 'Ni', 'Te', 'Ne', 'Ti', 'Se', 'Fi']
 	}
-}
+};

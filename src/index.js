@@ -8,7 +8,9 @@ import {HashRouter, Route, Switch} from 'react-router-dom';
 ReactDOM.render(
 	<HashRouter basename="/">
 		<Switch>
+			<Route path="/:properties/:relationsFor" component={App} />
 			<Route path="/:properties" component={App} />
+			<Route path="//:relationsFor" component={App} />
 			<Route path="/" component={App} />
 		</Switch>
 	</HashRouter>,

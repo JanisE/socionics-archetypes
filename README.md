@@ -20,6 +20,11 @@ Compile React independently:
 npm start
 ```
 
+Generate `relationships.less`:
+```
+node src/relationships.js > src/relationships.less
+```
+
 # To-Do
 
 * Changing the URL + [Enter] does not update the App.

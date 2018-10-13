@@ -39,7 +39,8 @@ class App extends Component
 			logic: initProperties.indexOf('T') > -1,
 			ethics: initProperties.indexOf('F') > -1,
 			rational: initProperties.indexOf('j') > -1,
-			irrational: initProperties.indexOf('p') > -1
+			irrational: initProperties.indexOf('p') > -1,
+			relationsFor: this.props.match.params.relationsFor || ''
 		};
 
 		this.onIntrovertSwitch = this.onIntrovertSwitch.bind(this);
@@ -51,6 +52,8 @@ class App extends Component
 		this.onRationalSwitch = this.onRationalSwitch.bind(this);
 		this.onIrrationalSwitch = this.onIrrationalSwitch.bind(this);
 		this.onQuadraSwitch = this.onQuadraSwitch.bind(this);
+		this.onRemoveRelations= this.onRemoveRelations.bind(this);
+		this.onToggleRelations= this.onToggleRelations.bind(this);
 	}
 
 	onIntrovertSwitch (event)
@@ -97,6 +100,14 @@ class App extends Component
 		this.setState({quadra: event.target.value});
 	}
 
+	onRemoveRelations () {
+		this.setState({relationsFor: ''})
+	}
+
+	onToggleRelations (type) {
+		this.setState({relationsFor: type === this.state.relationsFor ? '' : type})
+	}
+
 	static getRoutePropertyStatus (state) {
 		return {
 			'E': state.extrovert,
@@ -114,11 +125,11 @@ class App extends Component
 		}
 	}
 
-	static stateMatchesRoute (state, routeProperties) {
+	static stateMatchesRoute (state, {properties: routeProperties, relationsFor}) {
 		const actualRouteProperties = (routeProperties || '').split('').sort().join('');
 		const matchingRouteProperties = App.getRouteProperties(state).split('').sort().join('');
 
-		return actualRouteProperties === matchingRouteProperties;
+		return actualRouteProperties === matchingRouteProperties && (relationsFor || '') == state.relationsFor;
 	}
 
 	static getRouteProperties (state) {
@@ -129,21 +140,25 @@ class App extends Component
 
 	shouldComponentUpdate (nextParams, nextState, nextContext) {
 		// Update the URL/route.
-		if (!App.stateMatchesRoute(nextState, nextParams.match.params.properties)) {
-			this.props.history.push('/' + App.getRouteProperties(nextState));
+		if (!App.stateMatchesRoute(nextState, nextParams.match.params)) {
+			this.props.history.push('/' + App.getRouteProperties(nextState) + (nextState.relationsFor ? '/' + nextState.relationsFor : ''));
 			return false;
 		}
 
 		return true;
 	}
 
-
 	render ()
 	{
 		return (
 			<div className="App">
-				<Archetypes properties={Object.keys(this.state).filter(key => this.state[key])
-					.map(key => ({name: key, value: this.state[key]}))}/>
+				<Archetypes
+					properties={Object.keys(this.state).filter(key => key !== 'relationsFor' && this.state[key])
+						.map(key => ({name: key, value: this.state[key]}))}
+					relationsFor={this.state.relationsFor}
+					onRemoveRelations={this.onRemoveRelations}
+					onToggleRelations={this.onToggleRelations}
+				/>
 				<div className="switches">
 					<div className="dichotomies">
 						<div className="pair">
@@ -202,8 +217,8 @@ class App extends Component
 							<FormControlLabel value="" control={<Radio />} label="?" />
 							<FormControlLabel value="α" control={<Radio />} label="1. Alfa" />
 							<FormControlLabel value="β" control={<Radio />} label="2. Beta" />
-							<FormControlLabel value="γ" control={<Radio />} label="3. Gamma" />
 							<FormControlLabel value="δ" control={<Radio />} label="4. Delta" />
+							<FormControlLabel value="γ" control={<Radio />} label="3. Gamma" />
 						</RadioGroup>
 					</div>
 				</div>
