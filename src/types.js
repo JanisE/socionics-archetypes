@@ -2,7 +2,7 @@
 module.exports = {
 //export default { Does not work in Node.
 	EIE: {
-		epithet: 'hamlets',
+		epithet: 'Hamlet',
 		socionicsAbbr: 'EIE',
 		dichotomyAbbr: 'ENFj',
 		socialRole: 'skolotājs',
@@ -10,7 +10,7 @@ module.exports = {
 		functions: ['Fe', 'Ni', 'Te', 'Si', 'Ti', 'Se', 'Fi', 'Ne']
 	},
 	EII: {
-		epithet: 'dostojevskis',
+		epithet: 'Dostoyevsky',
 		socionicsAbbr: 'EII',
 		dichotomyAbbr: 'INFj',
 		socialRole: 'humānists',
@@ -18,7 +18,7 @@ module.exports = {
 		functions: ['Fi', 'Ne', 'Ti', 'Se', 'Te', 'Si', 'Fe', 'Ni']
 	},
 	ESE: {
-		epithet: 'igo',
+		epithet: 'Hugo',
 		socionicsAbbr: 'ESE',
 		dichotomyAbbr: 'ESFj',
 		socialRole: 'iedvesmotājs',
@@ -26,7 +26,7 @@ module.exports = {
 		functions: ['Fe', 'Si', 'Te', 'Ni', 'Ti', 'Ne', 'Fi', 'Se']
 	},
 	ESI: {
-		epithet: 'draizers',
+		epithet: 'Dreiser',
 		socionicsAbbr: 'ESI',
 		dichotomyAbbr: 'ISFj',
 		socialRole: 'sargātājs',
@@ -34,7 +34,7 @@ module.exports = {
 		functions: ['Fi', 'Se', 'Ti', 'Ne', 'Te', 'Ni', 'Fe', 'Si']
 	},
 	ILE: {
-		epithet: 'donkihots',
+		epithet: 'Don Quixote',
 		socionicsAbbr: 'ILE',
 		dichotomyAbbr: 'ENTp',
 		socialRole: 'meklētājs',
@@ -42,7 +42,7 @@ module.exports = {
 		functions: ['Ne', 'Ti', 'Se', 'Fi', 'Si', 'Fe', 'Ni', 'Te']
 	},
 	ILI: {
-		epithet: 'balzaks',
+		epithet: 'Balzac',
 		socionicsAbbr: 'ILI',
 		dichotomyAbbr: 'INTp',
 		socialRole: 'kritiķis',
@@ -50,7 +50,7 @@ module.exports = {
 		functions: ['Ni', 'Te', 'Si', 'Fe', 'Se', 'Fi', 'Ne', 'Ti']
 	},
 	IEE: {
-		epithet: 'hakslijs',
+		epithet: 'Huxley',
 		socionicsAbbr: 'IEE',
 		dichotomyAbbr: 'ENFp',
 		socialRole: 'komunikators',
@@ -58,7 +58,7 @@ module.exports = {
 		functions: ['Ne', 'Fi', 'Se', 'Ti', 'Si', 'Te', 'Ni', 'Fe']
 	},
 	IEI: {
-		epithet: 'jeseņins',
+		epithet: 'Yesenin',
 		socionicsAbbr: 'IEI',
 		dichotomyAbbr: 'INFp',
 		socialRole: 'motivētājs',
@@ -66,7 +66,7 @@ module.exports = {
 		functions: ['Ni', 'Fe', 'Si', 'Te', 'Se', 'Ti', 'Ne', 'Fi']
 	},
 	LIE: {
-		epithet: 'džeks',
+		epithet: 'Jack London',
 		socionicsAbbr: 'LIE',
 		dichotomyAbbr: 'ENTj',
 		socialRole: 'uzņēmējs',
@@ -74,7 +74,7 @@ module.exports = {
 		functions: ['Te', 'Ni', 'Fe', 'Si', 'Fi', 'Se', 'Ti', 'Ne']
 	},
 	LII: {
-		epithet: 'robespjērs',
+		epithet: 'Robespierre',
 		socionicsAbbr: 'LII',
 		dichotomyAbbr: 'INTj',
 		socialRole: 'analītiķis',
@@ -82,7 +82,7 @@ module.exports = {
 		functions: ['Ti', 'Ne', 'Fi', 'Se', 'Fe', 'Si', 'Te', 'Ni']
 	},
 	LSE: {
-		epithet: 'štirlics',
+		epithet: 'Stierlitz',
 		socionicsAbbr: 'LSE',
 		dichotomyAbbr: 'ESTj',
 		socialRole: 'administrētājs',
@@ -90,7 +90,7 @@ module.exports = {
 		functions: ['Te', 'Si', 'Fe', 'Ni', 'Fi', 'Ne', 'Ti', 'Se']
 	},
 	LSI: {
-		epithet: 'maksims',
+		epithet: 'Maxim Gorky',
 		socionicsAbbr: 'LSI',
 		dichotomyAbbr: 'ISTj',
 		socialRole: 'sistematizētājs',
@@ -98,7 +98,7 @@ module.exports = {
 		functions: ['Ti', 'Se', 'Fi', 'Ne', 'Fe', 'Ni', 'Te', 'Si']
 	},
 	SLE: {
-		epithet: 'žukovs',
+		epithet: 'Zhukov',
 		socionicsAbbr: 'SLE',
 		dichotomyAbbr: 'ESTp',
 		socialRole: 'rīkotājs',
@@ -106,7 +106,7 @@ module.exports = {
 		functions: ['Se', 'Ti', 'Ne', 'Fi', 'Ni', 'Fe', 'Si', 'Te']
 	},
 	SLI: {
-		epithet: 'gabēns',
+		epithet: 'Gabin',
 		socionicsAbbr: 'SLI',
 		dichotomyAbbr: 'ISTp',
 		socialRole: 'amatnieks',
@@ -114,7 +114,7 @@ module.exports = {
 		functions: ['Si', 'Te', 'Ni', 'Fe', 'Ne', 'Fi', 'Se', 'Ti']
 	},
 	SEE: {
-		epithet: 'napoleons',
+		epithet: 'Napoleon',
 		socionicsAbbr: 'SEE',
 		dichotomyAbbr: 'ESFp',
 		socialRole: 'politiķis',
@@ -122,7 +122,7 @@ module.exports = {
 		functions: ['Se', 'Fi', 'Ne', 'Ti', 'Ni', 'Te', 'Si', 'Fe']
 	},
 	SEI: {
-		epithet: 'dimā',
+		epithet: 'Dumas',
 		socionicsAbbr: 'SEI',
 		dichotomyAbbr: 'ISFp',
 		socialRole: 'starpnieks',

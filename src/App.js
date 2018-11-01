@@ -5,7 +5,12 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
 import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
-
+import FormControl from '@material-ui/core/FormControl';
+import FormLabel from '@material-ui/core/FormLabel';
+import IconButton from '@material-ui/core/IconButton';
+import SettingsIcon from '@material-ui/icons/Settings';
+import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
+import { withNamespaces } from 'react-i18next';
 
 class App extends Component
 {
@@ -40,7 +45,9 @@ class App extends Component
 			ethics: initProperties.indexOf('F') > -1,
 			rational: initProperties.indexOf('j') > -1,
 			irrational: initProperties.indexOf('p') > -1,
-			relationsFor: this.props.match.params.relationsFor || ''
+			relationsFor: this.props.match.params.relationsFor || '',
+			language: undefined,
+			drawerOpen: false
 		};
 
 		this.onIntrovertSwitch = this.onIntrovertSwitch.bind(this);
@@ -54,6 +61,7 @@ class App extends Component
 		this.onQuadraSwitch = this.onQuadraSwitch.bind(this);
 		this.onRemoveRelations= this.onRemoveRelations.bind(this);
 		this.onToggleRelations= this.onToggleRelations.bind(this);
+		this.onLanguageSwitch= this.onLanguageSwitch.bind(this);
 	}
 
 	onIntrovertSwitch (event)
@@ -108,6 +116,15 @@ class App extends Component
 		this.setState({relationsFor: type === this.state.relationsFor ? '' : type})
 	}
 
+	changeLanguage (lang) {
+		this.props.i18n.changeLanguage(lang);
+	};
+
+	onLanguageSwitch (event) {
+		this.changeLanguage(event.target.value);
+		this.setState({language: event.target.value});
+	};
+
 	static getRoutePropertyStatus (state) {
 		return {
 			'E': state.extrovert,
@@ -148,8 +165,19 @@ class App extends Component
 		return true;
 	}
 
+	toggleDrawer (open) {
+		return () =>
+		{
+			this.setState({
+				drawerOpen: open,
+			});
+		}
+	}
+
 	render ()
 	{
+		const {t} = this.props;
+
 		return (
 			<div className="App">
 				<Archetypes
@@ -164,48 +192,48 @@ class App extends Component
 						<div className="pair">
 							<FormControlLabel
 								control={<Checkbox checked={this.state.introvert} onChange={this.onIntrovertSwitch}/>}
-								label="Introverts"
+								label={t('controls.Introvert')}
 							/>
 
 							<FormControlLabel
 								control={<Checkbox checked={this.state.extrovert} onChange={this.onExtrovertSwitch}/>}
-								label="Ekstraverts"
+								label={t('controls.Extravert')}
 							/>
 						</div>
 
 						<div className="pair">
 							<FormControlLabel
 								control={<Checkbox checked={this.state.logic} onChange={this.onLogicSwitch}/>}
-								label="Loģiskais"
+								label={t('controls.Logical')}
 							/>
 
 							<FormControlLabel
 								control={<Checkbox checked={this.state.ethics} onChange={this.onEthicsSwitch}/>}
-								label="Ētiskais"
+								label={t('controls.Ethical')}
 							/>
 						</div>
 
 						<div className="pair">
 							<FormControlLabel
 								control={<Checkbox checked={this.state.intuition} onChange={this.onIntuitionSwitch}/>}
-								label="Intuīts"
+								label={t('controls.Intuitive')}
 							/>
 
 							<FormControlLabel
 								control={<Checkbox checked={this.state.sensing} onChange={this.onSensingSwitch}/>}
-								label="Sensorais"
+								label={t('controls.Sensory')}
 							/>
 						</div>
 
 						<div className="pair">
 							<FormControlLabel
 								control={<Checkbox checked={this.state.rational} onChange={this.onRationalSwitch}/>}
-								label="Racionāls"
+								label={t('controls.Rational')}
 							/>
 
 							<FormControlLabel
 								control={<Checkbox checked={this.state.irrational} onChange={this.onIrrationalSwitch}/>}
-								label="Iracionāls"
+								label={t('controls.Irrational')}
 							/>
 						</div>
 					</div>
@@ -215,16 +243,46 @@ class App extends Component
 							onChange={this.onQuadraSwitch}
 						>
 							<FormControlLabel value="" control={<Radio />} label="?" />
-							<FormControlLabel value="α" control={<Radio />} label="1. Alfa" />
-							<FormControlLabel value="β" control={<Radio />} label="2. Beta" />
-							<FormControlLabel value="δ" control={<Radio />} label="4. Delta" />
-							<FormControlLabel value="γ" control={<Radio />} label="3. Gamma" />
+							<FormControlLabel value="α" control={<Radio />} label={'1. ' + t('quadras.Alpha')} />
+							<FormControlLabel value="β" control={<Radio />} label={'2. ' + t('quadras.Beta')} />
+							<FormControlLabel value="δ" control={<Radio />} label={'4. ' + t('quadras.Delta')} />
+							<FormControlLabel value="γ" control={<Radio />} label={'3. ' + t('quadras.Gamma')} />
 						</RadioGroup>
 					</div>
+
+					<div className="preferences-icon">
+						<IconButton color="secondary" aria-label="Preferences" onClick={this.toggleDrawer(true)}>
+							<SettingsIcon />
+						</IconButton>
+					</div>
 				</div>
+
+				<SwipeableDrawer
+					anchor="right"
+					className="preferences-drawer"
+					open={this.state.drawerOpen}
+					onClose={this.toggleDrawer(false)}
+					onOpen={this.toggleDrawer(true)}
+				>
+					<div className="drawer-content">
+						<FormControl component="fieldset">
+							<FormLabel component="legend">{t('controls.Language')}</FormLabel>
+							<RadioGroup
+								name="language"
+								value={this.state.language}
+								onChange={this.onLanguageSwitch}
+							>
+								<FormControlLabel value="en" control={<Radio />} label="English" />
+								<FormControlLabel value="lv" control={<Radio />} label="Latviešu" />
+								<FormControlLabel value="ru" control={<Radio />} label="Русский" />
+							</RadioGroup>
+						</FormControl>
+					</div>
+
+				</SwipeableDrawer>
 			</div>
 		);
 	}
 }
 
-export default App;
+export default withNamespaces()(App);

@@ -1,0 +1,171 @@
+{
+	"controls": {
+		"Language": "Язык",
+		"Extravert": "Экстраверт",
+		"Introvert": "Интроверт",
+		"Ethical": "Этик",
+		"Logical": "Логик",
+		"Sensory": "Сенсорик",
+		"Intuitive": "Интуит",
+		"Irrational": "Иррационал",
+		"Rational": "Рационал"
+	},
+	"quadras": {
+		"Alpha": "Альфа",
+		"Beta": "Бета",
+		"Gamma": "Гамма",
+		"Delta": "Дельта"
+	},
+	"type info": {
+		"Hamlet": {
+			"socionics abbr": "ЭИЭ",
+			"epithet": "Гамлет",
+			"social role": "Наставник"
+		},
+		"Dostoyevsky": {
+			"socionics abbr": "ЭИИ",
+			"epithet": "Достоевский",
+			"social role": "Гуманист"
+		},
+		"Hugo": {
+			"socionics abbr": "ЭСЭ",
+			"epithet": "Гюго",
+			"social role": "Энтузиаст"
+		},
+		"Dreiser": {
+			"socionics abbr": "ЭСИ",
+			"epithet": "Драйзер",
+			"social role": "Хранитель"
+		},
+		"Don Quixote": {
+			"socionics abbr": "ИЛЭ",
+			"epithet": "Дон Кихот",
+			"social role": "Искатель"
+		},
+		"Balzac": {
+			"socionics abbr": "ИЛИ",
+			"epithet": "Бальзак",
+			"social role": "Критик"
+		},
+		"Huxley": {
+			"socionics abbr": "ИЭЭ",
+			"epithet": "Гексли",
+			"social role": "Советчик"
+		},
+		"Yesenin": {
+			"socionics abbr": "ИЭИ",
+			"epithet": "Есенин",
+			"social role": "Лирик"
+		},
+		"Jack London": {
+			"socionics abbr": "ЛИЭ",
+			"epithet": "Джек Лондон",
+			"social role": "Предприниматель"
+		},
+		"Robespierre": {
+			"socionics abbr": "ЛИИ",
+			"epithet": "Робеспьер",
+			"social role": "Аналитик"
+		},
+		"Stierlitz": {
+			"socionics abbr": "ЛСЭ",
+			"epithet": "Штирлиц",
+			"social role": "Администратор"
+		},
+		"Maxim Gorky": {
+			"socionics abbr": "ЛСИ",
+			"epithet": "Максим Горький",
+			"social role": "Инспектор"
+		},
+		"Zhukov": {
+			"socionics abbr": "СЛЭ",
+			"epithet": "Жуков",
+			"social role": "Маршал"
+		},
+		"Gabin": {
+			"socionics abbr": "СЛИ",
+			"epithet": "Габен",
+			"social role": "Мастер"
+		},
+		"Napoleon": {
+			"socionics abbr": "СЭЭ",
+			"epithet": "Наполеон",
+			"social role": "Политик"
+		},
+		"Dumas": {
+			"socionics abbr": "СЭИ",
+			"epithet": "Дюма",
+			"social role": "Посредник"
+		}
+	},
+	"relationships": {
+		"identity": {
+			"name": "тождественные",
+			"abbr": "Т"
+		},
+		"quasiidentity": {
+			"name": "квазитождества",
+			"abbr": "квт"
+		},
+		"kindred": {
+			"name": "родственные",
+			"abbr": "ро"
+		},
+		"benefactor": {
+			"name": "заказчик",
+			"abbr": "B"
+		},
+		"cooperation": {
+			"name": "деловые",
+			"abbr": "дел"
+		},
+		"beneficiary": {
+			"name": "подзаказный",
+			"name alternatives": "исполнитель, приемник",
+			"abbr": "п"
+		},
+		"superego": {
+			"name": "суперэго",
+			"abbr": "СЭ"
+		},
+		"activity": {
+			"name": "активация",
+			"abbr": "А"
+		},
+		"contrary": {
+			"name": "противоположность",
+			"name alternatives": "погашения",
+			"abbr": "пп"
+		},
+		"mirror": {
+			"name": "зеркальные",
+			"abbr": "З"
+		},
+		"illusionary": {
+			"name": "миражные",
+			"abbr": "м"
+		},
+		"supervisee": {
+			"name": "подревизный",
+			"name alternatives": "подконтрольный",
+			"abbr": "р"
+		},
+		"semidual": {
+			"name": "полудуал",
+			"abbr": "пД"
+		},
+		"supervisor": {
+			"name": "ревизор",
+			"name alternatives": "контролер",
+			"abbr": "Р"
+		},
+		"duality": {
+			"name": "дуал",
+			"abbr": "Д"
+		},
+		"conflict": {
+			"name": "конфликт",
+			"abbr": "К"
+		}
+	}
+}

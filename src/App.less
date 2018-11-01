@@ -1,7 +1,9 @@
 // Portrait (mobile) by default.
 @landscape: ~'(min-aspect-ratio: 1/1)';
 
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:400,900&subset=latin-ext');
+// TODO Add cyrillic only if necessary.
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:400,900&subset=latin-ext,cyrillic');
+//@import url('https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:400,900&subset=latin-ext');
 
 * {
   box-sizing: border-box;
@@ -92,7 +94,21 @@ body {
         }
 
         .epithet {
+          // Keep the content centered, but if too long, show only the beginning of it.
+          display: flex;
+          justify-content: center;
           font-weight: 900;
+
+          div {
+            max-width: 82%;
+            overflow: hidden;
+            white-space: nowrap;
+          }
+        }
+
+        .socialRole {
+          .epithet();
+          font-weight: normal;
         }
 
         .socionicsAbbr,
@@ -190,7 +206,7 @@ body {
           &.rel-mirror,
           &.rel-semidual,
           &.rel-illusionary,
-          &.rel-business,
+          &.rel-cooperation,
           &.rel-quasiidentity {
             .rel-shadow(saddlebrown);
             color: saddlebrown;
@@ -214,7 +230,7 @@ body {
 
           // Relation label
           div:first-child {
-            background: #bbbbbb;
+            background: #cccccc;
             font-size: @zoom * 1.2vmin;
             font-weight: bold;
           }
@@ -223,7 +239,7 @@ body {
           div:last-child {
             position: absolute;
             bottom: 0;
-            background: #bbbbbb;
+            background: #dddddd;
             width: 100%;
             padding-bottom: @zoom * 0.5vmin;
             font-size: @zoom * 0.8vmin;
@@ -346,12 +362,13 @@ body {
 .switches {
   display: flex;
   justify-content: space-evenly;
+  position: relative; // For the preferences icon.
 
   @media @landscape {
     flex-direction: column;
     justify-content: center;
     margin-left: 3vmin;
-    min-width: 38vmin;
+    min-width: 45vmin;
   }
 
   .dichotomies {
@@ -408,5 +425,17 @@ body {
   // Checkbox and radiobutton padding.
   .MuiIconButton-root-15, .jss15 {
     padding: 0.8vmin 1.5vmin;
+  }
+}
+
+.preferences-icon {
+  position: absolute;
+  top: 2vw;
+  right: 2vw;
+}
+
+.preferences-drawer {
+  .drawer-content {
+    padding: 2vw;
   }
 }

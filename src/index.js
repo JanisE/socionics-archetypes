@@ -5,6 +5,8 @@ import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import {HashRouter, Route, Switch} from 'react-router-dom';
 
+import './i18n';
+
 ReactDOM.render(
 	<HashRouter basename="/">
 		<Switch>

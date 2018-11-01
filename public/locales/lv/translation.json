@@ -1,0 +1,167 @@
+{
+	"controls": {
+		"Language": "Valoda",
+		"Extravert": "Ekstraverts",
+		"Introvert": "Introverts",
+		"Ethical": "Ētiskais",
+		"Logical": "Loģiskais",
+		"Sensory": "Sensorais",
+		"Intuitive": "Intuīts",
+		"Irrational": "Iracionāls",
+		"Rational": "Racionāls"
+	},
+	"quadras": {
+		"Alpha": "Alfa",
+		"Beta": "Beta",
+		"Gamma": "Gamma",
+		"Delta": "Delta"
+	},
+	"type info": {
+		"Hamlet": {
+			"socionics abbr": "EIE",
+			"epithet": "hamlets",
+			"social role": "skolotājs"
+		},
+		"Dostoyevsky": {
+			"socionics abbr": "EII",
+			"epithet": "dostojevskis",
+			"social role": "humānists"
+		},
+		"Hugo": {
+			"socionics abbr": "ESE",
+			"epithet": "igo",
+			"social role": "iedvesmotājs"
+		},
+		"Dreiser": {
+			"socionics abbr": "ESI",
+			"epithet": "draizers",
+			"social role": "sargātājs"
+		},
+		"Don Quixote": {
+			"socionics abbr": "ILE",
+			"epithet": "donkihots",
+			"social role": "meklētājs"
+		},
+		"Balzac": {
+			"socionics abbr": "ILI",
+			"epithet": "balzaks",
+			"social role": "kritiķis"
+		},
+		"Huxley": {
+			"socionics abbr": "IEE",
+			"epithet": "hakslijs",
+			"social role": "komunikators"
+		},
+		"Yesenin": {
+			"socionics abbr": "IEI",
+			"epithet": "jeseņins",
+			"social role": "motivētājs"
+		},
+		"Jack London": {
+			"socionics abbr": "LIE",
+			"epithet": "džeks",
+			"social role": "uzņēmējs"
+		},
+		"Robespierre": {
+			"socionics abbr": "LII",
+			"epithet": "robespjērs",
+			"social role": "analītiķis"
+		},
+		"Stierlitz": {
+			"socionics abbr": "LSE",
+			"epithet": "štirlics",
+			"social role": "administrētājs"
+		},
+		"Maxim Gorky": {
+			"socionics abbr": "LSI",
+			"epithet": "maksims",
+			"social role": "sistematizētājs"
+		},
+		"Zhukov": {
+			"socionics abbr": "SLE",
+			"epithet": "žukovs",
+			"social role": "rīkotājs"
+		},
+		"Gabin": {
+			"socionics abbr": "SLI",
+			"epithet": "gabēns",
+			"social role": "amatnieks"
+		},
+		"Napoleon": {
+			"socionics abbr": "SEE",
+			"epithet": "napoleons",
+			"social role": "politķis"
+		},
+		"Dumas": {
+			"socionics abbr": "SEI",
+			"epithet": "dimā",
+			"social role": "starpnieks"
+		}
+	},
+	"relationships": {
+		"identity": {
+			"name": "vienādais",
+			"abbr": "V"
+		},
+		"quasiidentity": {
+			"name": "šķietami vienādais",
+			"abbr": "šv"
+		},
+		"kindred": {
+			"name": "radniecīgais",
+			"abbr": "ra"
+		},
+		"benefactor": {
+			"name": "pārraidītājs",
+			"abbr": "P"
+		},
+		"cooperation": {
+			"name": "darbabiedrs",
+			"abbr": "d"
+		},
+		"beneficiary": {
+			"name": "uztvērējs",
+			"abbr": "u"
+		},
+		"superego": {
+			"name": "superego",
+			"abbr": "se"
+		},
+		"activity": {
+			"name": "aktivators",
+			"abbr": "A"
+		},
+		"contrary": {
+			"name": "pilnīgi pretējs",
+			"abbr": "pp"
+		},
+		"mirror": {
+			"name": "spogulis",
+			"abbr": "S"
+		},
+		"illusionary": {
+			"name": "mirāža",
+			"abbr": "M"
+		},
+		"supervisee": {
+			"name": "revidējamis",
+			"abbr": "r"
+		},
+		"semidual": {
+			"name": "pusduālais",
+			"abbr": "pd"
+		},
+		"supervisor": {
+			"name": "revidētājs",
+			"abbr": "R"
+		},
+		"duality": {
+			"name": "duālais",
+			"abbr": "D"
+		},
+		"conflict": {
+			"name": "konfliktieris",
+			"abbr": "K"
+		}
+	}
+}
