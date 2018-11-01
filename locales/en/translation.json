@@ -1,0 +1,195 @@
+{
+	"controls": {
+		"Language": "Language",
+		"Extravert": "Extravert",
+		"Introvert": "Introvert",
+		"Ethical": "Ethical",
+		"Logical": "Logical",
+		"Sensory": "Sensory",
+		"Intuitive": "Intuitive",
+		"Irrational": "Irrational",
+		"Rational": "Rational"
+	},
+	"quadras": {
+		"Alpha": "Alpha",
+		"Beta": "Beta",
+		"Gamma": "Gamma",
+		"Delta": "Delta"
+	},
+	"type info": {
+		"Hamlet": {
+			"socionics abbr": "EIE",
+			"epithet": "Hamlet",
+			"social role": "Mentor",
+			"social role - full": "Mentor / Actor"
+		},
+		"Dostoyevsky": {
+			"socionics abbr": "EII",
+			"epithet": "Dostoyevsky",
+			"social role": "Humanist",
+			"social role - full": "Humanist / Empath"
+		},
+		"Hugo": {
+			"socionics abbr": "ESE",
+			"epithet": "Hugo",
+			"social role": "Enthusiast",
+			"social role - full": "Enthusiast / Bonvivant"
+		},
+		"Dreiser": {
+			"socionics abbr": "ESI",
+			"epithet": "Dreiser",
+			"social role": "Guardian",
+			"social role - full": "Guardian / Conservator"
+		},
+		"Don Quixote": {
+			"socionics abbr": "ILE",
+			"epithet": "Don Quixote",
+			"social role": "Seeker",
+			"social role - full": "Seeker / Inventor"
+		},
+		"Balzac": {
+			"socionics abbr": "ILI",
+			"epithet": "Balzac",
+			"social role": "Critic",
+			"social role - full": "Critic / Mastermind"
+		},
+		"Huxley": {
+			"socionics abbr": "IEE",
+			"epithet": "Huxley",
+			"social role": "Reporter",
+			"social role - full": "Reporter / Psychologist"
+		},
+		"Yesenin": {
+			"socionics abbr": "IEI",
+			"epithet": "Yesenin",
+			"social role": "Romantic",
+			"social role - full": "Romantic / Lyricist"
+		},
+		"Jack London": {
+			"socionics abbr": "LIE",
+			"epithet": "Jack London",
+			"social role": "Enterpriser",
+			"social role - full": "Enterpriser / Pioneer"
+		},
+		"Robespierre": {
+			"socionics abbr": "LII",
+			"epithet": "Robespierre",
+			"social role": "Analyst",
+			"social role - full": "Analyst / Scientist"
+		},
+		"Stierlitz": {
+			"socionics abbr": "LSE",
+			"epithet": "Stierlitz",
+			"social role": "Administrator",
+			"social role - full": "Administrator / Director"
+		},
+		"Maxim Gorky": {
+			"socionics abbr": "LSI",
+			"epithet": "Maxim Gorky",
+			"social role": "Inspector",
+			"social role - full": "Inspector / Pragmatist"
+		},
+		"Zhukov": {
+			"socionics abbr": "SLE",
+			"epithet": "Zhukov",
+			"social role": "Conqueror",
+			"social role - full": "Conqueror / Legionnaire"
+		},
+		"Gabin": {
+			"socionics abbr": "SLI",
+			"epithet": "Gabin",
+			"social role": "Craftsman",
+			"social role - full": "Craftsman / Mechanic"
+		},
+		"Napoleon": {
+			"socionics abbr": "SEE",
+			"epithet": "Napoleon",
+			"social role": "Politician",
+			"social role - full": "Politician / Ambassador"
+		},
+		"Dumas": {
+			"socionics abbr": "SEI",
+			"epithet": "Dumas",
+			"social role": "Mediator",
+			"social role - full": "Mediator / Peacemaker"
+		}
+	},
+	"relationships": {
+		"identity": {
+			"name": "identity",
+			"name alternatives": "identical",
+			"abbr": "Id"
+		},
+		"quasiidentity": {
+			"name": "quasi-identity",
+			"name alternatives": "quasi-identical",
+			"abbr": "Q"
+		},
+		"kindred": {
+			"name": "kindred",
+			"name alternatives": "comparative, congenerity",
+			"abbr": "K"
+		},
+		"benefactor": {
+			"name": "benefactor",
+			"name alternatives": "social requester",
+			"abbr": "B"
+		},
+		"cooperation": {
+			"name": "cooperation",
+			"name alternatives": "business, look-a-like",
+			"abbr": "Cp"
+		},
+		"beneficiary": {
+			"name": "beneficiary",
+			"name alternatives": "social requested, social request recipient",
+			"abbr": "b"
+		},
+		"superego": {
+			"name": "super-ego",
+			"abbr": "Se"
+		},
+		"activity": {
+			"name": "activity",
+			"name alternatives": "activation",
+			"abbr": "A"
+		},
+		"contrary": {
+			"name": "contrary",
+			"name alternatives": "extinguishment",
+			"abbr": "C"
+		},
+		"mirror": {
+			"name": "mirror",
+			"abbr": "M"
+		},
+		"illusionary": {
+			"name": "illusionary",
+			"name alternatives": "mirage",
+			"abbr": "Is"
+		},
+		"supervisee": {
+			"name": "supervisee",
+			"name alternatives": "social controlled",
+			"abbr": "s"
+		},
+		"semidual": {
+			"name": "semi-dual",
+			"name alternatives": "semi-duality",
+			"abbr": "Sd"
+		},
+		"supervisor": {
+			"name": "supervisor",
+			"name alternatives": "social controller",
+			"abbr": "S"
+		},
+		"duality": {
+			"name": "duality",
+			"abbr": "D"
+		},
+		"conflict": {
+			"name": "conflict",
+			"abbr": "Cf"
+		}
+	}
+}
