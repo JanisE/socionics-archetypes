@@ -1,0 +1,372 @@
+env:
+  node: true
+parserOptions:
+  ecmaVersion: 8
+rules:
+  accessor-pairs: error
+  array-bracket-newline:
+    - error
+    - consistent
+  array-bracket-spacing:
+    - error
+    - never
+  array-callback-return: error
+  array-element-newline: off
+  arrow-body-style: off
+  arrow-parens: off
+  arrow-spacing: error
+  block-scoped-var: error
+  block-spacing:
+    - error
+    - never
+  brace-style:
+    - error
+    - stroustrup
+  callback-return: error
+  camelcase: error
+  capitalized-comments: off
+  class-methods-use-this: warn
+  comma-dangle:
+    - error
+    - never
+  comma-spacing: error
+  comma-style: error
+  complexity:
+    - warn
+    - 11
+  computed-property-spacing:
+    - error
+    - never
+  consistent-return: error
+  consistent-this: off
+  constructor-super: error
+  curly:
+    - error
+    - all
+  default-case: error # Either default defined or a comment "No default".
+  dot-location:
+    - error
+    - property
+  dot-notation:
+    - error
+    - allowKeywords: true
+  eol-last: error
+  eqeqeq: warn
+  for-direction: error
+  func-call-spacing: error
+  func-name-matching: warn
+  func-names: off
+  func-style:
+    - error
+    - declaration
+  function-paren-newline:
+    - error
+    - consistent
+  generator-star-spacing:
+    - error
+    - both
+  getter-return: error
+  global-require: warn
+  guard-for-in: off
+  handle-callback-err: warn
+  id-blacklist:
+    - warn
+    - e
+    - cb
+  id-length: off
+  id-match: off
+  implicit-arrow-linebreak: off
+  indent:
+    - error
+    - tab
+    - ignoreComments: true
+  init-declarations: off
+  jsx-quotes:
+    - error
+    - prefer-double
+  key-spacing:
+    - error
+    - afterColon: true
+      beforeColon: false
+  keyword-spacing: error
+  line-comment-position: off
+  linebreak-style:
+    - error
+    - unix
+  lines-around-comment:
+    - error
+    - beforeBlockComment: true
+      afterBlockComment: false
+  lines-between-class-members:
+    - error
+    - always
+  max-classes-per-file: off
+  max-depth:
+    - warn
+    - 4
+  max-len:
+    - warn
+    - code: 140
+      tabWidth: 4
+  max-lines:
+    - warn
+    - max: 500
+  max-nested-callbacks:
+    - warn
+    - 2
+  max-params: off
+  max-statements:
+    - warn
+    - max: 50
+  max-statements-per-line:
+    - error
+    - max: 1
+  multiline-comment-style: off
+  multiline-ternary:
+    - error
+    - always-multiline
+  new-cap:
+    - error
+    - newIsCap: true
+      capIsNew: false
+  new-parens: off
+  newline-per-chained-call: warn
+  no-alert: error
+  no-array-constructor: error
+  no-await-in-loop: off
+  no-bitwise: warn
+  no-buffer-constructor: error
+  no-caller: error
+  no-case-declarations: off
+  no-class-assign: warn
+  no-compare-neg-zero: warn
+  no-cond-assign: off
+  no-confusing-arrow: warn
+  no-console: off
+  no-const-assign: error
+  no-constant-condition: warn
+  no-continue: warn
+  no-control-regex: warn
+  no-debugger: warn
+  no-delete-var: error
+  no-div-regex: off
+  no-dupe-args: error
+  no-dupe-class-members: error
+  no-dupe-keys: error
+  no-duplicate-case: error
+  no-duplicate-imports: error
+  no-else-return: off
+  no-empty: off
+  no-empty-character-class: error
+  no-empty-function: warn
+  no-empty-pattern: error
+  no-eq-null: off
+  no-eval: error
+  no-ex-assign: error
+  no-extend-native: error
+  no-extra-bind: error
+  no-extra-boolean-cast: error
+  no-extra-label: error
+  no-extra-parens:
+    - error
+    - functions
+  no-extra-semi: error
+  no-fallthrough: warn
+  no-floating-decimal: error
+  no-func-assign: error
+  no-global-assign: error
+  no-implicit-coercion: off
+  no-implicit-globals: error
+  no-implied-eval: error
+  no-inline-comments: off
+  no-inner-declarations:
+    - error
+    - functions
+  no-invalid-regexp: error
+  no-invalid-this: error # Add JSDoc @this if needed.
+  no-irregular-whitespace: warn # Only warn, because auto-commented code will have this problem.
+  no-iterator: error
+  no-label-var: error
+  no-labels: warn
+  no-lone-blocks: error
+  no-lonely-if: off
+  no-loop-func: warn # It's OK if it is my intention to use a common variable in all the functions.
+  no-magic-numbers:
+    - warn
+    - ignore:
+      - -1 # For `indexOf` and the like.
+      - 0 # To mark the start (of the string), the emptyness (count of).
+  no-mixed-operators: off
+  no-mixed-requires: off
+  no-mixed-spaces-and-tabs:
+    - error
+    - false
+  no-multi-assign: warn
+  no-multi-spaces: error
+  no-multi-str: error
+  no-multiple-empty-lines:
+    - error
+    - max: 5
+  no-negated-condition: off
+  no-nested-ternary: off
+  no-new: warn
+  no-new-func: error
+  no-new-object: error
+  no-new-require: warn
+  no-new-symbol: error
+  no-new-wrappers: error
+  no-obj-calls: error
+  no-octal: error
+  no-octal-escape: error
+  no-param-reassign: off
+  no-path-concat: error
+  no-plusplus: off
+  no-process-env: off
+  no-process-exit: warn
+  no-proto: error
+  no-prototype-builtins: off
+  no-redeclare: error
+  no-regex-spaces: warn
+  no-restricted-globals: off
+  no-restricted-imports: off
+  no-restricted-modules: off
+  no-restricted-properties: off
+  no-restricted-syntax: off
+  no-return-assign: error
+  no-return-await: error
+  no-script-url: error
+  no-self-assign: error
+  no-self-compare: error
+  no-sequences: error
+  no-shadow: error
+  no-shadow-restricted-names: error
+  no-sparse-arrays: error
+  no-sync: off
+  no-tabs: off
+  no-template-curly-in-string: warn
+  no-ternary: off
+  no-this-before-super: error
+  no-throw-literal: error
+  no-trailing-spaces: error
+  no-undef: error
+  no-undef-init: error
+  no-undefined: off
+  no-underscore-dangle: off
+  no-unexpected-multiline: error
+  no-unmodified-loop-condition: warn
+  no-unneeded-ternary: error
+  no-unreachable: warn
+  no-unsafe-finally: warn
+  no-unsafe-negation: error
+  no-unused-expressions: error
+  no-unused-labels: error
+  no-unused-vars:
+    - warn
+    - args: after-used
+      vars: all
+  no-use-before-define: warn # Global variables raise this error used in functions.
+  no-useless-call: error
+  no-useless-computed-key: error
+  no-useless-concat: error
+  no-useless-constructor: warn
+  no-useless-escape: error
+  no-useless-rename: error
+  no-useless-return: warn
+  no-var: warn
+  no-void: off
+  no-warning-comments: off
+  no-whitespace-before-property: error
+  no-with: error
+  nonblock-statement-body-position: off
+  object-curly-newline:
+    - error
+    - consistent: true
+  object-curly-spacing:
+    - error
+    - never
+  object-property-newline:
+    - warn
+    - allowAllPropertiesOnSameLine: true
+  object-shorthand:
+    - error
+    - consistent
+  one-var: off
+  one-var-declaration-per-line: off
+  operator-assignment: off
+  operator-linebreak:
+    - error
+    - before
+  padded-blocks:
+    - error
+    - never
+  padding-line-between-statements: off
+  prefer-arrow-callback: error
+  prefer-const: warn
+  prefer-destructuring: warn
+  prefer-numeric-literals: error
+  prefer-object-spread: off
+  prefer-promise-reject-errors: warn
+  prefer-rest-params: error
+  prefer-spread: error
+  prefer-template: off
+  quote-props:
+    - error
+    - as-needed
+  quotes:
+    - error
+    - single
+  radix: off
+  require-await: error
+  require-jsdoc:
+    - error
+    - require:
+        FunctionDeclaration: false
+        ClassDeclaration: true
+  require-yield: warn
+  rest-spread-spacing:
+    - error
+    - never
+  semi: error
+  semi-spacing: error
+  sort-imports: off
+  sort-keys: off
+  sort-vars: off
+  space-before-blocks: error
+  space-before-function-paren:
+    - error
+    - always
+  space-in-parens:
+    - error
+    - never
+  space-infix-ops: error
+  space-unary-ops:
+    - error
+    - nonwords: false
+      words: true
+      overrides:
+        "!": true
+        "!!": true
+  spaced-comment: off
+  strict: off
+  symbol-description: warn
+  switch-colon-spacing: error
+  template-curly-spacing:
+    - error
+    - never
+  template-tag-spacing:
+    - error
+    - never
+  unicode-bom:
+    - error
+    - never
+  use-isnan: error
+  valid-jsdoc: warn
+  valid-typeof: error
+  vars-on-top: off
+  wrap-iife: error
+  wrap-regex: warn
+  yield-star-spacing:
+    - error
+    - before: true
+      after: false
+  yoda: error
