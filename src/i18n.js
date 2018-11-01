@@ -27,8 +27,10 @@ i18n
     // learn more: https://react.i18next.com/components/i18next-instance
     react: {
       wait: true
-    }
-  });
+    },
 
+	// Empty for the local instance, Github prefix when deployed on GH pages.
+	backend: {loadPath: process.env.PUBLIC_URL + '/locales/{{lng}}/{{ns}}.json'}
+  });
 
 export default i18n;
