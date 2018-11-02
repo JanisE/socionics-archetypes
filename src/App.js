@@ -1,12 +1,14 @@
 import React, {Component} from 'react';
 import './App.css';
 import Archetypes from './Archetypes';
+import FormGroup from '@material-ui/core/FormGroup'
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
 import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControl from '@material-ui/core/FormControl';
 import FormLabel from '@material-ui/core/FormLabel';
+import Switch from '@material-ui/core/Switch';
 import IconButton from '@material-ui/core/IconButton';
 import SettingsIcon from '@material-ui/icons/Settings';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
@@ -46,6 +48,7 @@ class App extends Component
 			rational: initProperties.indexOf('j') > -1,
 			irrational: initProperties.indexOf('p') > -1,
 			relationsFor: this.props.match.params.relationsFor || '',
+			introvertsInside: false,
 			language: undefined,
 			drawerOpen: false
 		};
@@ -166,12 +169,19 @@ class App extends Component
 	}
 
 	toggleDrawer (open) {
-		return () =>
-		{
+		return () => {
 			this.setState({
 				drawerOpen: open,
 			});
 		}
+	}
+
+	handleSwitch (switchName) {
+		return (event) => {
+			this.setState({
+				[switchName]: event.target.checked
+			});
+		};
 	}
 
 	render ()
@@ -184,6 +194,7 @@ class App extends Component
 					properties={Object.keys(this.state).filter(key => key !== 'relationsFor' && this.state[key])
 						.map(key => ({name: key, value: this.state[key]}))}
 					relationsFor={this.state.relationsFor}
+					introvertsInside={this.state.introvertsInside}
 					onRemoveRelations={this.onRemoveRelations}
 					onToggleRelations={this.onToggleRelations}
 				/>
@@ -268,7 +279,6 @@ class App extends Component
 						<FormControl component="fieldset">
 							<FormLabel component="legend">{t('controls.Language')}</FormLabel>
 							<RadioGroup
-								name="language"
 								value={this.state.language}
 								onChange={this.onLanguageSwitch}
 							>
@@ -277,6 +287,18 @@ class App extends Component
 								<FormControlLabel value="ru" control={<Radio />} label="Русский" />
 							</RadioGroup>
 						</FormControl>
+
+						<FormGroup>
+							<FormControlLabel
+								control={
+									<Switch
+										checked={this.state.introvertsInside}
+										onChange={this.handleSwitch('introvertsInside')}
+									/>
+								}
+								label={t('prefs.Introverts Inside')}
+							/>
+						</FormGroup>
 					</div>
 
 				</SwipeableDrawer>

@@ -15,22 +15,41 @@ class Archetypes extends Component {
 	render() {
 		const {t} = this.props;
 
-		types.EIE.pos = {col: 6, row: 2};
-		types.EII.pos = {col: 3, row: 5};
-		types.ESE.pos = {col: 1, row: 2};
-		types.ESI.pos = {col: 4, row: 5};
-		types.IEE.pos = {col: 2, row: 6};
-		types.IEI.pos = {col: 5, row: 3};
-		types.ILE.pos = {col: 2, row: 1};
-		types.ILI.pos = {col: 5, row: 4};
-		types.LIE.pos = {col: 6, row: 5};
-		types.LII.pos = {col: 3, row: 2};
-		types.LSE.pos = {col: 1, row: 5};
-		types.LSI.pos = {col: 4, row: 2};
-		types.SEE.pos = {col: 5, row: 6};
-		types.SEI.pos = {col: 2, row: 3};
-		types.SLE.pos = {col: 5, row: 1};
-		types.SLI.pos = {col: 2, row: 4};
+		if (this.props.introvertsInside) {
+			types.EIE.pos = {col: 6, row: 2};
+			types.EII.pos = {col: 3, row: 5};
+			types.ESE.pos = {col: 1, row: 2};
+			types.ESI.pos = {col: 4, row: 5};
+			types.IEE.pos = {col: 2, row: 6};
+			types.IEI.pos = {col: 5, row: 3};
+			types.ILE.pos = {col: 2, row: 1};
+			types.ILI.pos = {col: 5, row: 4};
+			types.LIE.pos = {col: 6, row: 5};
+			types.LII.pos = {col: 3, row: 2};
+			types.LSE.pos = {col: 1, row: 5};
+			types.LSI.pos = {col: 4, row: 2};
+			types.SEE.pos = {col: 5, row: 6};
+			types.SEI.pos = {col: 2, row: 3};
+			types.SLE.pos = {col: 5, row: 1};
+			types.SLI.pos = {col: 2, row: 4};
+		} else {
+			types.EIE.pos = {col: 5, row: 3};
+			types.EII.pos = {col: 2, row: 6};
+			types.ESE.pos = {col: 2, row: 3};
+			types.ESI.pos = {col: 5, row: 6};
+			types.IEE.pos = {col: 3, row: 5};
+			types.IEI.pos = {col: 6, row: 2};
+			types.ILE.pos = {col: 3, row: 2};
+			types.ILI.pos = {col: 6, row: 5};
+			types.LIE.pos = {col: 5, row: 4};
+			types.LII.pos = {col: 2, row: 1};
+			types.LSE.pos = {col: 2, row: 4};
+			types.LSI.pos = {col: 5, row: 1};
+			types.SEE.pos = {col: 4, row: 5};
+			types.SEI.pos = {col: 1, row: 2};
+			types.SLE.pos = {col: 4, row: 2};
+			types.SLI.pos = {col: 1, row: 5};
+		}
 
 		return (
 			<div className={"archetypes" + (this.props.relationsFor ? ' rel-for-' + this.props.relationsFor : '')}>
