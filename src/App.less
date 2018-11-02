@@ -20,6 +20,10 @@ body {
 }
 
 
+.hidden {
+  display: none;
+}
+
 .App {
   display: flex;
   flex-direction: column;
@@ -307,17 +311,15 @@ body {
 
   @rationalWidth: @quadraSize / 8;
 
-  .rational-marker,
-  .irrational-marker {
+  .rationality-marker-horizontal,
+  .rationality-marker-vertical {
     position: absolute;
     border: @zoom * 0.15vmin solid #666666;
     background: #bbbbbb;
     opacity: 0.2;
   }
 
-  .rational-marker {
-    display: none;
-
+  .rationality-marker-vertical {
     left: @quadraSize / 2 - @rationalWidth / 2;
     height: 2 * @quadraSize;
     width: @rationalWidth;
@@ -329,9 +331,7 @@ body {
     }
   }
 
-  .irrational-marker {
-    //display: none;
-
+  .rationality-marker-horizontal {
     top: @quadraSize / 2 - @rationalWidth / 2;
     width: 2 * @quadraSize;
     height: @rationalWidth;

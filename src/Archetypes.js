@@ -58,11 +58,11 @@ class Archetypes extends Component {
 				<div className="quadra-gamma-boundary" onClick={this.props.onRemoveRelations}> </div>
 				<div className="quadra-delta-boundary" onClick={this.props.onRemoveRelations}> </div>
 
-				<div className="rational-marker left"> </div>
-				<div className="rational-marker right"> </div>
+				<div className={"rationality-marker-vertical left" + (this.props.introvertsInside ? ' hidden' : '')}> </div>
+				<div className={"rationality-marker-vertical right" + (this.props.introvertsInside ? ' hidden' : '')}> </div>
 
-				<div className="irrational-marker top"> </div>
-				<div className="irrational-marker bottom"> </div>
+				<div className={"rationality-marker-horizontal top" + (!this.props.introvertsInside ? ' hidden' : '')}> </div>
+				<div className={"rationality-marker-horizontal bottom" + (!this.props.introvertsInside ? ' hidden' : '')}> </div>
 
 				<div className="intro-extra-boundary" onClick={this.props.onRemoveRelations}> </div>
 

@@ -27,6 +27,9 @@ body {
   padding: 0;
   font-family: Roboto, sans-serif;
 }
+.hidden {
+  display: none;
+}
 .App {
   display: flex;
   flex-direction: column;
@@ -243,32 +246,31 @@ body {
   background: #eee8aa;
   top: 50vmin;
 }
-.archetypes .rational-marker,
-.archetypes .irrational-marker {
+.archetypes .rationality-marker-horizontal,
+.archetypes .rationality-marker-vertical {
   position: absolute;
   border: 0.33vmin solid #666666;
   background: #bbbbbb;
   opacity: 0.2;
 }
-.archetypes .rational-marker {
-  display: none;
+.archetypes .rationality-marker-vertical {
   left: 21.875vmin;
   height: 100vmin;
   width: 6.25vmin;
   border-top: none;
   border-bottom: none;
 }
-.archetypes .rational-marker.right {
+.archetypes .rationality-marker-vertical.right {
   left: 71.875vmin;
 }
-.archetypes .irrational-marker {
+.archetypes .rationality-marker-horizontal {
   top: 21.875vmin;
   width: 100vmin;
   height: 6.25vmin;
   border-left: none;
   border-right: none;
 }
-.archetypes .irrational-marker.bottom {
+.archetypes .rationality-marker-horizontal.bottom {
   top: 71.875vmin;
 }
 .archetypes .intro-extra-boundary {
