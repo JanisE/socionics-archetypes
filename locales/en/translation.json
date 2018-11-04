@@ -29,6 +29,7 @@
 		"Dostoyevsky": {
 			"socionics abbr": "EII",
 			"epithet": "Dostoyevsky",
+			"epithet - alternatives": "Dr. Watson",
 			"social role": "Humanist",
 			"social role - full": "Humanist / Empath"
 		},
@@ -65,6 +66,7 @@
 		"Yesenin": {
 			"socionics abbr": "IEI",
 			"epithet": "Yesenin",
+			"epithet - alternatives": "Esenin",
 			"social role": "Romantic",
 			"social role - full": "Romantic / Lyricist"
 		},
@@ -77,12 +79,14 @@
 		"Robespierre": {
 			"socionics abbr": "LII",
 			"epithet": "Robespierre",
+			"epithet - alternatives": "Descartes",
 			"social role": "Analyst",
 			"social role - full": "Analyst / Scientist"
 		},
 		"Stierlitz": {
 			"socionics abbr": "LSE",
 			"epithet": "Stierlitz",
+			"epithet - alternatives": "Sherlock Holmes, Stirlitz",
 			"social role": "Administrator",
 			"social role - full": "Administrator / Director"
 		},
@@ -95,18 +99,21 @@
 		"Zhukov": {
 			"socionics abbr": "SLE",
 			"epithet": "Zhukov",
+			"epithet - alternatives": "Alexander the Great",
 			"social role": "Conqueror",
 			"social role - full": "Conqueror / Legionnaire"
 		},
 		"Gabin": {
 			"socionics abbr": "SLI",
 			"epithet": "Gabin",
+			"epithet - alternatives": "Gaben",
 			"social role": "Craftsman",
 			"social role - full": "Craftsman / Mechanic"
 		},
 		"Napoleon": {
 			"socionics abbr": "SEE",
 			"epithet": "Napoleon",
+			"epithet - alternatives": "Caesar",
 			"social role": "Politician",
 			"social role - full": "Politician / Ambassador"
 		},
@@ -173,7 +180,7 @@
 		},
 		"supervisee": {
 			"name": "supervisee",
-			"name alternatives": "social controlled",
+			"name alternatives": "social controlled, servant",
 			"abbr": "s"
 		},
 		"semidual": {
