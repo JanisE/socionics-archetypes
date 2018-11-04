@@ -33,22 +33,22 @@ class Archetypes extends Component {
 			types.SLE.pos = {col: 5, row: 1};
 			types.SLI.pos = {col: 2, row: 4};
 		} else {
-			types.EIE.pos = {col: 5, row: 3};
-			types.EII.pos = {col: 2, row: 6};
-			types.ESE.pos = {col: 2, row: 3};
-			types.ESI.pos = {col: 5, row: 6};
-			types.IEE.pos = {col: 3, row: 5};
-			types.IEI.pos = {col: 6, row: 2};
-			types.ILE.pos = {col: 3, row: 2};
-			types.ILI.pos = {col: 6, row: 5};
-			types.LIE.pos = {col: 5, row: 4};
-			types.LII.pos = {col: 2, row: 1};
-			types.LSE.pos = {col: 2, row: 4};
-			types.LSI.pos = {col: 5, row: 1};
-			types.SEE.pos = {col: 4, row: 5};
-			types.SEI.pos = {col: 1, row: 2};
-			types.SLE.pos = {col: 4, row: 2};
-			types.SLI.pos = {col: 1, row: 5};
+			types.EIE.pos = {col: 4, row: 2};
+			types.EII.pos = {col: 1, row: 5};
+			types.ESE.pos = {col: 3, row: 2};
+			types.ESI.pos = {col: 6, row: 5};
+			types.IEE.pos = {col: 2, row: 4};
+			types.IEI.pos = {col: 5, row: 1};
+			types.ILE.pos = {col: 2, row: 3};
+			types.ILI.pos = {col: 5, row: 6};
+			types.LIE.pos = {col: 4, row: 5};
+			types.LII.pos = {col: 1, row: 2};
+			types.LSE.pos = {col: 3, row: 5};
+			types.LSI.pos = {col: 6, row: 2};
+			types.SEE.pos = {col: 5, row: 4};
+			types.SEI.pos = {col: 2, row: 1};
+			types.SLE.pos = {col: 5, row: 3};
+			types.SLI.pos = {col: 2, row: 6};
 		}
 
 		return (
@@ -58,11 +58,11 @@ class Archetypes extends Component {
 				<div className="quadra-gamma-boundary" onClick={this.props.onRemoveRelations}> </div>
 				<div className="quadra-delta-boundary" onClick={this.props.onRemoveRelations}> </div>
 
-				<div className={"rationality-marker-vertical left" + (this.props.introvertsInside ? ' hidden' : '')}> </div>
-				<div className={"rationality-marker-vertical right" + (this.props.introvertsInside ? ' hidden' : '')}> </div>
+				<div className="rationality-marker-vertical left hidden"> </div>
+				<div className="rationality-marker-vertical right hidden"> </div>
 
-				<div className={"rationality-marker-horizontal top" + (!this.props.introvertsInside ? ' hidden' : '')}> </div>
-				<div className={"rationality-marker-horizontal bottom" + (!this.props.introvertsInside ? ' hidden' : '')}> </div>
+				<div className="rationality-marker-horizontal top"> </div>
+				<div className="rationality-marker-horizontal bottom"> </div>
 
 				<div className="intro-extra-boundary" onClick={this.props.onRemoveRelations}> </div>
 
