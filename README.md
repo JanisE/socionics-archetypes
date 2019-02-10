@@ -22,7 +22,7 @@ npm start
 
 Generate `relationships.less`:
 ```
-node src/relationships.js > src/relationships.less
+node src/generate_relationships.js > src/relationships.less
 ```
 
 # To-Do
