@@ -13,9 +13,15 @@ module.exports = {
 		dichotomies: {
 			aristocraticNotDemocratic: true,
 			askingNotDeclaring: true,
+			carefreeNotFarsighted: true,
+			constructivistNotEmotivist: true,
+			judiciousNotDecisive: false,
 			positiveNotNegative: false,
+			processNotResult: true,
+			staticNotDynamic: false,
 			subjectiveNotObjective: true,
-			tacticalNotStrategic: false
+			tacticalNotStrategic: false,
+			yieldingNotObstinate: false
 		}
 	},
 	EII: {
@@ -30,9 +36,15 @@ module.exports = {
 		dichotomies: {
 			aristocraticNotDemocratic: true,
 			askingNotDeclaring: false,
+			carefreeNotFarsighted: false,
+			constructivistNotEmotivist: true,
+			judiciousNotDecisive: true,
 			positiveNotNegative: true,
+			processNotResult: true,
+			staticNotDynamic: true,
 			subjectiveNotObjective: false,
-			tacticalNotStrategic: false
+			tacticalNotStrategic: false,
+			yieldingNotObstinate: true
 		}
 	},
 	ESE: {
@@ -47,9 +59,15 @@ module.exports = {
 		dichotomies: {
 			aristocraticNotDemocratic: false,
 			askingNotDeclaring: false,
+			carefreeNotFarsighted: false,
+			constructivistNotEmotivist: true,
+			judiciousNotDecisive: true,
 			positiveNotNegative: true,
+			processNotResult: false,
+			staticNotDynamic: false,
 			subjectiveNotObjective: true,
-			tacticalNotStrategic: true
+			tacticalNotStrategic: true,
+			yieldingNotObstinate: false
 		}
 	},
 	ESI: {
@@ -64,9 +82,15 @@ module.exports = {
 		dichotomies: {
 			aristocraticNotDemocratic: false,
 			askingNotDeclaring: true,
+			carefreeNotFarsighted: true,
+			constructivistNotEmotivist: true,
+			judiciousNotDecisive: false,
 			positiveNotNegative: false,
+			processNotResult: false,
+			staticNotDynamic: true,
 			subjectiveNotObjective: false,
-			tacticalNotStrategic: true
+			tacticalNotStrategic: true,
+			yieldingNotObstinate: true
 		}
 	},
 	ILE: {
@@ -81,9 +105,15 @@ module.exports = {
 		dichotomies: {
 			aristocraticNotDemocratic: false,
 			askingNotDeclaring: true,
+			carefreeNotFarsighted: true,
+			constructivistNotEmotivist: true,
+			judiciousNotDecisive: true,
 			positiveNotNegative: true,
+			processNotResult: true,
+			staticNotDynamic: true,
 			subjectiveNotObjective: true,
-			tacticalNotStrategic: true
+			tacticalNotStrategic: true,
+			yieldingNotObstinate: true
 		}
 	},
 	ILI: {
@@ -98,9 +128,15 @@ module.exports = {
 		dichotomies: {
 			aristocraticNotDemocratic: false,
 			askingNotDeclaring: false,
+			carefreeNotFarsighted: false,
+			constructivistNotEmotivist: true,
+			judiciousNotDecisive: false,
 			positiveNotNegative: false,
+			processNotResult: true,
+			staticNotDynamic: false,
 			subjectiveNotObjective: false,
-			tacticalNotStrategic: true
+			tacticalNotStrategic: true,
+			yieldingNotObstinate: false
 		}
 	},
 	IEE: {
@@ -115,9 +151,15 @@ module.exports = {
 		dichotomies: {
 			aristocraticNotDemocratic: true,
 			askingNotDeclaring: false,
+			carefreeNotFarsighted: true,
+			constructivistNotEmotivist: false,
+			judiciousNotDecisive: true,
 			positiveNotNegative: false,
+			processNotResult: false,
+			staticNotDynamic: true,
 			subjectiveNotObjective: false,
-			tacticalNotStrategic: true
+			tacticalNotStrategic: true,
+			yieldingNotObstinate: false
 		}
 	},
 	IEI: {
@@ -132,9 +174,15 @@ module.exports = {
 		dichotomies: {
 			aristocraticNotDemocratic: true,
 			askingNotDeclaring: true,
+			carefreeNotFarsighted: false,
+			constructivistNotEmotivist: false,
+			judiciousNotDecisive: false,
 			positiveNotNegative: true,
+			processNotResult: false,
+			staticNotDynamic: false,
 			subjectiveNotObjective: true,
-			tacticalNotStrategic: true
+			tacticalNotStrategic: true,
+			yieldingNotObstinate: true
 		}
 	},
 	LIE: {
@@ -149,9 +197,15 @@ module.exports = {
 		dichotomies: {
 			aristocraticNotDemocratic: false,
 			askingNotDeclaring: false,
+			carefreeNotFarsighted: true,
+			constructivistNotEmotivist: false,
+			judiciousNotDecisive: false,
 			positiveNotNegative: true,
+			processNotResult: false,
+			staticNotDynamic: false,
 			subjectiveNotObjective: false,
-			tacticalNotStrategic: false
+			tacticalNotStrategic: false,
+			yieldingNotObstinate: true
 		}
 	},
 	LII: {
@@ -166,9 +220,15 @@ module.exports = {
 		dichotomies: {
 			aristocraticNotDemocratic: false,
 			askingNotDeclaring: true,
+			carefreeNotFarsighted: false,
+			constructivistNotEmotivist: false,
+			judiciousNotDecisive: true,
 			positiveNotNegative: false,
+			processNotResult: false,
+			staticNotDynamic: true,
 			subjectiveNotObjective: true,
-			tacticalNotStrategic: false
+			tacticalNotStrategic: false,
+			yieldingNotObstinate: false
 		}
 	},
 	LSE: {
@@ -183,9 +243,15 @@ module.exports = {
 		dichotomies: {
 			aristocraticNotDemocratic: true,
 			askingNotDeclaring: true,
+			carefreeNotFarsighted: false,
+			constructivistNotEmotivist: false,
+			judiciousNotDecisive: true,
 			positiveNotNegative: false,
+			processNotResult: true,
+			staticNotDynamic: false,
 			subjectiveNotObjective: false,
-			tacticalNotStrategic: true
+			tacticalNotStrategic: true,
+			yieldingNotObstinate: true
 		}
 	},
 	LSI: {
@@ -200,9 +266,15 @@ module.exports = {
 		dichotomies: {
 			aristocraticNotDemocratic: true,
 			askingNotDeclaring: false,
+			carefreeNotFarsighted: true,
+			constructivistNotEmotivist: false,
+			judiciousNotDecisive: false,
 			positiveNotNegative: true,
+			processNotResult: true,
+			staticNotDynamic: true,
 			subjectiveNotObjective: true,
-			tacticalNotStrategic: true
+			tacticalNotStrategic: true,
+			yieldingNotObstinate: false
 		}
 	},
 	SLE: {
@@ -217,9 +289,15 @@ module.exports = {
 		dichotomies: {
 			aristocraticNotDemocratic: true,
 			askingNotDeclaring: false,
+			carefreeNotFarsighted: false,
+			constructivistNotEmotivist: true,
+			judiciousNotDecisive: false,
 			positiveNotNegative: false,
+			processNotResult: false,
+			staticNotDynamic: true,
 			subjectiveNotObjective: true,
-			tacticalNotStrategic: false
+			tacticalNotStrategic: false,
+			yieldingNotObstinate: true
 		}
 	},
 	SLI: {
@@ -234,9 +312,15 @@ module.exports = {
 		dichotomies: {
 			aristocraticNotDemocratic: true,
 			askingNotDeclaring: true,
+			carefreeNotFarsighted: true,
+			constructivistNotEmotivist: true,
+			judiciousNotDecisive: true,
 			positiveNotNegative: true,
+			processNotResult: false,
+			staticNotDynamic: false,
 			subjectiveNotObjective: false,
-			tacticalNotStrategic: false
+			tacticalNotStrategic: false,
+			yieldingNotObstinate: false
 		}
 	},
 	SEE: {
@@ -251,9 +335,15 @@ module.exports = {
 		dichotomies: {
 			aristocraticNotDemocratic: false,
 			askingNotDeclaring: true,
+			carefreeNotFarsighted: false,
+			constructivistNotEmotivist: false,
+			judiciousNotDecisive: false,
 			positiveNotNegative: true,
+			processNotResult: true,
+			staticNotDynamic: true,
 			subjectiveNotObjective: false,
-			tacticalNotStrategic: false
+			tacticalNotStrategic: false,
+			yieldingNotObstinate: false
 		}
 	},
 	SEI: {
@@ -268,9 +358,15 @@ module.exports = {
 		dichotomies: {
 			aristocraticNotDemocratic: false,
 			askingNotDeclaring: false,
+			carefreeNotFarsighted: true,
+			constructivistNotEmotivist: false,
+			judiciousNotDecisive: true,
 			positiveNotNegative: false,
+			processNotResult: true,
+			staticNotDynamic: false,
 			subjectiveNotObjective: true,
-			tacticalNotStrategic: false
+			tacticalNotStrategic: false,
+			yieldingNotObstinate: true
 		}
 	}
 };
