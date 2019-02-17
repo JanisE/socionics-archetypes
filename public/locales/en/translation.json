@@ -8,7 +8,9 @@
 		"Sensory": "Sensory",
 		"Intuitive": "Intuitive",
 		"Irrational": "Irrational",
-		"Rational": "Rational"
+		"Rational": "Rational",
+		"Aristocratic": "Aristocratic",
+		"Democratic": "Democratic"
 	},
 	"prefs": {
 		"Introverts Inside": "Introverts Inside"

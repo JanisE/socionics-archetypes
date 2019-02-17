@@ -69,45 +69,50 @@ class Archetypes extends Component {
 				<ul>
 					{Object.keys(types).map(type =>
 					{
-						let enabled = this.props.properties.reduce((enabled, property) => {
+						let enabled = this.props.dichotomies.reduce((enabled, dichotomy) => {
 							if (enabled) {
-								switch (property.name) {
+								switch (dichotomy.name) {
 								case 'introvert':
-									enabled = types[type].dichotomyAbbr[0] === 'I';
+									enabled = ! dichotomy.value || types[type].dichotomyAbbr[0] === 'I';
 									break;
 
 								case 'extrovert':
-									enabled = types[type].dichotomyAbbr[0] === 'E';
+									enabled = ! dichotomy.value || types[type].dichotomyAbbr[0] === 'E';
 									break;
 
 								case 'intuition':
-									enabled = types[type].dichotomyAbbr[1] === 'N';
+									enabled = ! dichotomy.value || types[type].dichotomyAbbr[1] === 'N';
 									break;
 
 								case 'sensing':
-									enabled = types[type].dichotomyAbbr[1] === 'S';
+									enabled = ! dichotomy.value || types[type].dichotomyAbbr[1] === 'S';
 									break;
 
 								case 'logic':
-									enabled = types[type].dichotomyAbbr[2] === 'T';
+									enabled = ! dichotomy.value || types[type].dichotomyAbbr[2] === 'T';
 									break;
 
 								case 'ethics':
-									enabled = types[type].dichotomyAbbr[2] === 'F';
+									enabled = ! dichotomy.value || types[type].dichotomyAbbr[2] === 'F';
 									break;
 
 								case 'irrational':
-									enabled = types[type].dichotomyAbbr[3] === 'p';
+									enabled = ! dichotomy.value || types[type].dichotomyAbbr[3] === 'p';
 									break;
 
 								case 'rational':
-									enabled = types[type].dichotomyAbbr[3] === 'j';
+									enabled = ! dichotomy.value || types[type].dichotomyAbbr[3] === 'j';
+									break;
+
+								case 'aristocraticNotDemocratic':
+									enabled = dichotomy.value === null
+										|| dichotomy.value === types[type].dichotomies.aristocraticNotDemocratic;
 									break;
 
 								default:
-									console.error('Archetypes: Unexpected property:', property);
+									console.error('Archetypes: Unexpected dichotomy:', dichotomy);
 								}
-							} // Disabled if the type does not have any one of the properties.
+							} // Disabled if the type does not match all of the dichotomies.
 
 							return enabled;
 						}, true);

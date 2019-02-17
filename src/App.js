@@ -47,7 +47,8 @@ class App extends Component
 				logic: initProperties.indexOf('T') > -1,
 				ethics: initProperties.indexOf('F') > -1,
 				rational: initProperties.indexOf('j') > -1,
-				irrational: initProperties.indexOf('p') > -1
+				irrational: initProperties.indexOf('p') > -1,
+				aristocraticNotDemocratic: null
 			},
 			relationsFor: this.props.match.params.relationsFor || '',
 			introvertsInside: false,
@@ -63,6 +64,10 @@ class App extends Component
 		this.onSensingSwitch = this.onSensingSwitch.bind(this);
 		this.onRationalSwitch = this.onRationalSwitch.bind(this);
 		this.onIrrationalSwitch = this.onIrrationalSwitch.bind(this);
+
+		this.onAristocraticSwitch = this.onAristocraticSwitch.bind(this);
+		this.onDemocraticSwitch = this.onDemocraticSwitch.bind(this);
+
 		this.onQuadraSwitch = this.onQuadraSwitch.bind(this);
 		this.onRemoveRelations= this.onRemoveRelations.bind(this);
 		this.onToggleRelations= this.onToggleRelations.bind(this);
@@ -71,42 +76,92 @@ class App extends Component
 
 	onIntrovertSwitch (event)
 	{
-		this.setState({dichotomies: {...this.state.dichotomies, introvert: event.target.checked}});
+		const newValues = {introvert: event.target.checked};
+		if (event.target.checked) {
+			newValues.extrovert = ! event.target.checked;
+		}
+
+		this.setState({dichotomies: {...this.state.dichotomies, ...newValues}});
 	}
 
 	onExtrovertSwitch (event)
 	{
-		this.setState({dichotomies: {...this.state.dichotomies, extrovert: event.target.checked}});
+		const newValues = {extrovert: event.target.checked};
+		if (event.target.checked) {
+			newValues.introvert = ! event.target.checked;
+		}
+
+		this.setState({dichotomies: {...this.state.dichotomies, ...newValues}});
 	}
 
 	onLogicSwitch (event)
 	{
-		this.setState({dichotomies: {...this.state.dichotomies, logic: event.target.checked}});
+		const newValues = {logic: event.target.checked};
+		if (event.target.checked) {
+			newValues.ethics = ! event.target.checked;
+		}
+
+		this.setState({dichotomies: {...this.state.dichotomies, ...newValues}});
 	}
 
 	onEthicsSwitch (event)
 	{
-		this.setState({dichotomies: {...this.state.dichotomies, ethics: event.target.checked}});
+		const newValues = {ethics: event.target.checked};
+		if (event.target.checked) {
+			newValues.logic = ! event.target.checked;
+		}
+
+		this.setState({dichotomies: {...this.state.dichotomies, ...newValues}});
 	}
 
 	onIntuitionSwitch (event)
 	{
-		this.setState({dichotomies: {...this.state.dichotomies, intuition: event.target.checked}});
+		const newValues = {intuition: event.target.checked};
+		if (event.target.checked) {
+			newValues.sensing = ! event.target.checked;
+		}
+
+		this.setState({dichotomies: {...this.state.dichotomies, ...newValues}});
 	}
 
 	onSensingSwitch (event)
 	{
-		this.setState({dichotomies: {...this.state.dichotomies, sensing: event.target.checked}});
+		const newValues = {sensing: event.target.checked};
+		if (event.target.checked) {
+			newValues.intuition = ! event.target.checked;
+		}
+
+		this.setState({dichotomies: {...this.state.dichotomies, ...newValues}});
 	}
 
 	onRationalSwitch (event)
 	{
-		this.setState({dichotomies: {...this.state.dichotomies, rational: event.target.checked}});
+		const newValues = {rational: event.target.checked};
+		if (event.target.checked) {
+			newValues.irrational = ! event.target.checked;
+		}
+
+		this.setState({dichotomies: {...this.state.dichotomies, ...newValues}});
 	}
 
 	onIrrationalSwitch (event)
 	{
-		this.setState({dichotomies: {...this.state.dichotomies, irrational: event.target.checked}});
+		const newValues = {irrational: event.target.checked};
+		if (event.target.checked) {
+			newValues.rational = ! event.target.checked;
+		}
+
+		this.setState({dichotomies: {...this.state.dichotomies, ...newValues}});
+	}
+
+	onAristocraticSwitch (event)
+	{
+		this.setState({dichotomies: {...this.state.dichotomies, aristocraticNotDemocratic: event.target.checked ? true : null}});
+	}
+
+	onDemocraticSwitch (event)
+	{
+		this.setState({dichotomies: {...this.state.dichotomies, aristocraticNotDemocratic: event.target.checked ? false : null}});
 	}
 
 	onQuadraSwitch (event) {
@@ -186,15 +241,14 @@ class App extends Component
 		};
 	}
 
-	render ()
-	{
+	render () {
 		const {t} = this.props;
 
 		return (
 			<div className="App">
 				<Archetypes
-					properties={Object.keys(this.state.dichotomies).filter(key => this.state.dichotomies[key])
-						.map(key => ({name: key, value: this.state[key]}))}
+					dichotomies={Object.keys(this.state.dichotomies)
+						.map(key => ({name: key, value: this.state.dichotomies[key]}))}
 					quadra={this.state.quadra}
 					relationsFor={this.state.relationsFor}
 					introvertsInside={this.state.introvertsInside}
@@ -248,6 +302,18 @@ class App extends Component
 							<FormControlLabel
 								control={<Checkbox checked={this.state.dichotomies.irrational} onChange={this.onIrrationalSwitch}/>}
 								label={t('controls.Irrational')}
+							/>
+						</div>
+
+						<div className="pair">
+							<FormControlLabel
+								control={<Checkbox checked={this.state.dichotomies.aristocraticNotDemocratic === true} onChange={this.onAristocraticSwitch}/>}
+								label={t('controls.Aristocratic')}
+							/>
+
+							<FormControlLabel
+								control={<Checkbox checked={this.state.dichotomies.aristocraticNotDemocratic === false} onChange={this.onDemocraticSwitch}/>}
+								label={t('controls.Democratic')}
 							/>
 						</div>
 					</div>
