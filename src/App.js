@@ -69,6 +69,8 @@ class App extends Component
 		this.onDemocraticSwitch = this.onDemocraticSwitch.bind(this);
 		this.onYieldingSwitch = this.onYieldingSwitch.bind(this);
 		this.onObstinateSwitch = this.onObstinateSwitch.bind(this);
+		this.onPositiveSwitch = this.onPositiveSwitch.bind(this);
+		this.onNegativeSwitch = this.onNegativeSwitch.bind(this);
 
 		this.onQuadraSwitch = this.onQuadraSwitch.bind(this);
 		this.onRemoveRelations= this.onRemoveRelations.bind(this);
@@ -172,6 +174,13 @@ class App extends Component
 		this.setState({dichotomies: {...this.state.dichotomies, yieldingNotObstinate: event.target.checked ? false : null}});
 	}
 
+	onPositiveSwitch (event) {
+		this.setState({dichotomies: {...this.state.dichotomies, positiveNotNegative: event.target.checked ? true : null}});
+	}
+
+	onNegativeSwitch (event) {
+		this.setState({dichotomies: {...this.state.dichotomies, positiveNotNegative: event.target.checked ? false : null}});
+	}
 
 	onQuadraSwitch (event) {
 		this.setState({quadra: event.target.value});
@@ -335,6 +344,18 @@ class App extends Component
 							<FormControlLabel
 								control={<Checkbox checked={this.state.dichotomies.yieldingNotObstinate === false} onChange={this.onObstinateSwitch}/>}
 								label={t('controls.Obstinate')}
+							/>
+						</div>
+
+						<div className="pair">
+							<FormControlLabel
+								control={<Checkbox checked={this.state.dichotomies.positiveNotNegative === true} onChange={this.onPositiveSwitch}/>}
+								label={t('controls.Positive')}
+							/>
+
+							<FormControlLabel
+								control={<Checkbox checked={this.state.dichotomies.positiveNotNegative === false} onChange={this.onNegativeSwitch}/>}
+								label={t('controls.Negative')}
 							/>
 						</div>
 					</div>

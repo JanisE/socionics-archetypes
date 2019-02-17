@@ -12,7 +12,9 @@
 		"Aristocratic": "Aristokrāts",
 		"Democratic": "Demokrāts",
 		"Yielding": "Piekāpīgs",
-		"Obstinate": "Ietiepīgs"
+		"Obstinate": "Ietiepīgs",
+		"Positive": "Positīvists",
+		"Negative": "Negatīvists"
 	},
 	"prefs": {
 		"Introverts Inside": "Introverti iekšpusē"

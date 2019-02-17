@@ -114,6 +114,11 @@ class Archetypes extends Component {
 										|| dichotomy.value === types[type].dichotomies.yieldingNotObstinate;
 									break;
 
+								case 'positiveNotNegative':
+									enabled = dichotomy.value === null
+										|| dichotomy.value === types[type].dichotomies.positiveNotNegative;
+									break;
+
 								default:
 									console.error('Archetypes: Unexpected dichotomy:', dichotomy);
 								}

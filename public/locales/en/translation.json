@@ -12,7 +12,9 @@
 		"Aristocratic": "Aristocratic",
 		"Democratic": "Democratic",
 		"Yielding": "Yielding",
-		"Obstinate": "Obstinate"
+		"Obstinate": "Obstinate",
+		"Positive": "Positive",
+		"Negative": "Negative"
 	},
 	"prefs": {
 		"Introverts Inside": "Introverts Inside"
