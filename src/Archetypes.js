@@ -69,7 +69,7 @@ class Archetypes extends Component {
 				<ul>
 					{Object.keys(types).map(type =>
 					{
-						const enabled = this.props.properties.reduce((enabled, property) => {
+						let enabled = this.props.properties.reduce((enabled, property) => {
 							if (enabled) {
 								switch (property.name) {
 								case 'introvert':
@@ -104,10 +104,6 @@ class Archetypes extends Component {
 									enabled = types[type].dichotomyAbbr[3] === 'j';
 									break;
 
-								case 'quadra':
-									enabled = types[type].quadra === property.value;
-									break;
-
 								default:
 									console.error('Archetypes: Unexpected property:', property);
 								}
@@ -115,6 +111,10 @@ class Archetypes extends Component {
 
 							return enabled;
 						}, true);
+
+						if(this.props.quadra){
+							enabled = enabled && this.props.quadra === types[type].quadra;
+						}
 
 						return (
 							<li className={'pos-col-' + types[type].pos.col + ' pos-row-' + types[type].pos.row

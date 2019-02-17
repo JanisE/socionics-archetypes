@@ -39,14 +39,16 @@ class App extends Component
 
 		this.state = {
 			quadra: initQuadra,
-			introvert: initProperties.indexOf('I') > -1,
-			extrovert: initProperties.indexOf('E') > -1,
-			intuition: initProperties.indexOf('N') > -1,
-			sensing: initProperties.indexOf('S') > -1,
-			logic: initProperties.indexOf('T') > -1,
-			ethics: initProperties.indexOf('F') > -1,
-			rational: initProperties.indexOf('j') > -1,
-			irrational: initProperties.indexOf('p') > -1,
+			dichotomies: {
+				introvert: initProperties.indexOf('I') > -1,
+				extrovert: initProperties.indexOf('E') > -1,
+				intuition: initProperties.indexOf('N') > -1,
+				sensing: initProperties.indexOf('S') > -1,
+				logic: initProperties.indexOf('T') > -1,
+				ethics: initProperties.indexOf('F') > -1,
+				rational: initProperties.indexOf('j') > -1,
+				irrational: initProperties.indexOf('p') > -1
+			},
 			relationsFor: this.props.match.params.relationsFor || '',
 			introvertsInside: false,
 			language: undefined,
@@ -69,42 +71,42 @@ class App extends Component
 
 	onIntrovertSwitch (event)
 	{
-		this.setState({introvert: event.target.checked});
+		this.setState({dichotomies: {...this.state.dichotomies, introvert: event.target.checked}});
 	}
 
 	onExtrovertSwitch (event)
 	{
-		this.setState({extrovert: event.target.checked});
+		this.setState({dichotomies: {...this.state.dichotomies, extrovert: event.target.checked}});
 	}
 
 	onLogicSwitch (event)
 	{
-		this.setState({logic: event.target.checked});
+		this.setState({dichotomies: {...this.state.dichotomies, logic: event.target.checked}});
 	}
 
 	onEthicsSwitch (event)
 	{
-		this.setState({ethics: event.target.checked});
+		this.setState({dichotomies: {...this.state.dichotomies, ethics: event.target.checked}});
 	}
 
 	onIntuitionSwitch (event)
 	{
-		this.setState({intuition: event.target.checked});
+		this.setState({dichotomies: {...this.state.dichotomies, intuition: event.target.checked}});
 	}
 
 	onSensingSwitch (event)
 	{
-		this.setState({sensing: event.target.checked});
+		this.setState({dichotomies: {...this.state.dichotomies, sensing: event.target.checked}});
 	}
 
 	onRationalSwitch (event)
 	{
-		this.setState({rational: event.target.checked});
+		this.setState({dichotomies: {...this.state.dichotomies, rational: event.target.checked}});
 	}
 
 	onIrrationalSwitch (event)
 	{
-		this.setState({irrational: event.target.checked});
+		this.setState({dichotomies: {...this.state.dichotomies, irrational: event.target.checked}});
 	}
 
 	onQuadraSwitch (event) {
@@ -130,14 +132,14 @@ class App extends Component
 
 	static getRoutePropertyStatus (state) {
 		return {
-			'E': state.extrovert,
-			'I': state.introvert,
-			'N': state.intuition,
-			'S': state.sensing,
-			'F': state.ethics,
-			'T': state.logic,
-			'j': state.rational,
-			'p': state.irrational,
+			'E': state.dichotomies.extrovert,
+			'I': state.dichotomies.introvert,
+			'N': state.dichotomies.intuition,
+			'S': state.dichotomies.sensing,
+			'F': state.dichotomies.ethics,
+			'T': state.dichotomies.logic,
+			'j': state.dichotomies.rational,
+			'p': state.dichotomies.irrational,
 			'α': state.quadra === 'α',
 			'β': state.quadra === 'β',
 			'δ': state.quadra === 'δ',
@@ -191,8 +193,9 @@ class App extends Component
 		return (
 			<div className="App">
 				<Archetypes
-					properties={Object.keys(this.state).filter(key => key !== 'relationsFor' && this.state[key])
+					properties={Object.keys(this.state.dichotomies).filter(key => this.state.dichotomies[key])
 						.map(key => ({name: key, value: this.state[key]}))}
+					quadra={this.state.quadra}
 					relationsFor={this.state.relationsFor}
 					introvertsInside={this.state.introvertsInside}
 					onRemoveRelations={this.onRemoveRelations}
@@ -202,48 +205,48 @@ class App extends Component
 					<div className="dichotomies">
 						<div className="pair">
 							<FormControlLabel
-								control={<Checkbox checked={this.state.introvert} onChange={this.onIntrovertSwitch}/>}
+								control={<Checkbox checked={this.state.dichotomies.introvert} onChange={this.onIntrovertSwitch}/>}
 								label={t('controls.Introvert')}
 							/>
 
 							<FormControlLabel
-								control={<Checkbox checked={this.state.extrovert} onChange={this.onExtrovertSwitch}/>}
+								control={<Checkbox checked={this.state.dichotomies.extrovert} onChange={this.onExtrovertSwitch}/>}
 								label={t('controls.Extravert')}
 							/>
 						</div>
 
 						<div className="pair">
 							<FormControlLabel
-								control={<Checkbox checked={this.state.logic} onChange={this.onLogicSwitch}/>}
+								control={<Checkbox checked={this.state.dichotomies.logic} onChange={this.onLogicSwitch}/>}
 								label={t('controls.Logical')}
 							/>
 
 							<FormControlLabel
-								control={<Checkbox checked={this.state.ethics} onChange={this.onEthicsSwitch}/>}
+								control={<Checkbox checked={this.state.dichotomies.ethics} onChange={this.onEthicsSwitch}/>}
 								label={t('controls.Ethical')}
 							/>
 						</div>
 
 						<div className="pair">
 							<FormControlLabel
-								control={<Checkbox checked={this.state.intuition} onChange={this.onIntuitionSwitch}/>}
+								control={<Checkbox checked={this.state.dichotomies.intuition} onChange={this.onIntuitionSwitch}/>}
 								label={t('controls.Intuitive')}
 							/>
 
 							<FormControlLabel
-								control={<Checkbox checked={this.state.sensing} onChange={this.onSensingSwitch}/>}
+								control={<Checkbox checked={this.state.dichotomies.sensing} onChange={this.onSensingSwitch}/>}
 								label={t('controls.Sensory')}
 							/>
 						</div>
 
 						<div className="pair">
 							<FormControlLabel
-								control={<Checkbox checked={this.state.rational} onChange={this.onRationalSwitch}/>}
+								control={<Checkbox checked={this.state.dichotomies.rational} onChange={this.onRationalSwitch}/>}
 								label={t('controls.Rational')}
 							/>
 
 							<FormControlLabel
-								control={<Checkbox checked={this.state.irrational} onChange={this.onIrrationalSwitch}/>}
+								control={<Checkbox checked={this.state.dichotomies.irrational} onChange={this.onIrrationalSwitch}/>}
 								label={t('controls.Irrational')}
 							/>
 						</div>
