@@ -67,6 +67,8 @@ class App extends Component
 
 		this.onAristocraticSwitch = this.onAristocraticSwitch.bind(this);
 		this.onDemocraticSwitch = this.onDemocraticSwitch.bind(this);
+		this.onYieldingSwitch = this.onYieldingSwitch.bind(this);
+		this.onObstinateSwitch = this.onObstinateSwitch.bind(this);
 
 		this.onQuadraSwitch = this.onQuadraSwitch.bind(this);
 		this.onRemoveRelations= this.onRemoveRelations.bind(this);
@@ -154,15 +156,22 @@ class App extends Component
 		this.setState({dichotomies: {...this.state.dichotomies, ...newValues}});
 	}
 
-	onAristocraticSwitch (event)
-	{
+	onAristocraticSwitch (event) {
 		this.setState({dichotomies: {...this.state.dichotomies, aristocraticNotDemocratic: event.target.checked ? true : null}});
 	}
 
-	onDemocraticSwitch (event)
-	{
+	onDemocraticSwitch (event) {
 		this.setState({dichotomies: {...this.state.dichotomies, aristocraticNotDemocratic: event.target.checked ? false : null}});
 	}
+
+	onYieldingSwitch (event) {
+		this.setState({dichotomies: {...this.state.dichotomies, yieldingNotObstinate: event.target.checked ? true : null}});
+	}
+
+	onObstinateSwitch (event) {
+		this.setState({dichotomies: {...this.state.dichotomies, yieldingNotObstinate: event.target.checked ? false : null}});
+	}
+
 
 	onQuadraSwitch (event) {
 		this.setState({quadra: event.target.value});
@@ -314,6 +323,18 @@ class App extends Component
 							<FormControlLabel
 								control={<Checkbox checked={this.state.dichotomies.aristocraticNotDemocratic === false} onChange={this.onDemocraticSwitch}/>}
 								label={t('controls.Democratic')}
+							/>
+						</div>
+
+						<div className="pair">
+							<FormControlLabel
+								control={<Checkbox checked={this.state.dichotomies.yieldingNotObstinate === true} onChange={this.onYieldingSwitch}/>}
+								label={t('controls.Yielding')}
+							/>
+
+							<FormControlLabel
+								control={<Checkbox checked={this.state.dichotomies.yieldingNotObstinate === false} onChange={this.onObstinateSwitch}/>}
+								label={t('controls.Obstinate')}
 							/>
 						</div>
 					</div>

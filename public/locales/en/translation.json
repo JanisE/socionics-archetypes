@@ -10,7 +10,9 @@
 		"Irrational": "Irrational",
 		"Rational": "Rational",
 		"Aristocratic": "Aristocratic",
-		"Democratic": "Democratic"
+		"Democratic": "Democratic",
+		"Yielding": "Yielding",
+		"Obstinate": "Obstinate"
 	},
 	"prefs": {
 		"Introverts Inside": "Introverts Inside"
