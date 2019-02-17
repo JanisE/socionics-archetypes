@@ -8,7 +8,13 @@
 		"Sensory": "Sensorais",
 		"Intuitive": "Intuīts",
 		"Irrational": "Iracionāls",
-		"Rational": "Racionāls"
+		"Rational": "Racionāls",
+		"Aristocratic": "Aristokrāts",
+		"Democratic": "Demokrāts",
+		"Yielding": "Piekāpīgs",
+		"Obstinate": "Ietiepīgs",
+		"Positive": "Positīvists",
+		"Negative": "Negatīvists"
 	},
 	"prefs": {
 		"Introverts Inside": "Introverti iekšpusē"
