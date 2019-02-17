@@ -48,7 +48,10 @@ class App extends Component
 				ethics: initProperties.indexOf('F') > -1,
 				rational: initProperties.indexOf('j') > -1,
 				irrational: initProperties.indexOf('p') > -1,
-				aristocraticNotDemocratic: null
+				aristocraticNotDemocratic: null,
+				yieldingNotObstinate: null,
+				positiveNotNegative: null,
+				carefreeNotFarsighted: null
 			},
 			relationsFor: this.props.match.params.relationsFor || '',
 			introvertsInside: false,
@@ -71,6 +74,8 @@ class App extends Component
 		this.onObstinateSwitch = this.onObstinateSwitch.bind(this);
 		this.onPositiveSwitch = this.onPositiveSwitch.bind(this);
 		this.onNegativeSwitch = this.onNegativeSwitch.bind(this);
+		this.onCarefreeSwitch = this.onCarefreeSwitch.bind(this);
+		this.onFarsightedSwitch = this.onFarsightedSwitch.bind(this);
 
 		this.onQuadraSwitch = this.onQuadraSwitch.bind(this);
 		this.onRemoveRelations= this.onRemoveRelations.bind(this);
@@ -180,6 +185,14 @@ class App extends Component
 
 	onNegativeSwitch (event) {
 		this.setState({dichotomies: {...this.state.dichotomies, positiveNotNegative: event.target.checked ? false : null}});
+	}
+
+	onCarefreeSwitch (event) {
+		this.setState({dichotomies: {...this.state.dichotomies, carefreeNotFarsighted: event.target.checked ? true : null}});
+	}
+
+	onFarsightedSwitch (event) {
+		this.setState({dichotomies: {...this.state.dichotomies, carefreeNotFarsighted: event.target.checked ? false : null}});
 	}
 
 	onQuadraSwitch (event) {
@@ -356,6 +369,18 @@ class App extends Component
 							<FormControlLabel
 								control={<Checkbox checked={this.state.dichotomies.positiveNotNegative === false} onChange={this.onNegativeSwitch}/>}
 								label={t('controls.Negative')}
+							/>
+						</div>
+
+						<div className="pair">
+							<FormControlLabel
+								control={<Checkbox checked={this.state.dichotomies.carefreeNotFarsighted === true} onChange={this.onCarefreeSwitch}/>}
+								label={t('controls.Carefree')}
+							/>
+
+							<FormControlLabel
+								control={<Checkbox checked={this.state.dichotomies.carefreeNotFarsighted === false} onChange={this.onFarsightedSwitch}/>}
+								label={t('controls.Farsighted')}
 							/>
 						</div>
 					</div>
