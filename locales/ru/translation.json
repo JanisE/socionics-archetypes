@@ -8,7 +8,15 @@
 		"Sensory": "Сенсорик",
 		"Intuitive": "Интуит",
 		"Irrational": "Иррационал",
-		"Rational": "Рационал"
+		"Rational": "Рационал",
+		"Aristocratic": "Aristocratic",
+		"Democratic": "Democratic",
+		"Yielding": "Уступчивый",
+		"Obstinate": "Упрямый",
+		"Positive": "Positive",
+		"Negative": "Negative",
+		"Carefree": "Carefree",
+		"Farsighted": "Farsighted"
 	},
 	"prefs": {
 		"Introverts Inside": "Introverts Inside"
