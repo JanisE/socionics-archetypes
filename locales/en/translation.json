@@ -16,7 +16,9 @@
 		"Positive": "Positive",
 		"Negative": "Negative",
 		"Carefree": "Carefree",
-		"Farsighted": "Farsighted"
+		"Farsighted": "Farsighted",
+		"Asking": "Asking",
+		"Declaring": "Declaring"
 	},
 	"prefs": {
 		"Introverts Inside": "Introverts Inside"

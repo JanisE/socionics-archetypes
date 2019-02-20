@@ -9,14 +9,14 @@
 		"Intuitive": "Интуит",
 		"Irrational": "Иррационал",
 		"Rational": "Рационал",
-		"Aristocratic": "Aristocratic",
-		"Democratic": "Democratic",
+		"Aristocratic": "Аристократ",
+		"Democratic": "Демократ",
 		"Yielding": "Уступчивый",
 		"Obstinate": "Упрямый",
-		"Positive": "Positive",
-		"Negative": "Negative",
-		"Carefree": "Carefree",
-		"Farsighted": "Farsighted"
+		"Positive": "Позитивист",
+		"Negative": "Негативист",
+		"Carefree": "Беспечный",
+		"Farsighted": "Предусмотрительный"
 	},
 	"prefs": {
 		"Introverts Inside": "Introverts Inside"

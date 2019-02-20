@@ -16,7 +16,9 @@
 		"Positive": "Pozitīvists",
 		"Negative": "Negatīvists",
 		"Carefree": "Bezrūpīgs",
-		"Farsighted": "Piesardzīgs"
+		"Farsighted": "Piesardzīgs",
+		"Asking": "Dialogs",
+		"Declaring": "Monologs"
 	},
 	"prefs": {
 		"Introverts Inside": "Introverti iekšpusē"
