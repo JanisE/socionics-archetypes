@@ -18,7 +18,9 @@
 		"Carefree": "Carefree",
 		"Farsighted": "Farsighted",
 		"Asking": "Asking",
-		"Declaring": "Declaring"
+		"Declaring": "Declaring",
+		"Static": "Static",
+		"Dynamic": "Dynamic"
 	},
 	"prefs": {
 		"Introverts Inside": "Introverts Inside"

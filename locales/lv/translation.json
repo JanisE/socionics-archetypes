@@ -18,7 +18,9 @@
 		"Carefree": "Bezrūpīgs",
 		"Farsighted": "Piesardzīgs",
 		"Asking": "Dialogs",
-		"Declaring": "Monologs"
+		"Declaring": "Monologs",
+		"Static": "Statiķis",
+		"Dynamic": "Dinamiķis"
 	},
 	"prefs": {
 		"Introverts Inside": "Introverti iekšpusē"
