@@ -129,6 +129,11 @@ class Archetypes extends Component {
 										|| dichotomy.value === types[type].dichotomies.askingNotDeclaring;
 									break;
 
+								case 'staticNotDynamic':
+									enabled = dichotomy.value === null
+										|| dichotomy.value === types[type].dichotomies.staticNotDynamic;
+									break;
+
 								default:
 									console.error('Archetypes: Unexpected dichotomy:', dichotomy);
 								}

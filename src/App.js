@@ -78,6 +78,9 @@ class App extends Component
 		this.onFarsightedSwitch = this.onFarsightedSwitch.bind(this);
 		this.onAskingSwitch = this.onAskingSwitch.bind(this);
 		this.onDeclaringSwitch = this.onDeclaringSwitch.bind(this);
+		this.onStaticSwitch = this.onStaticSwitch.bind(this);
+		this.onDynamicSwitch = this.onDynamicSwitch.bind(this);
+
 
 		this.onQuadraSwitch = this.onQuadraSwitch.bind(this);
 		this.onRemoveRelations= this.onRemoveRelations.bind(this);
@@ -203,6 +206,14 @@ class App extends Component
 
 	onDeclaringSwitch (event) {
 		this.setState({dichotomies: {...this.state.dichotomies, askingNotDeclaring: event.target.checked ? false : null}});
+	}
+
+	onStaticSwitch (event) {
+		this.setState({dichotomies: {...this.state.dichotomies, staticNotDynamic: event.target.checked ? true : null}});
+	}
+
+	onDynamicSwitch (event) {
+		this.setState({dichotomies: {...this.state.dichotomies, staticNotDynamic: event.target.checked ? false : null}});
 	}
 
 	onQuadraSwitch (event) {
@@ -403,6 +414,18 @@ class App extends Component
 							<FormControlLabel
 								control={<Checkbox checked={this.state.dichotomies.askingNotDeclaring === false} onChange={this.onDeclaringSwitch}/>}
 								label={t('controls.Declaring')}
+							/>
+						</div>
+
+						<div className="pair">
+							<FormControlLabel
+								control={<Checkbox checked={this.state.dichotomies.staticNotDynamic === true} onChange={this.onStaticSwitch}/>}
+								label={t('controls.Static')}
+							/>
+
+							<FormControlLabel
+								control={<Checkbox checked={this.state.dichotomies.staticNotDynamic === false} onChange={this.onDynamicSwitch}/>}
+								label={t('controls.Dynamic')}
 							/>
 						</div>
 					</div>
