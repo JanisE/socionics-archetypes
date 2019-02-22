@@ -14,7 +14,7 @@
   font-family: 'Roboto Mono';
   font-style: normal;
   font-weight: 400;
-  src: local('Roboto Mono'), local('RobotoMono-Regular'), url(https://fonts.gstatic.com/s/robotomono/v5/L0x5DF4xlVMF-BfR8bXMIghM.ttf) format('truetype');
+  src: local('Roboto Mono'), local('RobotoMono-Regular'), url(https://fonts.gstatic.com/s/robotomono/v6/L0x5DF4xlVMF-BfR8bXMIghM.ttf) format('truetype');
 }
 * {
   box-sizing: border-box;
@@ -574,6 +574,8 @@ body {
   display: flex;
   justify-content: space-evenly;
   position: relative;
+  height: calc(100vh - 100vmin);
+  overflow-y: auto;
 }
 @media (min-aspect-ratio: 1/1) {
   .switches {
@@ -581,6 +583,7 @@ body {
     justify-content: center;
     margin-left: 3vmin;
     min-width: 45vmin;
+    height: auto;
   }
 }
 .switches .dichotomies {
@@ -604,13 +607,17 @@ body {
 .switches .dichotomies .pair .jss1:first-child {
   flex-direction: row-reverse;
 }
-.switches .quadras {
+.switches .im-elements-and-quadras {
   min-width: 46vmin;
 }
 @media (min-aspect-ratio: 1/1) {
-  .switches .quadras {
-    margin-top: 5vmin;
+  .switches .im-elements-and-quadras {
     min-width: auto;
+  }
+}
+@media (min-aspect-ratio: 1/1) {
+  .switches .quadras {
+    margin-top: 2vmin;
   }
 }
 .switches .quadras > div {
@@ -625,6 +632,28 @@ body {
 .switches .quadras > div :nth-child(2n) {
   grid-column-start: left;
   flex-direction: row-reverse;
+}
+.switches .im-elements {
+  min-width: 46vmin;
+}
+@media (min-aspect-ratio: 1/1) {
+  .switches .im-elements {
+    margin-top: 2vmin;
+    min-width: auto;
+  }
+}
+.switches .im-elements .form-control-label {
+  display: inline-flex;
+  align-items: center;
+}
+.switches .im-elements .form-control-label:first-child {
+  flex-direction: row-reverse;
+}
+.switches .im-elements .form-control-label > svg:nth-child(2) {
+  display: inline-block;
+  width: 0.8rem;
+  height: 0.8rem;
+  cursor: pointer;
 }
 .switches .MuiFormControlLabel-root-1,
 .switches .jss1 {

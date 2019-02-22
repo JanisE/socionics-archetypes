@@ -7,6 +7,7 @@ module.exports = {
 		dichotomyAbbr: 'ENFj',
 		socialRole: 'skolotājs',
 		quadra: 'β',
+		// ■ □ ▲ △ ● ○ ◳ ▙
 		functions: ['Fe', 'Ni', 'Te', 'Si', 'Ti', 'Se', 'Fi', 'Ne'],
 		professionalClub: 'humanitarians',
 		communicationStyle: 'passionate',

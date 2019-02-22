@@ -142,6 +142,16 @@ class Archetypes extends Component {
 							return enabled;
 						}, true);
 
+						enabled = this.props.imElements.reduce((enabled, imElement) => {
+							if (enabled) {
+								enabled = imElement.value === null
+									|| types[type].functions[0] === imElement.name
+									|| types[type].functions[1] === imElement.name;
+							} // Disabled if the type does not match all of the IM elements.
+
+							return enabled;
+						}, enabled);
+
 						if(this.props.quadra){
 							enabled = enabled && this.props.quadra === types[type].quadra;
 						}

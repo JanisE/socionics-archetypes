@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
 import Archetypes from './Archetypes';
+import {IconFi, IconFe, IconTe, IconTi, IconNi, IconNe, IconSi, IconSe} from './IeIcons';
 import FormGroup from '@material-ui/core/FormGroup'
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
@@ -53,6 +54,16 @@ class App extends Component
 				positiveNotNegative: null,
 				carefreeNotFarsighted: null
 			},
+			imElements: {
+				Fi: null,
+				Fe: null,
+				Ti: null,
+				Te: null,
+				Ni: null,
+				Ne: null,
+				Si: null,
+				Se: null
+			},
 			relationsFor: this.props.match.params.relationsFor || '',
 			introvertsInside: false,
 			language: undefined,
@@ -81,6 +92,14 @@ class App extends Component
 		this.onStaticSwitch = this.onStaticSwitch.bind(this);
 		this.onDynamicSwitch = this.onDynamicSwitch.bind(this);
 
+		this.onImFiSwitch = this.onImFiSwitch.bind(this);
+		this.onImFeSwitch = this.onImFeSwitch.bind(this);
+		this.onImTiSwitch = this.onImTiSwitch.bind(this);
+		this.onImTeSwitch = this.onImTeSwitch.bind(this);
+		this.onImNiSwitch = this.onImNiSwitch.bind(this);
+		this.onImNeSwitch = this.onImNeSwitch.bind(this);
+		this.onImSiSwitch = this.onImSiSwitch.bind(this);
+		this.onImSeSwitch = this.onImSeSwitch.bind(this);
 
 		this.onQuadraSwitch = this.onQuadraSwitch.bind(this);
 		this.onRemoveRelations= this.onRemoveRelations.bind(this);
@@ -110,42 +129,274 @@ class App extends Component
 
 	onLogicSwitch (event)
 	{
-		const newValues = {logic: event.target.checked};
+		const newDichotomyValues = {logic: event.target.checked};
+		const newImElementValues = {};
+
 		if (event.target.checked) {
-			newValues.ethics = ! event.target.checked;
+			newDichotomyValues.ethics = false;
+
+			newImElementValues.Fi = null;
+			newImElementValues.Fe = null;
+		}
+		else {
+			newImElementValues.Ti = null;
+			newImElementValues.Te = null;
 		}
 
-		this.setState({dichotomies: {...this.state.dichotomies, ...newValues}});
+		this.setState({
+			dichotomies: {...this.state.dichotomies, ...newDichotomyValues},
+			imElements: {...this.state.imElements, ...newImElementValues}
+		});
+	}
+
+	onImTiSwitch ()
+	{
+		// Opposite of the old state.
+		const checked = !this.state.imElements.Ti;
+
+		const newDichotomyValues = {};
+		const newImElementValues = {Ti: checked ? true : null};
+
+		if (checked) {
+			newImElementValues.Te = null;
+			newImElementValues.Fi = null;
+			newImElementValues.Fe = null;
+
+			newDichotomyValues.ethics = false;
+			newDichotomyValues.logic = true;
+		}
+
+		this.setState({
+			dichotomies: {...this.state.dichotomies, ...newDichotomyValues},
+			imElements: {...this.state.imElements, ...newImElementValues}
+		});
+	}
+
+	onImTeSwitch ()
+	{
+		// Opposite of the old state.
+		const checked = !this.state.imElements.Te;
+
+		const newDichotomyValues = {};
+		const newImElementValues = {Te: checked ? true : null};
+
+		if (checked) {
+			newImElementValues.Ti = null;
+			newImElementValues.Fi = null;
+			newImElementValues.Fe = null;
+
+			newDichotomyValues.ethics = false;
+			newDichotomyValues.logic = true;
+		}
+
+		this.setState({
+			dichotomies: {...this.state.dichotomies, ...newDichotomyValues},
+			imElements: {...this.state.imElements, ...newImElementValues}
+		});
 	}
 
 	onEthicsSwitch (event)
 	{
-		const newValues = {ethics: event.target.checked};
+		const newDichotomyValues = {ethics: event.target.checked};
+		const newImElementValues = {};
+
 		if (event.target.checked) {
-			newValues.logic = ! event.target.checked;
+			newDichotomyValues.logic = false;
+
+			newImElementValues.Ti = null;
+			newImElementValues.Te = null;
+		}
+		else {
+			newImElementValues.Fi = null;
+			newImElementValues.Fe = null;
 		}
 
-		this.setState({dichotomies: {...this.state.dichotomies, ...newValues}});
+		this.setState({
+			dichotomies: {...this.state.dichotomies, ...newDichotomyValues},
+			imElements: {...this.state.imElements, ...newImElementValues}
+		});
+	}
+
+	onImFiSwitch ()
+	{
+		// Opposite of the old state.
+		const checked = !this.state.imElements.Fi;
+
+		const newDichotomyValues = {};
+		const newImElementValues = {Fi: checked ? true : null};
+
+		if (checked) {
+			newDichotomyValues.ethics = true;
+			newDichotomyValues.logic = false;
+
+			newImElementValues.Fe = null;
+			newImElementValues.Ti = null;
+			newImElementValues.Te = null;
+		}
+
+		this.setState({
+			dichotomies: {...this.state.dichotomies, ...newDichotomyValues},
+			imElements: {...this.state.imElements, ...newImElementValues}
+		});
+	}
+
+	onImFeSwitch ()
+	{
+		// Opposite of the old state.
+		const checked = !this.state.imElements.Fe;
+
+		const newDichotomyValues = {};
+		const newImElementValues = {Fe: checked ? true : null};
+
+		if (checked) {
+			newDichotomyValues.ethics = true;
+			newDichotomyValues.logic = false;
+
+			newImElementValues.Fi = null;
+			newImElementValues.Ti = null;
+			newImElementValues.Te = null;
+		}
+
+		this.setState({
+			dichotomies: {...this.state.dichotomies, ...newDichotomyValues},
+			imElements: {...this.state.imElements, ...newImElementValues}
+		});
 	}
 
 	onIntuitionSwitch (event)
 	{
-		const newValues = {intuition: event.target.checked};
+		const newDichotomyValues = {intuition: event.target.checked};
+		const newImElementValues = {};
+
 		if (event.target.checked) {
-			newValues.sensing = ! event.target.checked;
+			newDichotomyValues.sensing = false;
+
+			newImElementValues.Si = null;
+			newImElementValues.Se = null;
+		}
+		else {
+			newImElementValues.Ni = null;
+			newImElementValues.Ne = null;
 		}
 
-		this.setState({dichotomies: {...this.state.dichotomies, ...newValues}});
+		this.setState({
+			dichotomies: {...this.state.dichotomies, ...newDichotomyValues},
+			imElements: {...this.state.imElements, ...newImElementValues}
+		});
+	}
+
+	onImNiSwitch ()
+	{
+		// Opposite of the old state.
+		const checked = !this.state.imElements.Ni;
+
+		const newDichotomyValues = {};
+		const newImElementValues = {Ni: checked ? true : null};
+
+		if (checked) {
+			newDichotomyValues.intuition = true;
+			newDichotomyValues.sensing = false;
+
+			newImElementValues.Ne = null;
+			newImElementValues.Si = null;
+			newImElementValues.Se = null;
+		}
+
+		this.setState({
+			dichotomies: {...this.state.dichotomies, ...newDichotomyValues},
+			imElements: {...this.state.imElements, ...newImElementValues}
+		});
+	}
+
+	onImNeSwitch ()
+	{
+		// Opposite of the old state.
+		const checked = !this.state.imElements.Ne;
+
+		const newDichotomyValues = {};
+		const newImElementValues = {Ne: checked ? true : null};
+
+		if (checked) {
+			newDichotomyValues.intuition = true;
+			newDichotomyValues.sensing = false;
+
+			newImElementValues.Ni = null;
+			newImElementValues.Si = null;
+			newImElementValues.Se = null;
+		}
+
+		this.setState({
+			dichotomies: {...this.state.dichotomies, ...newDichotomyValues},
+			imElements: {...this.state.imElements, ...newImElementValues}
+		});
 	}
 
 	onSensingSwitch (event)
 	{
-		const newValues = {sensing: event.target.checked};
+		const newDichotomyValues = {sensing: event.target.checked};
+		const newImElementValues = {};
+
 		if (event.target.checked) {
-			newValues.intuition = ! event.target.checked;
+			newDichotomyValues.intuition = false;
+
+			newImElementValues.Ni = null;
+			newImElementValues.Ne = null;
+		}
+		else {
+			newImElementValues.Si = null;
+			newImElementValues.Se = null;
 		}
 
-		this.setState({dichotomies: {...this.state.dichotomies, ...newValues}});
+		this.setState({
+			dichotomies: {...this.state.dichotomies, ...newDichotomyValues},
+			imElements: {...this.state.imElements, ...newImElementValues}
+		});
+	}
+
+	onImSiSwitch ()
+	{
+		// Opposite of the old state.
+		const checked = !this.state.imElements.Si;
+
+		const newDichotomyValues = {};
+		const newImElementValues = {Si: checked ? true : null};
+
+		if (checked) {
+			newDichotomyValues.intuition = false;
+			newDichotomyValues.sensing = true;
+
+			newImElementValues.Se = null;
+			newImElementValues.Ni = null;
+			newImElementValues.Ne = null;
+		}
+
+		this.setState({
+			dichotomies: {...this.state.dichotomies, ...newDichotomyValues},
+			imElements: {...this.state.imElements, ...newImElementValues}
+		});
+	}
+
+	onImSeSwitch ()
+	{
+		// Opposite of the old state.
+		const checked = !this.state.imElements.Se;
+
+		const newDichotomyValues = {};
+		const newImElementValues = {Se: checked ? true : null};
+
+		if (checked) {
+			newDichotomyValues.intuition = false;
+			newDichotomyValues.sensing = true;
+
+			newImElementValues.Si = null;
+			newImElementValues.Ni = null;
+			newImElementValues.Ne = null;
+		}
+
+		this.setState({
+			dichotomies: {...this.state.dichotomies, ...newDichotomyValues},
+			imElements: {...this.state.imElements, ...newImElementValues}
+		});
 	}
 
 	onRationalSwitch (event)
@@ -301,6 +552,8 @@ class App extends Component
 				<Archetypes
 					dichotomies={Object.keys(this.state.dichotomies)
 						.map(key => ({name: key, value: this.state.dichotomies[key]}))}
+					imElements={Object.keys(this.state.imElements)
+						.map(key => ({name: key, value: this.state.imElements[key]}))}
 					quadra={this.state.quadra}
 					relationsFor={this.state.relationsFor}
 					introvertsInside={this.state.introvertsInside}
@@ -429,17 +682,67 @@ class App extends Component
 							/>
 						</div>
 					</div>
-					<div className="quadras">
-						<RadioGroup
-							value={this.state.quadra}
-							onChange={this.onQuadraSwitch}
-						>
-							<FormControlLabel value="" control={<Radio />} label="?" />
-							<FormControlLabel value="α" control={<Radio />} label={'1. ' + t('quadras.Alpha')} />
-							<FormControlLabel value="β" control={<Radio />} label={'2. ' + t('quadras.Beta')} />
-							<FormControlLabel value="δ" control={<Radio />} label={'4. ' + t('quadras.Delta')} />
-							<FormControlLabel value="γ" control={<Radio />} label={'3. ' + t('quadras.Gamma')} />
-						</RadioGroup>
+
+					<div class="im-elements-and-quadras">
+						<div class="im-elements">
+							<div className="pair">
+								<div class="form-control-label" onClick={this.onImFiSwitch}>
+									<Checkbox checked={this.state.imElements.Fi === true} />
+									<IconFi />
+								</div>
+
+								<div class="form-control-label" onClick={this.onImFeSwitch}>
+									<Checkbox checked={this.state.imElements.Fe === true} />
+									<IconFe />
+								</div>
+							</div>
+							<div className="pair">
+								<div className="form-control-label" onClick={this.onImTiSwitch}>
+									<Checkbox checked={this.state.imElements.Ti === true} />
+									<IconTi/>
+								</div>
+
+								<div className="form-control-label" onClick={this.onImTeSwitch}>
+									<Checkbox checked={this.state.imElements.Te === true} />
+									<IconTe/>
+								</div>
+							</div>
+							<div className="pair">
+								<div className="form-control-label" onClick={this.onImNiSwitch}>
+									<Checkbox checked={this.state.imElements.Ni === true} />
+									<IconNi/>
+								</div>
+
+								<div className="form-control-label" onClick={this.onImNeSwitch}>
+									<Checkbox checked={this.state.imElements.Ne === true} />
+									<IconNe/>
+								</div>
+							</div>
+							<div className="pair">
+								<div className="form-control-label" onClick={this.onImSiSwitch}>
+									<Checkbox checked={this.state.imElements.Si === true} />
+									<IconSi/>
+								</div>
+
+								<div className="form-control-label" onClick={this.onImSeSwitch}>
+									<Checkbox checked={this.state.imElements.Se === true} />
+									<IconSe/>
+								</div>
+							</div>
+						</div>
+
+						<div className="quadras">
+							<RadioGroup
+								value={this.state.quadra}
+								onChange={this.onQuadraSwitch}
+							>
+								<FormControlLabel value="" control={<Radio />} label="?" />
+								<FormControlLabel value="α" control={<Radio />} label={'1. ' + t('quadras.Alpha')} />
+								<FormControlLabel value="β" control={<Radio />} label={'2. ' + t('quadras.Beta')} />
+								<FormControlLabel value="δ" control={<Radio />} label={'4. ' + t('quadras.Delta')} />
+								<FormControlLabel value="γ" control={<Radio />} label={'3. ' + t('quadras.Gamma')} />
+							</RadioGroup>
+						</div>
 					</div>
 
 					<div className="preferences-icon">
