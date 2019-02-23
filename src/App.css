@@ -615,24 +615,6 @@ body {
     min-width: auto;
   }
 }
-@media (min-aspect-ratio: 1/1) {
-  .switches .quadras {
-    margin-top: 2vmin;
-  }
-}
-.switches .quadras > div {
-  display: grid;
-  grid-template-columns: [left] 50% 50% [right];
-}
-.switches .quadras > div :first-child {
-  justify-content: center;
-  grid-column-start: left;
-  grid-column-end: right;
-}
-.switches .quadras > div :nth-child(2n) {
-  grid-column-start: left;
-  flex-direction: row-reverse;
-}
 .switches .im-elements {
   min-width: 46vmin;
 }
@@ -654,6 +636,15 @@ body {
   width: 0.8rem;
   height: 0.8rem;
   cursor: pointer;
+}
+.switches .quadras {
+  margin-top: 2vmin;
+  display: grid;
+  grid-template-columns: [left] 50% 50% [right];
+}
+.switches .quadras :nth-child(2n+1) {
+  grid-column-start: left;
+  flex-direction: row-reverse;
 }
 .switches .MuiFormControlLabel-root-1,
 .switches .jss1 {

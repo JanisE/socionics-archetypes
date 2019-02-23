@@ -468,7 +468,7 @@ class App extends Component
 	}
 
 	onQuadraSwitch (event) {
-		this.setState({quadra: event.target.value});
+		this.setState({quadra: event.target.checked ? event.target.value : null});
 	}
 
 	onRemoveRelations () {
@@ -708,17 +708,6 @@ class App extends Component
 								</div>
 							</div>
 							<div className="pair">
-								<div className="form-control-label" onClick={this.onImNiSwitch}>
-									<Checkbox checked={this.state.imElements.Ni === true} />
-									<IconNi/>
-								</div>
-
-								<div className="form-control-label" onClick={this.onImNeSwitch}>
-									<Checkbox checked={this.state.imElements.Ne === true} />
-									<IconNe/>
-								</div>
-							</div>
-							<div className="pair">
 								<div className="form-control-label" onClick={this.onImSiSwitch}>
 									<Checkbox checked={this.state.imElements.Si === true} />
 									<IconSi/>
@@ -729,19 +718,24 @@ class App extends Component
 									<IconSe/>
 								</div>
 							</div>
+							<div className="pair">
+								<div className="form-control-label" onClick={this.onImNiSwitch}>
+									<Checkbox checked={this.state.imElements.Ni === true} />
+									<IconNi/>
+								</div>
+
+								<div className="form-control-label" onClick={this.onImNeSwitch}>
+									<Checkbox checked={this.state.imElements.Ne === true} />
+									<IconNe/>
+								</div>
+							</div>
 						</div>
 
 						<div className="quadras">
-							<RadioGroup
-								value={this.state.quadra}
-								onChange={this.onQuadraSwitch}
-							>
-								<FormControlLabel value="" control={<Radio />} label="?" />
-								<FormControlLabel value="α" control={<Radio />} label={'1. ' + t('quadras.Alpha')} />
-								<FormControlLabel value="β" control={<Radio />} label={'2. ' + t('quadras.Beta')} />
-								<FormControlLabel value="δ" control={<Radio />} label={'4. ' + t('quadras.Delta')} />
-								<FormControlLabel value="γ" control={<Radio />} label={'3. ' + t('quadras.Gamma')} />
-							</RadioGroup>
+							<FormControlLabel value="α" control={<Checkbox checked={this.state.quadra === 'α'} onChange={this.onQuadraSwitch} />} label={'1. ' + t('quadras.Alpha')} />
+							<FormControlLabel value="β" control={<Checkbox checked={this.state.quadra === 'β'} onChange={this.onQuadraSwitch} />} label={'2. ' + t('quadras.Beta')} />
+							<FormControlLabel value="δ" control={<Checkbox checked={this.state.quadra === 'δ'} onChange={this.onQuadraSwitch} />} label={'4. ' + t('quadras.Delta')} />
+							<FormControlLabel value="γ" control={<Checkbox checked={this.state.quadra === 'γ'} onChange={this.onQuadraSwitch} />} label={'3. ' + t('quadras.Gamma')} />
 						</div>
 					</div>
 
