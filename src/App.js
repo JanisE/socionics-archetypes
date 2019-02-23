@@ -107,316 +107,372 @@ class App extends Component
 		this.onLanguageSwitch= this.onLanguageSwitch.bind(this);
 	}
 
-	onIntrovertSwitch (event)
+	onIntrovertSwitch ()
 	{
-		const newValues = {introvert: event.target.checked};
-		if (event.target.checked) {
-			newValues.extrovert = ! event.target.checked;
-		}
+		this.setState(oldState => {
+			// Opposite of the old state.
+			const checked = ! oldState.dichotomies.introvert;
 
-		this.setState({dichotomies: {...this.state.dichotomies, ...newValues}});
+			const newValues = {introvert: checked};
+			if (checked) {
+				newValues.extrovert = ! checked;
+			}
+
+			return {dichotomies: {...oldState.dichotomies, ...newValues}};
+		});
 	}
 
-	onExtrovertSwitch (event)
+	onExtrovertSwitch ()
 	{
-		const newValues = {extrovert: event.target.checked};
-		if (event.target.checked) {
-			newValues.introvert = ! event.target.checked;
-		}
+		this.setState(oldState => {
+			// Opposite of the old state.
+			const checked = ! oldState.dichotomies.extrovert;
 
-		this.setState({dichotomies: {...this.state.dichotomies, ...newValues}});
+			const newValues = {extrovert: checked};
+			if (checked) {
+				newValues.introvert = ! checked;
+			}
+
+			return {dichotomies: {...oldState.dichotomies, ...newValues}};
+		});
 	}
 
-	onLogicSwitch (event)
+	onLogicSwitch ()
 	{
-		const newDichotomyValues = {logic: event.target.checked};
-		const newImElementValues = {};
+		this.setState(oldState => {
+			// Opposite of the old state.
+			const checked = ! oldState.dichotomies.logic;
 
-		if (event.target.checked) {
-			newDichotomyValues.ethics = false;
+			const newDichotomyValues = {logic: checked};
+			const newImElementValues = {};
 
-			newImElementValues.Fi = null;
-			newImElementValues.Fe = null;
-		}
-		else {
-			newImElementValues.Ti = null;
-			newImElementValues.Te = null;
-		}
+			if (checked) {
+				newDichotomyValues.ethics = false;
 
-		this.setState({
-			dichotomies: {...this.state.dichotomies, ...newDichotomyValues},
-			imElements: {...this.state.imElements, ...newImElementValues}
+				newImElementValues.Fi = null;
+				newImElementValues.Fe = null;
+			}
+			else {
+				newImElementValues.Ti = null;
+				newImElementValues.Te = null;
+			}
+
+			return {
+				dichotomies: {...oldState.dichotomies, ...newDichotomyValues},
+				imElements: {...oldState.imElements, ...newImElementValues}
+			};
 		});
 	}
 
 	onImTiSwitch ()
 	{
-		// Opposite of the old state.
-		const checked = !this.state.imElements.Ti;
+		this.setState(oldState => {
+			// Opposite of the old state.
+			const checked = ! oldState.imElements.Ti;
 
-		const newDichotomyValues = {};
-		const newImElementValues = {Ti: checked ? true : null};
+			const newDichotomyValues = {};
+			const newImElementValues = {Ti: checked ? true : null};
 
-		if (checked) {
-			newImElementValues.Te = null;
-			newImElementValues.Fi = null;
-			newImElementValues.Fe = null;
+			if (checked) {
+				newImElementValues.Te = null;
+				newImElementValues.Fi = null;
+				newImElementValues.Fe = null;
 
-			newDichotomyValues.ethics = false;
-			newDichotomyValues.logic = true;
-		}
+				newDichotomyValues.ethics = false;
+				newDichotomyValues.logic = true;
+			}
 
-		this.setState({
-			dichotomies: {...this.state.dichotomies, ...newDichotomyValues},
-			imElements: {...this.state.imElements, ...newImElementValues}
+			return {
+				dichotomies: {...oldState.dichotomies, ...newDichotomyValues},
+				imElements: {...oldState.imElements, ...newImElementValues}
+			};
 		});
 	}
 
 	onImTeSwitch ()
 	{
-		// Opposite of the old state.
-		const checked = !this.state.imElements.Te;
+		this.setState(oldState => {
+			// Opposite of the old state.
+			const checked = ! oldState.imElements.Te;
 
-		const newDichotomyValues = {};
-		const newImElementValues = {Te: checked ? true : null};
+			const newDichotomyValues = {};
+			const newImElementValues = {Te: checked ? true : null};
 
-		if (checked) {
-			newImElementValues.Ti = null;
-			newImElementValues.Fi = null;
-			newImElementValues.Fe = null;
+			if (checked) {
+				newImElementValues.Ti = null;
+				newImElementValues.Fi = null;
+				newImElementValues.Fe = null;
 
-			newDichotomyValues.ethics = false;
-			newDichotomyValues.logic = true;
-		}
+				newDichotomyValues.ethics = false;
+				newDichotomyValues.logic = true;
+			}
 
-		this.setState({
-			dichotomies: {...this.state.dichotomies, ...newDichotomyValues},
-			imElements: {...this.state.imElements, ...newImElementValues}
+			return {
+				dichotomies: {...oldState.dichotomies, ...newDichotomyValues},
+				imElements: {...oldState.imElements, ...newImElementValues}
+			}
 		});
 	}
 
-	onEthicsSwitch (event)
+	onEthicsSwitch ()
 	{
-		const newDichotomyValues = {ethics: event.target.checked};
-		const newImElementValues = {};
+		this.setState(oldState => {
+			// Opposite of the old state.
+			const checked = ! oldState.dichotomies.ethics;
 
-		if (event.target.checked) {
-			newDichotomyValues.logic = false;
+			const newDichotomyValues = {ethics: checked};
+			const newImElementValues = {};
 
-			newImElementValues.Ti = null;
-			newImElementValues.Te = null;
-		}
-		else {
-			newImElementValues.Fi = null;
-			newImElementValues.Fe = null;
-		}
+			if (checked) {
+				newDichotomyValues.logic = false;
 
-		this.setState({
-			dichotomies: {...this.state.dichotomies, ...newDichotomyValues},
-			imElements: {...this.state.imElements, ...newImElementValues}
+				newImElementValues.Ti = null;
+				newImElementValues.Te = null;
+			}
+			else {
+				newImElementValues.Fi = null;
+				newImElementValues.Fe = null;
+			}
+
+			return {
+				dichotomies: {...oldState.dichotomies, ...newDichotomyValues},
+				imElements: {...oldState.imElements, ...newImElementValues}
+			};
 		});
 	}
 
 	onImFiSwitch ()
 	{
-		// Opposite of the old state.
-		const checked = !this.state.imElements.Fi;
+		this.setState(oldstate => {
+			// Opposite of the old state.
+			const checked = ! oldstate.imElements.Fi;
 
-		const newDichotomyValues = {};
-		const newImElementValues = {Fi: checked ? true : null};
+			const newDichotomyValues = {};
+			const newImElementValues = {Fi: checked ? true : null};
 
-		if (checked) {
-			newDichotomyValues.ethics = true;
-			newDichotomyValues.logic = false;
+			if (checked) {
+				newDichotomyValues.ethics = true;
+				newDichotomyValues.logic = false;
 
-			newImElementValues.Fe = null;
-			newImElementValues.Ti = null;
-			newImElementValues.Te = null;
-		}
+				newImElementValues.Fe = null;
+				newImElementValues.Ti = null;
+				newImElementValues.Te = null;
+			}
 
-		this.setState({
-			dichotomies: {...this.state.dichotomies, ...newDichotomyValues},
-			imElements: {...this.state.imElements, ...newImElementValues}
+			return {
+				dichotomies: {...oldstate.dichotomies, ...newDichotomyValues},
+				imElements: {...oldstate.imElements, ...newImElementValues}
+			};
 		});
 	}
 
 	onImFeSwitch ()
 	{
-		// Opposite of the old state.
-		const checked = !this.state.imElements.Fe;
+		this.setState(oldState => {
+			// Opposite of the old state.
+			const checked = ! oldState.imElements.Fe;
 
-		const newDichotomyValues = {};
-		const newImElementValues = {Fe: checked ? true : null};
+			const newDichotomyValues = {};
+			const newImElementValues = {Fe: checked ? true : null};
 
-		if (checked) {
-			newDichotomyValues.ethics = true;
-			newDichotomyValues.logic = false;
+			if (checked) {
+				newDichotomyValues.ethics = true;
+				newDichotomyValues.logic = false;
 
-			newImElementValues.Fi = null;
-			newImElementValues.Ti = null;
-			newImElementValues.Te = null;
-		}
+				newImElementValues.Fi = null;
+				newImElementValues.Ti = null;
+				newImElementValues.Te = null;
+			}
 
-		this.setState({
-			dichotomies: {...this.state.dichotomies, ...newDichotomyValues},
-			imElements: {...this.state.imElements, ...newImElementValues}
+			return {
+				dichotomies: {...oldState.dichotomies, ...newDichotomyValues},
+				imElements: {...oldState.imElements, ...newImElementValues}
+			};
 		});
 	}
 
-	onIntuitionSwitch (event)
+	onIntuitionSwitch ()
 	{
-		const newDichotomyValues = {intuition: event.target.checked};
-		const newImElementValues = {};
+		this.setState(oldState => {
+			// Opposite of the old state.
+			const checked = ! oldState.dichotomies.intuition;
 
-		if (event.target.checked) {
-			newDichotomyValues.sensing = false;
+			const newDichotomyValues = {intuition: checked};
+			const newImElementValues = {};
 
-			newImElementValues.Si = null;
-			newImElementValues.Se = null;
-		}
-		else {
-			newImElementValues.Ni = null;
-			newImElementValues.Ne = null;
-		}
+			if (checked) {
+				newDichotomyValues.sensing = false;
 
-		this.setState({
-			dichotomies: {...this.state.dichotomies, ...newDichotomyValues},
-			imElements: {...this.state.imElements, ...newImElementValues}
+				newImElementValues.Si = null;
+				newImElementValues.Se = null;
+			}
+			else {
+				newImElementValues.Ni = null;
+				newImElementValues.Ne = null;
+			}
+
+			return {
+				dichotomies: {...oldState.dichotomies, ...newDichotomyValues},
+				imElements: {...oldState.imElements, ...newImElementValues}
+			};
 		});
 	}
 
 	onImNiSwitch ()
 	{
-		// Opposite of the old state.
-		const checked = !this.state.imElements.Ni;
+		this.setState(oldState => {
+			// Opposite of the old state.
+			const checked = ! oldState.imElements.Ni;
 
-		const newDichotomyValues = {};
-		const newImElementValues = {Ni: checked ? true : null};
+			const newDichotomyValues = {};
+			const newImElementValues = {Ni: checked ? true : null};
 
-		if (checked) {
-			newDichotomyValues.intuition = true;
-			newDichotomyValues.sensing = false;
+			if (checked) {
+				newDichotomyValues.intuition = true;
+				newDichotomyValues.sensing = false;
 
-			newImElementValues.Ne = null;
-			newImElementValues.Si = null;
-			newImElementValues.Se = null;
-		}
+				newImElementValues.Ne = null;
+				newImElementValues.Si = null;
+				newImElementValues.Se = null;
+			}
 
-		this.setState({
-			dichotomies: {...this.state.dichotomies, ...newDichotomyValues},
-			imElements: {...this.state.imElements, ...newImElementValues}
+			return {
+				dichotomies: {...oldState.dichotomies, ...newDichotomyValues},
+				imElements: {...oldState.imElements, ...newImElementValues}
+			};
 		});
 	}
 
 	onImNeSwitch ()
 	{
-		// Opposite of the old state.
-		const checked = !this.state.imElements.Ne;
+		this.setState(oldState => {
+			// Opposite of the old state.
+			const checked = ! oldState.imElements.Ne;
 
-		const newDichotomyValues = {};
-		const newImElementValues = {Ne: checked ? true : null};
+			const newDichotomyValues = {};
+			const newImElementValues = {Ne: checked ? true : null};
 
-		if (checked) {
-			newDichotomyValues.intuition = true;
-			newDichotomyValues.sensing = false;
+			if (checked) {
+				newDichotomyValues.intuition = true;
+				newDichotomyValues.sensing = false;
 
-			newImElementValues.Ni = null;
-			newImElementValues.Si = null;
-			newImElementValues.Se = null;
-		}
+				newImElementValues.Ni = null;
+				newImElementValues.Si = null;
+				newImElementValues.Se = null;
+			}
 
-		this.setState({
-			dichotomies: {...this.state.dichotomies, ...newDichotomyValues},
-			imElements: {...this.state.imElements, ...newImElementValues}
+			return {
+				dichotomies: {...oldState.dichotomies, ...newDichotomyValues},
+				imElements: {...oldState.imElements, ...newImElementValues}
+			};
 		});
 	}
 
-	onSensingSwitch (event)
+	onSensingSwitch ()
 	{
-		const newDichotomyValues = {sensing: event.target.checked};
-		const newImElementValues = {};
+		this.setState(oldState => {
+			// Opposite of the old state.
+			const checked = ! oldState.dichotomies.sensing;
 
-		if (event.target.checked) {
-			newDichotomyValues.intuition = false;
+			const newDichotomyValues = {sensing: checked};
+			const newImElementValues = {};
 
-			newImElementValues.Ni = null;
-			newImElementValues.Ne = null;
-		}
-		else {
-			newImElementValues.Si = null;
-			newImElementValues.Se = null;
-		}
+			if (checked) {
+				newDichotomyValues.intuition = false;
 
-		this.setState({
-			dichotomies: {...this.state.dichotomies, ...newDichotomyValues},
-			imElements: {...this.state.imElements, ...newImElementValues}
+				newImElementValues.Ni = null;
+				newImElementValues.Ne = null;
+			}
+			else {
+				newImElementValues.Si = null;
+				newImElementValues.Se = null;
+			}
+
+			return {
+				dichotomies: {...oldState.dichotomies, ...newDichotomyValues},
+				imElements: {...oldState.imElements, ...newImElementValues}
+			};
 		});
 	}
 
 	onImSiSwitch ()
 	{
-		// Opposite of the old state.
-		const checked = !this.state.imElements.Si;
+		this.setState(oldState => {
+			// Opposite of the old state.
+			const checked = ! oldState.imElements.Si;
 
-		const newDichotomyValues = {};
-		const newImElementValues = {Si: checked ? true : null};
+			const newDichotomyValues = {};
+			const newImElementValues = {Si: checked ? true : null};
 
-		if (checked) {
-			newDichotomyValues.intuition = false;
-			newDichotomyValues.sensing = true;
+			if (checked) {
+				newDichotomyValues.intuition = false;
+				newDichotomyValues.sensing = true;
 
-			newImElementValues.Se = null;
-			newImElementValues.Ni = null;
-			newImElementValues.Ne = null;
-		}
+				newImElementValues.Se = null;
+				newImElementValues.Ni = null;
+				newImElementValues.Ne = null;
+			}
 
-		this.setState({
-			dichotomies: {...this.state.dichotomies, ...newDichotomyValues},
-			imElements: {...this.state.imElements, ...newImElementValues}
+			return {
+				dichotomies: {...oldState.dichotomies, ...newDichotomyValues},
+				imElements: {...oldState.imElements, ...newImElementValues}
+			};
 		});
 	}
 
 	onImSeSwitch ()
 	{
-		// Opposite of the old state.
-		const checked = !this.state.imElements.Se;
+		this.setState(oldState => {
+			// Opposite of the old state.
+			const checked = ! oldState.imElements.Se;
 
-		const newDichotomyValues = {};
-		const newImElementValues = {Se: checked ? true : null};
+			const newDichotomyValues = {};
+			const newImElementValues = {Se: checked ? true : null};
 
-		if (checked) {
-			newDichotomyValues.intuition = false;
-			newDichotomyValues.sensing = true;
+			if (checked) {
+				newDichotomyValues.intuition = false;
+				newDichotomyValues.sensing = true;
 
-			newImElementValues.Si = null;
-			newImElementValues.Ni = null;
-			newImElementValues.Ne = null;
-		}
+				newImElementValues.Si = null;
+				newImElementValues.Ni = null;
+				newImElementValues.Ne = null;
+			}
 
-		this.setState({
-			dichotomies: {...this.state.dichotomies, ...newDichotomyValues},
-			imElements: {...this.state.imElements, ...newImElementValues}
+			return {
+				dichotomies: {...oldState.dichotomies, ...newDichotomyValues},
+				imElements: {...oldState.imElements, ...newImElementValues}
+			};
 		});
 	}
 
-	onRationalSwitch (event)
+	onRationalSwitch ()
 	{
-		const newValues = {rational: event.target.checked};
-		if (event.target.checked) {
-			newValues.irrational = ! event.target.checked;
-		}
+		this.setState(oldState => {
+			// Opposite of the old state.
+			const checked = ! oldState.dichotomies.rational;
 
-		this.setState({dichotomies: {...this.state.dichotomies, ...newValues}});
+			const newValues = {rational: checked};
+			if (checked) {
+				newValues.irrational = ! checked;
+			}
+
+			return {dichotomies: {...oldState.dichotomies, ...newValues}};
+		});
 	}
 
-	onIrrationalSwitch (event)
+	onIrrationalSwitch ()
 	{
-		const newValues = {irrational: event.target.checked};
-		if (event.target.checked) {
-			newValues.rational = ! event.target.checked;
-		}
+		this.setState(oldState => {
+			// Opposite of the old state.
+			const checked = ! oldState.dichotomies.irrational;
 
-		this.setState({dichotomies: {...this.state.dichotomies, ...newValues}});
+			const newValues = {irrational: checked};
+			if (checked) {
+				newValues.rational = ! checked;
+			}
+
+			return {dichotomies: {...oldState.dichotomies, ...newValues}};
+		});
 	}
 
 	onAristocraticSwitch (event) {
@@ -520,7 +576,7 @@ class App extends Component
 
 	shouldComponentUpdate (nextParams, nextState, nextContext) {
 		// Update the URL/route.
-		if (!App.stateMatchesRoute(nextState, nextParams.match.params)) {
+		if (! App.stateMatchesRoute(nextState, nextParams.match.params)) {
 			this.props.history.push('/' + App.getRouteProperties(nextState) + (nextState.relationsFor ? '/' + nextState.relationsFor : ''));
 			return false;
 		}
