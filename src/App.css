@@ -573,17 +573,16 @@ body {
 .switches {
   display: flex;
   justify-content: space-evenly;
-  position: relative;
   height: calc(100vh - 100vmin);
   overflow-y: auto;
 }
 @media (min-aspect-ratio: 1/1) {
   .switches {
-    flex-direction: column;
-    justify-content: center;
+    display: block;
+    margin-top: 5vh;
     margin-left: 3vmin;
     min-width: 45vmin;
-    height: auto;
+    height: 94vh;
   }
 }
 .switches .dichotomies {
@@ -607,11 +606,11 @@ body {
 .switches .dichotomies .pair .jss1:first-child {
   flex-direction: row-reverse;
 }
-.switches .im-elements-and-quadras {
+.switches .im-elements-and-small-groups {
   min-width: 46vmin;
 }
 @media (min-aspect-ratio: 1/1) {
-  .switches .im-elements-and-quadras {
+  .switches .im-elements-and-small-groups {
     min-width: auto;
   }
 }
@@ -637,12 +636,12 @@ body {
   height: 0.8rem;
   cursor: pointer;
 }
-.switches .quadras {
+.switches .small-groups > div {
   margin-top: 2vmin;
   display: grid;
   grid-template-columns: [left] 50% 50% [right];
 }
-.switches .quadras :nth-child(2n+1) {
+.switches .small-groups > div :nth-child(2n+1) {
   grid-column-start: left;
   flex-direction: row-reverse;
 }
@@ -656,8 +655,13 @@ body {
 }
 .preferences-icon {
   position: absolute;
-  top: 2vw;
+  top: 101vw;
   right: 2vw;
+}
+@media (min-aspect-ratio: 1/1) {
+  .preferences-icon {
+    top: 1vh;
+  }
 }
 .preferences-drawer .drawer-content {
   padding: 2vw;

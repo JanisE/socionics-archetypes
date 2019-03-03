@@ -23,7 +23,7 @@ class App extends Component
 
 		const initProperties = this.props.match.params.properties || '';
 
-		let initQuadra = '';
+		let initQuadra = null;
 
 		if (initProperties.indexOf('α') > -1) {
 			initQuadra = 'α'
@@ -39,7 +39,6 @@ class App extends Component
 		}
 
 		this.state = {
-			quadra: initQuadra,
 			dichotomies: {
 				introvert: initProperties.indexOf('I') > -1,
 				extrovert: initProperties.indexOf('E') > -1,
@@ -50,9 +49,16 @@ class App extends Component
 				rational: initProperties.indexOf('j') > -1,
 				irrational: initProperties.indexOf('p') > -1,
 				aristocraticNotDemocratic: null,
-				yieldingNotObstinate: null,
+				askingNotDeclaring: null,
+				carefreeNotFarsighted: null,
+				constructivistNotEmotivist: null,
+				judiciousNotDecisive: null,
 				positiveNotNegative: null,
-				carefreeNotFarsighted: null
+				processNotResult: null,
+				staticNotDynamic: null,
+				subjectiveNotObjective: null,
+				tacticalNotStrategic: null,
+				yieldingNotObstinate: null
 			},
 			imElements: {
 				Fi: null,
@@ -63,6 +69,12 @@ class App extends Component
 				Ne: null,
 				Si: null,
 				Se: null
+			},
+			smallGroups: {
+				communicationStyle: null,
+				professionalClub: null,
+				quadra: initQuadra,
+				stimulus: null
 			},
 			relationsFor: this.props.match.params.relationsFor || '',
 			introvertsInside: false,
@@ -112,6 +124,9 @@ class App extends Component
 		this.onImSeSwitch = this.onImSeSwitch.bind(this);
 
 		this.onQuadraSwitch = this.onQuadraSwitch.bind(this);
+		this.onCommunicationStyleSwitch = this.onCommunicationStyleSwitch.bind(this);
+		this.onStimulusSwitch = this.onStimulusSwitch.bind(this);
+
 		this.onRemoveRelations= this.onRemoveRelations.bind(this);
 		this.onToggleRelations= this.onToggleRelations.bind(this);
 		this.onLanguageSwitch= this.onLanguageSwitch.bind(this);
@@ -575,7 +590,15 @@ class App extends Component
 
 
 	onQuadraSwitch (event) {
-		this.setState({quadra: event.target.checked ? event.target.value : null});
+		this.setState({smallGroups: {...this.state.smallGroups, quadra: event.target.checked ? event.target.value : null}});
+	}
+
+	onCommunicationStyleSwitch (event) {
+		this.setState({smallGroups: {...this.state.smallGroups, communicationStyle: event.target.checked ? event.target.value : null}});
+	}
+
+	onStimulusSwitch (event) {
+		this.setState({smallGroups: {...this.state.smallGroups, stimulus: event.target.checked ? event.target.value : null}});
 	}
 
 	onRemoveRelations () {
@@ -605,10 +628,10 @@ class App extends Component
 			'T': state.dichotomies.logic,
 			'j': state.dichotomies.rational,
 			'p': state.dichotomies.irrational,
-			'α': state.quadra === 'α',
-			'β': state.quadra === 'β',
-			'δ': state.quadra === 'δ',
-			'γ': state.quadra === 'γ'
+			'α': state.smallGroups.quadra === 'α',
+			'β': state.smallGroups.quadra === 'β',
+			'δ': state.smallGroups.quadra === 'δ',
+			'γ': state.smallGroups.quadra === 'γ'
 		}
 	}
 
@@ -661,7 +684,8 @@ class App extends Component
 						.map(key => ({name: key, value: this.state.dichotomies[key]}))}
 					imElements={Object.keys(this.state.imElements)
 						.map(key => ({name: key, value: this.state.imElements[key]}))}
-					quadra={this.state.quadra}
+					smallGroups={Object.keys(this.state.smallGroups)
+						.map(key => ({name: key, value: this.state.smallGroups[key]}))}
 					relationsFor={this.state.relationsFor}
 					introvertsInside={this.state.introvertsInside}
 					onRemoveRelations={this.onRemoveRelations}
@@ -850,15 +874,15 @@ class App extends Component
 						</div>
 					</div>
 
-					<div class="im-elements-and-quadras">
-						<div class="im-elements">
+					<div className="im-elements-and-small-groups">
+						<div className="im-elements">
 							<div className="pair">
-								<div class="form-control-label" onClick={this.onImFiSwitch}>
+								<div className="form-control-label" onClick={this.onImFiSwitch}>
 									<Checkbox checked={this.state.imElements.Fi === true} />
 									<IconFi />
 								</div>
 
-								<div class="form-control-label" onClick={this.onImFeSwitch}>
+								<div className="form-control-label" onClick={this.onImFeSwitch}>
 									<Checkbox checked={this.state.imElements.Fe === true} />
 									<IconFe />
 								</div>
@@ -898,19 +922,35 @@ class App extends Component
 							</div>
 						</div>
 
-						<div className="quadras">
-							<FormControlLabel value="α" control={<Checkbox checked={this.state.quadra === 'α'} onChange={this.onQuadraSwitch} />} label={'1. ' + t('quadras.Alpha')} />
-							<FormControlLabel value="β" control={<Checkbox checked={this.state.quadra === 'β'} onChange={this.onQuadraSwitch} />} label={'2. ' + t('quadras.Beta')} />
-							<FormControlLabel value="δ" control={<Checkbox checked={this.state.quadra === 'δ'} onChange={this.onQuadraSwitch} />} label={'4. ' + t('quadras.Delta')} />
-							<FormControlLabel value="γ" control={<Checkbox checked={this.state.quadra === 'γ'} onChange={this.onQuadraSwitch} />} label={'3. ' + t('quadras.Gamma')} />
+						<div className="small-groups">
+							<div className="quadras">
+								<FormControlLabel value="α" control={<Checkbox checked={this.state.smallGroups.quadra === 'α'} onChange={this.onQuadraSwitch} />} label={'1. ' + t('quadras.Alpha')} />
+								<FormControlLabel value="β" control={<Checkbox checked={this.state.smallGroups.quadra === 'β'} onChange={this.onQuadraSwitch} />} label={'2. ' + t('quadras.Beta')} />
+								<FormControlLabel value="δ" control={<Checkbox checked={this.state.smallGroups.quadra === 'δ'} onChange={this.onQuadraSwitch} />} label={'4. ' + t('quadras.Delta')} />
+								<FormControlLabel value="γ" control={<Checkbox checked={this.state.smallGroups.quadra === 'γ'} onChange={this.onQuadraSwitch} />} label={'3. ' + t('quadras.Gamma')} />
+							</div>
+
+							<div className="communication-styles">
+								<FormControlLabel value="coldblooded" control={<Checkbox checked={this.state.smallGroups.communicationStyle === 'coldblooded'} onChange={this.onCommunicationStyleSwitch} />} label={t('communication styles.Cold-blooded')} />
+								<FormControlLabel value="businesslike" control={<Checkbox checked={this.state.smallGroups.communicationStyle === 'businesslike'} onChange={this.onCommunicationStyleSwitch} />} label={t('communication styles.Business-like')} />
+								<FormControlLabel value="sincere" control={<Checkbox checked={this.state.smallGroups.communicationStyle === 'sincere'} onChange={this.onCommunicationStyleSwitch} />} label={t('communication styles.Sincere')} />
+								<FormControlLabel value="passionate" control={<Checkbox checked={this.state.smallGroups.communicationStyle === 'passionate'} onChange={this.onCommunicationStyleSwitch} />} label={t('communication styles.Passionate')} />
+							</div>
+
+							<div className="stimulus">
+								<FormControlLabel value="uniqueness" control={<Checkbox checked={this.state.smallGroups.stimulus === 'uniqueness'} onChange={this.onStimulusSwitch} />} label={t('stimuli.Uniqueness')} />
+								<FormControlLabel value="self-worth" control={<Checkbox checked={this.state.smallGroups.stimulus === 'self-worth'} onChange={this.onStimulusSwitch} />} label={t('stimuli.Self-worth')} />
+								<FormControlLabel value="prestige" control={<Checkbox checked={this.state.smallGroups.stimulus === 'prestige'} onChange={this.onStimulusSwitch} />} label={t('stimuli.Prestige')} />
+								<FormControlLabel value="welfare" control={<Checkbox checked={this.state.smallGroups.stimulus === 'welfare'} onChange={this.onStimulusSwitch} />} label={t('stimuli.Welfare')} />
+							</div>
 						</div>
 					</div>
+				</div>
 
-					<div className="preferences-icon">
-						<IconButton color="secondary" aria-label="Preferences" onClick={this.toggleDrawer(true)}>
-							<SettingsIcon />
-						</IconButton>
-					</div>
+				<div className="preferences-icon">
+					<IconButton color="secondary" aria-label="Preferences" onClick={this.toggleDrawer(true)}>
+						<SettingsIcon />
+					</IconButton>
 				</div>
 
 				<SwipeableDrawer

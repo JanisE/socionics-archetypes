@@ -362,19 +362,18 @@ body {
 .switches {
   display: flex;
   justify-content: space-evenly;
-  position: relative; // For the preferences icon.
+  //position: relative; // For the preferences icon.
 
   // The type square stays, the switches part - scrolls.
   height: calc(100vh - 100vmin);
   overflow-y: auto;
 
   @media @landscape {
-    flex-direction: column;
-    justify-content: center;
+    display: block;
+    margin-top: 5vh;
     margin-left: 3vmin;
     min-width: 45vmin;
-
-    height: auto;
+    height: 94vh;
   }
 
   .dichotomies {
@@ -399,7 +398,7 @@ body {
     }
   }
 
-  .im-elements-and-quadras {
+  .im-elements-and-small-groups {
     min-width: 46vmin;
 
     @media @landscape {
@@ -432,7 +431,7 @@ body {
     }
   }
 
-  .quadras {
+  .small-groups > div {
     margin-top: 2vmin;
 
     display: grid;
@@ -456,8 +455,13 @@ body {
 
 .preferences-icon {
   position: absolute;
-  top: 2vw;
+  top: 101vw;
   right: 2vw;
+
+  @media @landscape {
+    top: 1vh;
+
+  }
 }
 
 .preferences-drawer {

@@ -128,13 +128,23 @@ class Archetypes extends Component {
 							return enabled;
 						}, enabled);
 
-						if(this.props.quadra){
-							enabled = enabled && this.props.quadra === types[type].quadra;
-						}
+						enabled = this.props.smallGroups.reduce((enabled, smallGroup) => {
+							if (enabled) {
+								if (typeof types[type].smallGroups[smallGroup.name] !== 'undefined') {
+									enabled = smallGroup.value === null
+										|| smallGroup.value === types[type].smallGroups[smallGroup.name];
+								}
+								else {
+									console.error('Archetypes: Unexpected small group:', smallGroup);
+								}
+							} // Disabled if the type does not match all of the small groups.
+
+							return enabled;
+						}, enabled);
 
 						return (
 							<li className={'pos-col-' + types[type].pos.col + ' pos-row-' + types[type].pos.row
-							+ ' quadra-' + classNames[types[type].quadra] + ' type-' + types[type].socionicsAbbr
+							+ ' quadra-' + classNames[types[type].smallGroups.quadra] + ' type-' + types[type].socionicsAbbr
 							+ (enabled ? '' : ' disabled')}
 								onClick={this.props.onToggleRelations.bind(null, type)}
 								key={types[type].socionicsAbbr}>

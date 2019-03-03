@@ -6,11 +6,8 @@ module.exports = {
 		socionicsAbbr: 'EIE',
 		dichotomyAbbr: 'ENFj',
 		socialRole: 'skolotājs',
-		quadra: 'β',
 		// ■ □ ▲ △ ● ○ ◳ ▙
 		functions: ['Fe', 'Ni', 'Te', 'Si', 'Ti', 'Se', 'Fi', 'Ne'],
-		professionalClub: 'humanitarians',
-		communicationStyle: 'passionate',
 		dichotomies: {
 			aristocraticNotDemocratic: true,
 			askingNotDeclaring: true,
@@ -23,6 +20,12 @@ module.exports = {
 			subjectiveNotObjective: true,
 			tacticalNotStrategic: false,
 			yieldingNotObstinate: false
+		},
+		smallGroups: {
+			communicationStyle: 'passionate',
+			professionalClub: 'humanitarians',
+			quadra: 'β',
+			stimulus: 'uniqueness'
 		}
 	},
 	EII: {
@@ -30,10 +33,7 @@ module.exports = {
 		socionicsAbbr: 'EII',
 		dichotomyAbbr: 'INFj',
 		socialRole: 'humānists',
-		quadra: 'δ',
 		functions: ['Fi', 'Ne', 'Ti', 'Se', 'Te', 'Si', 'Fe', 'Ni'],
-		professionalClub: 'humanitarians',
-		communicationStyle: 'sincere',
 		dichotomies: {
 			aristocraticNotDemocratic: true,
 			askingNotDeclaring: false,
@@ -46,6 +46,12 @@ module.exports = {
 			subjectiveNotObjective: false,
 			tacticalNotStrategic: false,
 			yieldingNotObstinate: true
+		},
+		smallGroups: {
+			communicationStyle: 'sincere',
+			professionalClub: 'humanitarians',
+			quadra: 'δ',
+			stimulus: 'self-worth'
 		}
 	},
 	ESE: {
@@ -53,10 +59,7 @@ module.exports = {
 		socionicsAbbr: 'ESE',
 		dichotomyAbbr: 'ESFj',
 		socialRole: 'iedvesmotājs',
-		quadra: 'α',
 		functions: ['Fe', 'Si', 'Te', 'Ni', 'Ti', 'Ne', 'Fi', 'Se'],
-		professionalClub: 'socials',
-		communicationStyle: 'passionate',
 		dichotomies: {
 			aristocraticNotDemocratic: false,
 			askingNotDeclaring: false,
@@ -69,6 +72,12 @@ module.exports = {
 			subjectiveNotObjective: true,
 			tacticalNotStrategic: true,
 			yieldingNotObstinate: false
+		},
+		smallGroups: {
+			communicationStyle: 'passionate',
+			professionalClub: 'socials',
+			quadra: 'α',
+			stimulus: 'prestige'
 		}
 	},
 	ESI: {
@@ -76,10 +85,7 @@ module.exports = {
 		socionicsAbbr: 'ESI',
 		dichotomyAbbr: 'ISFj',
 		socialRole: 'sargātājs',
-		quadra: 'γ',
 		functions: ['Fi', 'Se', 'Ti', 'Ne', 'Te', 'Ni', 'Fe', 'Si'],
-		professionalClub: 'socials',
-		communicationStyle: 'sincere',
 		dichotomies: {
 			aristocraticNotDemocratic: false,
 			askingNotDeclaring: true,
@@ -92,6 +98,12 @@ module.exports = {
 			subjectiveNotObjective: false,
 			tacticalNotStrategic: true,
 			yieldingNotObstinate: true
+		},
+		smallGroups: {
+			communicationStyle: 'sincere',
+			professionalClub: 'socials',
+			quadra: 'γ',
+			stimulus: 'welfare'
 		}
 	},
 	ILE: {
@@ -99,10 +111,7 @@ module.exports = {
 		socionicsAbbr: 'ILE',
 		dichotomyAbbr: 'ENTp',
 		socialRole: 'meklētājs',
-		quadra: 'α',
 		functions: ['Ne', 'Ti', 'Se', 'Fi', 'Si', 'Fe', 'Ni', 'Te'],
-		professionalClub: 'researchers',
-		communicationStyle: 'businesslike',
 		dichotomies: {
 			aristocraticNotDemocratic: false,
 			askingNotDeclaring: true,
@@ -115,6 +124,12 @@ module.exports = {
 			subjectiveNotObjective: true,
 			tacticalNotStrategic: true,
 			yieldingNotObstinate: true
+		},
+		smallGroups: {
+			communicationStyle: 'businesslike',
+			professionalClub: 'researchers',
+			quadra: 'α',
+			stimulus: 'uniqueness'
 		}
 	},
 	ILI: {
@@ -122,10 +137,7 @@ module.exports = {
 		socionicsAbbr: 'ILI',
 		dichotomyAbbr: 'INTp',
 		socialRole: 'kritiķis',
-		quadra: 'γ',
 		functions: ['Ni', 'Te', 'Si', 'Fe', 'Se', 'Fi', 'Ne', 'Ti'],
-		professionalClub: 'researchers',
-		communicationStyle: 'coldblooded',
 		dichotomies: {
 			aristocraticNotDemocratic: false,
 			askingNotDeclaring: false,
@@ -138,6 +150,12 @@ module.exports = {
 			subjectiveNotObjective: false,
 			tacticalNotStrategic: true,
 			yieldingNotObstinate: false
+		},
+		smallGroups: {
+			communicationStyle: 'coldblooded',
+			professionalClub: 'researchers',
+			quadra: 'γ',
+			stimulus: 'self-worth'
 		}
 	},
 	IEE: {
@@ -145,10 +163,7 @@ module.exports = {
 		socionicsAbbr: 'IEE',
 		dichotomyAbbr: 'ENFp',
 		socialRole: 'komunikators',
-		quadra: 'δ',
 		functions: ['Ne', 'Fi', 'Se', 'Ti', 'Si', 'Te', 'Ni', 'Fe'],
-		professionalClub: 'humanitarians',
-		communicationStyle: 'passionate',
 		dichotomies: {
 			aristocraticNotDemocratic: true,
 			askingNotDeclaring: false,
@@ -161,6 +176,12 @@ module.exports = {
 			subjectiveNotObjective: false,
 			tacticalNotStrategic: true,
 			yieldingNotObstinate: false
+		},
+		smallGroups: {
+			communicationStyle: 'passionate',
+			professionalClub: 'humanitarians',
+			quadra: 'δ',
+			stimulus: 'uniqueness'
 		}
 	},
 	IEI: {
@@ -168,10 +189,7 @@ module.exports = {
 		socionicsAbbr: 'IEI',
 		dichotomyAbbr: 'INFp',
 		socialRole: 'motivētājs',
-		quadra: 'β',
 		functions: ['Ni', 'Fe', 'Si', 'Te', 'Se', 'Ti', 'Ne', 'Fi'],
-		professionalClub: 'humanitarians',
-		communicationStyle: 'sincere',
 		dichotomies: {
 			aristocraticNotDemocratic: true,
 			askingNotDeclaring: true,
@@ -184,6 +202,12 @@ module.exports = {
 			subjectiveNotObjective: true,
 			tacticalNotStrategic: true,
 			yieldingNotObstinate: true
+		},
+		smallGroups: {
+			communicationStyle: 'sincere',
+			professionalClub: 'humanitarians',
+			quadra: 'β',
+			stimulus: 'self-worth'
 		}
 	},
 	LIE: {
@@ -191,10 +215,7 @@ module.exports = {
 		socionicsAbbr: 'LIE',
 		dichotomyAbbr: 'ENTj',
 		socialRole: 'uzņēmējs',
-		quadra: 'γ',
 		functions: ['Te', 'Ni', 'Fe', 'Si', 'Fi', 'Se', 'Ti', 'Ne'],
-		professionalClub: 'researchers',
-		communicationStyle: 'businesslike',
 		dichotomies: {
 			aristocraticNotDemocratic: false,
 			askingNotDeclaring: false,
@@ -207,6 +228,12 @@ module.exports = {
 			subjectiveNotObjective: false,
 			tacticalNotStrategic: false,
 			yieldingNotObstinate: true
+		},
+		smallGroups: {
+			communicationStyle: 'businesslike',
+			professionalClub: 'researchers',
+			quadra: 'γ',
+			stimulus: 'uniqueness'
 		}
 	},
 	LII: {
@@ -214,10 +241,7 @@ module.exports = {
 		socionicsAbbr: 'LII',
 		dichotomyAbbr: 'INTj',
 		socialRole: 'analītiķis',
-		quadra: 'α',
 		functions: ['Ti', 'Ne', 'Fi', 'Se', 'Fe', 'Si', 'Te', 'Ni'],
-		professionalClub: 'researchers',
-		communicationStyle: 'coldblooded',
 		dichotomies: {
 			aristocraticNotDemocratic: false,
 			askingNotDeclaring: true,
@@ -230,6 +254,12 @@ module.exports = {
 			subjectiveNotObjective: true,
 			tacticalNotStrategic: false,
 			yieldingNotObstinate: false
+		},
+		smallGroups: {
+			communicationStyle: 'coldblooded',
+			professionalClub: 'researchers',
+			quadra: 'α',
+			stimulus: 'self-worth'
 		}
 	},
 	LSE: {
@@ -237,10 +267,7 @@ module.exports = {
 		socionicsAbbr: 'LSE',
 		dichotomyAbbr: 'ESTj',
 		socialRole: 'administrētājs',
-		quadra: 'δ',
 		functions: ['Te', 'Si', 'Fe', 'Ni', 'Fi', 'Ne', 'Ti', 'Se'],
-		professionalClub: 'pragmatists',
-		communicationStyle: 'businesslike',
 		dichotomies: {
 			aristocraticNotDemocratic: true,
 			askingNotDeclaring: true,
@@ -253,6 +280,12 @@ module.exports = {
 			subjectiveNotObjective: false,
 			tacticalNotStrategic: true,
 			yieldingNotObstinate: true
+		},
+		smallGroups: {
+			communicationStyle: 'businesslike',
+			professionalClub: 'pragmatists',
+			quadra: 'δ',
+			stimulus: 'prestige'
 		}
 	},
 	LSI: {
@@ -260,10 +293,7 @@ module.exports = {
 		socionicsAbbr: 'LSI',
 		dichotomyAbbr: 'ISTj',
 		socialRole: 'sistematizētājs',
-		quadra: 'β',
 		functions: ['Ti', 'Se', 'Fi', 'Ne', 'Fe', 'Ni', 'Te', 'Si'],
-		professionalClub: 'pragmatists',
-		communicationStyle: 'coldblooded',
 		dichotomies: {
 			aristocraticNotDemocratic: true,
 			askingNotDeclaring: false,
@@ -276,6 +306,12 @@ module.exports = {
 			subjectiveNotObjective: true,
 			tacticalNotStrategic: true,
 			yieldingNotObstinate: false
+		},
+		smallGroups: {
+			communicationStyle: 'coldblooded',
+			professionalClub: 'pragmatists',
+			quadra: 'β',
+			stimulus: 'welfare'
 		}
 	},
 	SLE: {
@@ -283,10 +319,7 @@ module.exports = {
 		socionicsAbbr: 'SLE',
 		dichotomyAbbr: 'ESTp',
 		socialRole: 'rīkotājs',
-		quadra: 'β',
 		functions: ['Se', 'Ti', 'Ne', 'Fi', 'Ni', 'Fe', 'Si', 'Te'],
-		professionalClub: 'pragmatists',
-		communicationStyle: 'businesslike',
 		dichotomies: {
 			aristocraticNotDemocratic: true,
 			askingNotDeclaring: false,
@@ -299,6 +332,12 @@ module.exports = {
 			subjectiveNotObjective: true,
 			tacticalNotStrategic: false,
 			yieldingNotObstinate: true
+		},
+		smallGroups: {
+			communicationStyle: 'businesslike',
+			professionalClub: 'pragmatists',
+			quadra: 'β',
+			stimulus: 'prestige'
 		}
 	},
 	SLI: {
@@ -306,10 +345,7 @@ module.exports = {
 		socionicsAbbr: 'SLI',
 		dichotomyAbbr: 'ISTp',
 		socialRole: 'amatnieks',
-		quadra: 'δ',
 		functions: ['Si', 'Te', 'Ni', 'Fe', 'Ne', 'Fi', 'Se', 'Ti'],
-		professionalClub: 'pragmatists',
-		communicationStyle: 'coldblooded',
 		dichotomies: {
 			aristocraticNotDemocratic: true,
 			askingNotDeclaring: true,
@@ -322,6 +358,12 @@ module.exports = {
 			subjectiveNotObjective: false,
 			tacticalNotStrategic: false,
 			yieldingNotObstinate: false
+		},
+		smallGroups: {
+			communicationStyle: 'coldblooded',
+			professionalClub: 'pragmatists',
+			quadra: 'δ',
+			stimulus: 'welfare'
 		}
 	},
 	SEE: {
@@ -329,10 +371,7 @@ module.exports = {
 		socionicsAbbr: 'SEE',
 		dichotomyAbbr: 'ESFp',
 		socialRole: 'politiķis',
-		quadra: 'γ',
 		functions: ['Se', 'Fi', 'Ne', 'Ti', 'Ni', 'Te', 'Si', 'Fe'],
-		professionalClub: 'socials',
-		communicationStyle: 'passionate',
 		dichotomies: {
 			aristocraticNotDemocratic: false,
 			askingNotDeclaring: true,
@@ -345,6 +384,12 @@ module.exports = {
 			subjectiveNotObjective: false,
 			tacticalNotStrategic: false,
 			yieldingNotObstinate: false
+		},
+		smallGroups: {
+			communicationStyle: 'passionate',
+			professionalClub: 'socials',
+			quadra: 'γ',
+			stimulus: 'prestige'
 		}
 	},
 	SEI: {
@@ -352,10 +397,7 @@ module.exports = {
 		socionicsAbbr: 'SEI',
 		dichotomyAbbr: 'ISFp',
 		socialRole: 'starpnieks',
-		quadra: 'α',
 		functions: ['Si', 'Fe', 'Ni', 'Te', 'Ne', 'Ti', 'Se', 'Fi'],
-		professionalClub: 'socials',
-		communicationStyle: 'sincere',
 		dichotomies: {
 			aristocraticNotDemocratic: false,
 			askingNotDeclaring: false,
@@ -368,6 +410,12 @@ module.exports = {
 			subjectiveNotObjective: true,
 			tacticalNotStrategic: false,
 			yieldingNotObstinate: true
+		},
+		smallGroups: {
+			communicationStyle: 'sincere',
+			professionalClub: 'socials',
+			quadra: 'α',
+			stimulus: 'welfare'
 		}
 	}
 };
