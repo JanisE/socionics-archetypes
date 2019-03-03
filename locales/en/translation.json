@@ -41,6 +41,18 @@
 		"Gamma": "Gamma",
 		"Delta": "Delta"
 	},
+	"communication styles": {
+		"Cold-blooded": "Cold-blooded",
+		"Business-like": "Business-like",
+		"Sincere": "Sincere",
+		"Passionate": "Passionate"
+	},
+	"stimuli": {
+		"Prestige": "Prestige",
+		"Self-worth": "Self-worth",
+		"Uniqueness": "Uniqueness",
+		"Welfare": "Welfare"
+	},
 	"type info": {
 		"Hamlet": {
 			"socionics abbr": "EIE",

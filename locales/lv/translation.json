@@ -41,6 +41,18 @@
 		"Gamma": "Gamma",
 		"Delta": "Delta"
 	},
+	"communication styles": {
+		"Cold-blooded": "informatīvais",
+		"Business-like": "lietišķais",
+		"Sincere": "sirsnīgais",
+		"Passionate": "kaislīgais"
+	},
+	"stimuli": {
+		"Prestige": "prestižs",
+		"Self-worth": "pašizaugsme",
+		"Uniqueness": "oriģinalitāte",
+		"Welfare": "labklājība"
+	},
 	"type info": {
 		"Hamlet": {
 			"socionics abbr": "EIE",
