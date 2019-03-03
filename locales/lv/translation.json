@@ -20,7 +20,17 @@
 		"Asking": "Dialogs",
 		"Declaring": "Monologs",
 		"Static": "Statiķis",
-		"Dynamic": "Dinamiķis"
+		"Dynamic": "Dinamiķis",
+		"Constructivist": "Konstruktīvists",
+		"Emotivist": "Emotīvists",
+		"Tactical": "Taktiķis",
+		"Strategic": "Stratēģis",
+		"Judicious": "Apdomīgs",
+		"Decisive": "Izlēmīgs",
+		"Subjective": "Subjektīvists",
+		"Objective": "Objektīvists",
+		"Process": "Process",
+		"Result": "Rezultāts"
 	},
 	"prefs": {
 		"Introverts Inside": "Introverti iekšpusē"
