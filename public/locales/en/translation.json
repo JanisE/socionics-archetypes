@@ -20,7 +20,17 @@
 		"Asking": "Asking",
 		"Declaring": "Declaring",
 		"Static": "Static",
-		"Dynamic": "Dynamic"
+		"Dynamic": "Dynamic",
+		"Constructivist":  "Constructivist",
+		"Emotivist": "Emotivist",
+		"Tactical": "Tactical",
+		"Strategic": "Strategic",
+		"Judicious": "Judicious",
+		"Decisive": "Decisive",
+		"Subjective": "Subjective",
+		"Objective": "Objective",
+		"Process": "Process",
+		"Result": "Result"
 	},
 	"prefs": {
 		"Introverts Inside": "Introverts Inside"

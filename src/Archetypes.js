@@ -104,38 +104,14 @@ class Archetypes extends Component {
 									enabled = ! dichotomy.value || types[type].dichotomyAbbr[3] === 'j';
 									break;
 
-								case 'aristocraticNotDemocratic':
-									enabled = dichotomy.value === null
-										|| dichotomy.value === types[type].dichotomies.aristocraticNotDemocratic;
-									break;
-
-								case 'yieldingNotObstinate':
-									enabled = dichotomy.value === null
-										|| dichotomy.value === types[type].dichotomies.yieldingNotObstinate;
-									break;
-
-								case 'positiveNotNegative':
-									enabled = dichotomy.value === null
-										|| dichotomy.value === types[type].dichotomies.positiveNotNegative;
-									break;
-
-								case 'carefreeNotFarsighted':
-									enabled = dichotomy.value === null
-										|| dichotomy.value === types[type].dichotomies.carefreeNotFarsighted;
-									break;
-
-								case 'askingNotDeclaring':
-									enabled = dichotomy.value === null
-										|| dichotomy.value === types[type].dichotomies.askingNotDeclaring;
-									break;
-
-								case 'staticNotDynamic':
-									enabled = dichotomy.value === null
-										|| dichotomy.value === types[type].dichotomies.staticNotDynamic;
-									break;
-
 								default:
-									console.error('Archetypes: Unexpected dichotomy:', dichotomy);
+									if (typeof types[type].dichotomies[dichotomy.name] !== 'undefined') {
+										enabled = dichotomy.value === null
+											|| dichotomy.value === types[type].dichotomies[dichotomy.name];
+									}
+									else {
+										console.error('Archetypes: Unexpected dichotomy:', dichotomy);
+									}
 								}
 							} // Disabled if the type does not match all of the dichotomies.
 

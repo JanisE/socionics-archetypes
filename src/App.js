@@ -91,6 +91,16 @@ class App extends Component
 		this.onDeclaringSwitch = this.onDeclaringSwitch.bind(this);
 		this.onStaticSwitch = this.onStaticSwitch.bind(this);
 		this.onDynamicSwitch = this.onDynamicSwitch.bind(this);
+		this.onConstructivistSwitch = this.onConstructivistSwitch.bind(this);
+		this.onEmotivistSwitch = this.onEmotivistSwitch.bind(this);
+		this.onTacticalSwitch = this.onTacticalSwitch.bind(this);
+		this.onStrategicSwitch = this.onStrategicSwitch.bind(this);
+		this.onJudiciousSwitch = this.onJudiciousSwitch.bind(this);
+		this.onDecisiveSwitch = this.onDecisiveSwitch.bind(this);
+		this.onSubjectiveSwitch = this.onSubjectiveSwitch.bind(this);
+		this.onObjectiveSwitch = this.onObjectiveSwitch.bind(this);
+		this.onProcessSwitch = this.onProcessSwitch.bind(this);
+		this.onResultSwitch = this.onResultSwitch.bind(this);
 
 		this.onImFiSwitch = this.onImFiSwitch.bind(this);
 		this.onImFeSwitch = this.onImFeSwitch.bind(this);
@@ -523,6 +533,47 @@ class App extends Component
 		this.setState({dichotomies: {...this.state.dichotomies, staticNotDynamic: event.target.checked ? false : null}});
 	}
 
+	onConstructivistSwitch (event) {
+		this.setState({dichotomies: {...this.state.dichotomies, constructivistNotEmotivist: event.target.checked ? true : null}});
+	}
+
+	onEmotivistSwitch (event) {
+		this.setState({dichotomies: {...this.state.dichotomies, constructivistNotEmotivist: event.target.checked ? false : null}});
+	}
+
+	onTacticalSwitch (event) {
+		this.setState({dichotomies: {...this.state.dichotomies, tacticalNotStrategic: event.target.checked ? true : null}});
+	}
+
+	onStrategicSwitch (event) {
+		this.setState({dichotomies: {...this.state.dichotomies, tacticalNotStrategic: event.target.checked ? false : null}});
+	}
+
+	onJudiciousSwitch (event) {
+		this.setState({dichotomies: {...this.state.dichotomies, judiciousNotDecisive: event.target.checked ? true : null}});
+	}
+
+	onDecisiveSwitch (event) {
+		this.setState({dichotomies: {...this.state.dichotomies, judiciousNotDecisive: event.target.checked ? false : null}});
+	}
+
+	onSubjectiveSwitch (event) {
+		this.setState({dichotomies: {...this.state.dichotomies, subjectiveNotObjective: event.target.checked ? true : null}});
+	}
+
+	onObjectiveSwitch (event) {
+		this.setState({dichotomies: {...this.state.dichotomies, subjectiveNotObjective: event.target.checked ? false : null}});
+	}
+
+	onProcessSwitch (event) {
+		this.setState({dichotomies: {...this.state.dichotomies, processNotResult: event.target.checked ? true : null}});
+	}
+
+	onResultSwitch (event) {
+		this.setState({dichotomies: {...this.state.dichotomies, processNotResult: event.target.checked ? false : null}});
+	}
+
+
 	onQuadraSwitch (event) {
 		this.setState({quadra: event.target.checked ? event.target.value : null});
 	}
@@ -735,6 +786,66 @@ class App extends Component
 							<FormControlLabel
 								control={<Checkbox checked={this.state.dichotomies.staticNotDynamic === false} onChange={this.onDynamicSwitch}/>}
 								label={t('controls.Dynamic')}
+							/>
+						</div>
+
+						<div className="pair">
+							<FormControlLabel
+								control={<Checkbox checked={this.state.dichotomies.constructivistNotEmotivist === true} onChange={this.onConstructivistSwitch}/>}
+								label={t('controls.Constructivist')}
+							/>
+
+							<FormControlLabel
+								control={<Checkbox checked={this.state.dichotomies.constructivistNotEmotivist === false} onChange={this.onEmotivistSwitch}/>}
+								label={t('controls.Emotivist')}
+							/>
+						</div>
+
+						<div className="pair">
+							<FormControlLabel
+								control={<Checkbox checked={this.state.dichotomies.tacticalNotStrategic === true} onChange={this.onTacticalSwitch}/>}
+								label={t('controls.Tactical')}
+							/>
+
+							<FormControlLabel
+								control={<Checkbox checked={this.state.dichotomies.tacticalNotStrategic === false} onChange={this.onStrategicSwitch}/>}
+								label={t('controls.Strategic')}
+							/>
+						</div>
+
+						<div className="pair">
+							<FormControlLabel
+								control={<Checkbox checked={this.state.dichotomies.judiciousNotDecisive === true} onChange={this.onJudiciousSwitch}/>}
+								label={t('controls.Judicious')}
+							/>
+
+							<FormControlLabel
+								control={<Checkbox checked={this.state.dichotomies.judiciousNotDecisive === false} onChange={this.onDecisiveSwitch}/>}
+								label={t('controls.Decisive')}
+							/>
+						</div>
+
+						<div className="pair">
+							<FormControlLabel
+								control={<Checkbox checked={this.state.dichotomies.subjectiveNotObjective === true} onChange={this.onSubjectiveSwitch}/>}
+								label={t('controls.Subjective')}
+							/>
+
+							<FormControlLabel
+								control={<Checkbox checked={this.state.dichotomies.subjectiveNotObjective === false} onChange={this.onObjectiveSwitch}/>}
+								label={t('controls.Objective')}
+							/>
+						</div>
+
+						<div className="pair">
+							<FormControlLabel
+								control={<Checkbox checked={this.state.dichotomies.processNotResult === true} onChange={this.onProcessSwitch}/>}
+								label={t('controls.Process')}
+							/>
+
+							<FormControlLabel
+								control={<Checkbox checked={this.state.dichotomies.processNotResult === false} onChange={this.onResultSwitch}/>}
+								label={t('controls.Result')}
 							/>
 						</div>
 					</div>
