@@ -585,6 +585,9 @@ body {
     height: 94vh;
   }
 }
+.switches .fits-selected {
+  background: #d9ffd9;
+}
 .switches .dichotomies {
   min-width: 46vmin;
 }

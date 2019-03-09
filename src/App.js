@@ -14,6 +14,7 @@ import IconButton from '@material-ui/core/IconButton';
 import SettingsIcon from '@material-ui/icons/Settings';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 import { withNamespaces } from 'react-i18next';
+import types from "./types";
 
 class App extends Component
 {
@@ -697,11 +698,13 @@ class App extends Component
 							<FormControlLabel
 								control={<Checkbox checked={this.state.dichotomies.introvert} onChange={this.onIntrovertSwitch}/>}
 								label={t('controls.Introvert')}
+								className={this.state.relationsFor && types[this.state.relationsFor].dichotomyAbbr[0] === 'I' ? 'fits-selected' : ''}
 							/>
 
 							<FormControlLabel
 								control={<Checkbox checked={this.state.dichotomies.extrovert} onChange={this.onExtrovertSwitch}/>}
 								label={t('controls.Extravert')}
+								className={this.state.relationsFor && types[this.state.relationsFor].dichotomyAbbr[0] === 'E' ? 'fits-selected' : ''}
 							/>
 						</div>
 
@@ -709,11 +712,13 @@ class App extends Component
 							<FormControlLabel
 								control={<Checkbox checked={this.state.dichotomies.logic} onChange={this.onLogicSwitch}/>}
 								label={t('controls.Logical')}
+								className={this.state.relationsFor && types[this.state.relationsFor].dichotomyAbbr[2] === 'T' ? 'fits-selected' : ''}
 							/>
 
 							<FormControlLabel
 								control={<Checkbox checked={this.state.dichotomies.ethics} onChange={this.onEthicsSwitch}/>}
 								label={t('controls.Ethical')}
+								className={this.state.relationsFor && types[this.state.relationsFor].dichotomyAbbr[2] === 'F' ? 'fits-selected' : ''}
 							/>
 						</div>
 
@@ -721,11 +726,13 @@ class App extends Component
 							<FormControlLabel
 								control={<Checkbox checked={this.state.dichotomies.intuition} onChange={this.onIntuitionSwitch}/>}
 								label={t('controls.Intuitive')}
+								className={this.state.relationsFor && types[this.state.relationsFor].dichotomyAbbr[1] === 'N' ? 'fits-selected' : ''}
 							/>
 
 							<FormControlLabel
 								control={<Checkbox checked={this.state.dichotomies.sensing} onChange={this.onSensingSwitch}/>}
 								label={t('controls.Sensory')}
+								className={this.state.relationsFor && types[this.state.relationsFor].dichotomyAbbr[1] === 'S' ? 'fits-selected' : ''}
 							/>
 						</div>
 
@@ -733,11 +740,13 @@ class App extends Component
 							<FormControlLabel
 								control={<Checkbox checked={this.state.dichotomies.rational} onChange={this.onRationalSwitch}/>}
 								label={t('controls.Rational')}
+								className={this.state.relationsFor && types[this.state.relationsFor].dichotomyAbbr[3] === 'j' ? 'fits-selected' : ''}
 							/>
 
 							<FormControlLabel
 								control={<Checkbox checked={this.state.dichotomies.irrational} onChange={this.onIrrationalSwitch}/>}
 								label={t('controls.Irrational')}
+								className={this.state.relationsFor && types[this.state.relationsFor].dichotomyAbbr[3] === 'p' ? 'fits-selected' : ''}
 							/>
 						</div>
 
@@ -745,11 +754,13 @@ class App extends Component
 							<FormControlLabel
 								control={<Checkbox checked={this.state.dichotomies.aristocraticNotDemocratic === true} onChange={this.onAristocraticSwitch}/>}
 								label={t('controls.Aristocratic')}
+								className={this.state.relationsFor && types[this.state.relationsFor].dichotomies.aristocraticNotDemocratic ? 'fits-selected' : ''}
 							/>
 
 							<FormControlLabel
 								control={<Checkbox checked={this.state.dichotomies.aristocraticNotDemocratic === false} onChange={this.onDemocraticSwitch}/>}
 								label={t('controls.Democratic')}
+								className={this.state.relationsFor && ! types[this.state.relationsFor].dichotomies.aristocraticNotDemocratic ? 'fits-selected' : ''}
 							/>
 						</div>
 
@@ -757,11 +768,13 @@ class App extends Component
 							<FormControlLabel
 								control={<Checkbox checked={this.state.dichotomies.yieldingNotObstinate === true} onChange={this.onYieldingSwitch}/>}
 								label={t('controls.Yielding')}
+								className={this.state.relationsFor && types[this.state.relationsFor].dichotomies.yieldingNotObstinate ? 'fits-selected' : ''}
 							/>
 
 							<FormControlLabel
 								control={<Checkbox checked={this.state.dichotomies.yieldingNotObstinate === false} onChange={this.onObstinateSwitch}/>}
 								label={t('controls.Obstinate')}
+								className={this.state.relationsFor && ! types[this.state.relationsFor].dichotomies.yieldingNotObstinate ? 'fits-selected' : ''}
 							/>
 						</div>
 
@@ -769,11 +782,13 @@ class App extends Component
 							<FormControlLabel
 								control={<Checkbox checked={this.state.dichotomies.positiveNotNegative === true} onChange={this.onPositiveSwitch}/>}
 								label={t('controls.Positive')}
+								className={this.state.relationsFor && types[this.state.relationsFor].dichotomies.positiveNotNegative ? 'fits-selected' : ''}
 							/>
 
 							<FormControlLabel
 								control={<Checkbox checked={this.state.dichotomies.positiveNotNegative === false} onChange={this.onNegativeSwitch}/>}
 								label={t('controls.Negative')}
+								className={this.state.relationsFor && ! types[this.state.relationsFor].dichotomies.positiveNotNegative ? 'fits-selected' : ''}
 							/>
 						</div>
 
@@ -781,11 +796,13 @@ class App extends Component
 							<FormControlLabel
 								control={<Checkbox checked={this.state.dichotomies.carefreeNotFarsighted === true} onChange={this.onCarefreeSwitch}/>}
 								label={t('controls.Carefree')}
+								className={this.state.relationsFor && types[this.state.relationsFor].dichotomies.carefreeNotFarsighted ? 'fits-selected' : ''}
 							/>
 
 							<FormControlLabel
 								control={<Checkbox checked={this.state.dichotomies.carefreeNotFarsighted === false} onChange={this.onFarsightedSwitch}/>}
 								label={t('controls.Farsighted')}
+								className={this.state.relationsFor && ! types[this.state.relationsFor].dichotomies.carefreeNotFarsighted ? 'fits-selected' : ''}
 							/>
 						</div>
 
@@ -793,11 +810,13 @@ class App extends Component
 							<FormControlLabel
 								control={<Checkbox checked={this.state.dichotomies.askingNotDeclaring === true} onChange={this.onAskingSwitch}/>}
 								label={t('controls.Asking')}
+								className={this.state.relationsFor && types[this.state.relationsFor].dichotomies.askingNotDeclaring ? 'fits-selected' : ''}
 							/>
 
 							<FormControlLabel
 								control={<Checkbox checked={this.state.dichotomies.askingNotDeclaring === false} onChange={this.onDeclaringSwitch}/>}
 								label={t('controls.Declaring')}
+								className={this.state.relationsFor && ! types[this.state.relationsFor].dichotomies.askingNotDeclaring ? 'fits-selected' : ''}
 							/>
 						</div>
 
@@ -805,11 +824,13 @@ class App extends Component
 							<FormControlLabel
 								control={<Checkbox checked={this.state.dichotomies.staticNotDynamic === true} onChange={this.onStaticSwitch}/>}
 								label={t('controls.Static')}
+								className={this.state.relationsFor && types[this.state.relationsFor].dichotomies.staticNotDynamic ? 'fits-selected' : ''}
 							/>
 
 							<FormControlLabel
 								control={<Checkbox checked={this.state.dichotomies.staticNotDynamic === false} onChange={this.onDynamicSwitch}/>}
 								label={t('controls.Dynamic')}
+								className={this.state.relationsFor && ! types[this.state.relationsFor].dichotomies.staticNotDynamic ? 'fits-selected' : ''}
 							/>
 						</div>
 
@@ -817,11 +838,13 @@ class App extends Component
 							<FormControlLabel
 								control={<Checkbox checked={this.state.dichotomies.constructivistNotEmotivist === true} onChange={this.onConstructivistSwitch}/>}
 								label={t('controls.Constructivist')}
+								className={this.state.relationsFor && types[this.state.relationsFor].dichotomies.constructivistNotEmotivist ? 'fits-selected' : ''}
 							/>
 
 							<FormControlLabel
 								control={<Checkbox checked={this.state.dichotomies.constructivistNotEmotivist === false} onChange={this.onEmotivistSwitch}/>}
 								label={t('controls.Emotivist')}
+								className={this.state.relationsFor && ! types[this.state.relationsFor].dichotomies.constructivistNotEmotivist ? 'fits-selected' : ''}
 							/>
 						</div>
 
@@ -829,11 +852,13 @@ class App extends Component
 							<FormControlLabel
 								control={<Checkbox checked={this.state.dichotomies.tacticalNotStrategic === true} onChange={this.onTacticalSwitch}/>}
 								label={t('controls.Tactical')}
+								className={this.state.relationsFor && types[this.state.relationsFor].dichotomies.tacticalNotStrategic ? 'fits-selected' : ''}
 							/>
 
 							<FormControlLabel
 								control={<Checkbox checked={this.state.dichotomies.tacticalNotStrategic === false} onChange={this.onStrategicSwitch}/>}
 								label={t('controls.Strategic')}
+								className={this.state.relationsFor && ! types[this.state.relationsFor].dichotomies.tacticalNotStrategic ? 'fits-selected' : ''}
 							/>
 						</div>
 
@@ -841,11 +866,13 @@ class App extends Component
 							<FormControlLabel
 								control={<Checkbox checked={this.state.dichotomies.judiciousNotDecisive === true} onChange={this.onJudiciousSwitch}/>}
 								label={t('controls.Judicious')}
+								className={this.state.relationsFor && types[this.state.relationsFor].dichotomies.judiciousNotDecisive ? 'fits-selected' : ''}
 							/>
 
 							<FormControlLabel
 								control={<Checkbox checked={this.state.dichotomies.judiciousNotDecisive === false} onChange={this.onDecisiveSwitch}/>}
 								label={t('controls.Decisive')}
+								className={this.state.relationsFor && ! types[this.state.relationsFor].dichotomies.judiciousNotDecisive ? 'fits-selected' : ''}
 							/>
 						</div>
 
@@ -853,11 +880,13 @@ class App extends Component
 							<FormControlLabel
 								control={<Checkbox checked={this.state.dichotomies.subjectiveNotObjective === true} onChange={this.onSubjectiveSwitch}/>}
 								label={t('controls.Subjective')}
+								className={this.state.relationsFor && types[this.state.relationsFor].dichotomies.subjectiveNotObjective ? 'fits-selected' : ''}
 							/>
 
 							<FormControlLabel
 								control={<Checkbox checked={this.state.dichotomies.subjectiveNotObjective === false} onChange={this.onObjectiveSwitch}/>}
 								label={t('controls.Objective')}
+								className={this.state.relationsFor && ! types[this.state.relationsFor].dichotomies.subjectiveNotObjective ? 'fits-selected' : ''}
 							/>
 						</div>
 
@@ -865,11 +894,13 @@ class App extends Component
 							<FormControlLabel
 								control={<Checkbox checked={this.state.dichotomies.processNotResult === true} onChange={this.onProcessSwitch}/>}
 								label={t('controls.Process')}
+								className={this.state.relationsFor && types[this.state.relationsFor].dichotomies.processNotResult ? 'fits-selected' : ''}
 							/>
 
 							<FormControlLabel
 								control={<Checkbox checked={this.state.dichotomies.processNotResult === false} onChange={this.onResultSwitch}/>}
 								label={t('controls.Result')}
+								className={this.state.relationsFor && ! types[this.state.relationsFor].dichotomies.processNotResult ? 'fits-selected' : ''}
 							/>
 						</div>
 					</div>
@@ -877,45 +908,53 @@ class App extends Component
 					<div className="im-elements-and-small-groups">
 						<div className="im-elements">
 							<div className="pair">
-								<div className="form-control-label" onClick={this.onImFiSwitch}>
+								<div className={'form-control-label' + (this.state.relationsFor && (types[this.state.relationsFor].functions[0] === 'Fi' || types[this.state.relationsFor].functions[1] === 'Fi') ? ' fits-selected' : '')}
+									onClick={this.onImFiSwitch}>
 									<Checkbox checked={this.state.imElements.Fi === true} />
 									<IconFi />
 								</div>
 
-								<div className="form-control-label" onClick={this.onImFeSwitch}>
+								<div className={'form-control-label' + (this.state.relationsFor && (types[this.state.relationsFor].functions[0] === 'Fe' || types[this.state.relationsFor].functions[1] === 'Fe') ? ' fits-selected' : '')}
+									onClick={this.onImFeSwitch}>
 									<Checkbox checked={this.state.imElements.Fe === true} />
 									<IconFe />
 								</div>
 							</div>
 							<div className="pair">
-								<div className="form-control-label" onClick={this.onImTiSwitch}>
+								<div className={'form-control-label' + (this.state.relationsFor && (types[this.state.relationsFor].functions[0] === 'Ti' || types[this.state.relationsFor].functions[1] === 'Ti') ? ' fits-selected' : '')}
+									onClick={this.onImTiSwitch}>
 									<Checkbox checked={this.state.imElements.Ti === true} />
 									<IconTi/>
 								</div>
 
-								<div className="form-control-label" onClick={this.onImTeSwitch}>
+								<div className={'form-control-label' + (this.state.relationsFor && (types[this.state.relationsFor].functions[0] === 'Te' || types[this.state.relationsFor].functions[1] === 'Te') ? ' fits-selected' : '')}
+									onClick={this.onImTeSwitch}>
 									<Checkbox checked={this.state.imElements.Te === true} />
 									<IconTe/>
 								</div>
 							</div>
 							<div className="pair">
-								<div className="form-control-label" onClick={this.onImSiSwitch}>
+								<div className={'form-control-label' + (this.state.relationsFor && (types[this.state.relationsFor].functions[0] === 'Si' || types[this.state.relationsFor].functions[1] === 'Si') ? ' fits-selected' : '')}
+									onClick={this.onImSiSwitch}>
 									<Checkbox checked={this.state.imElements.Si === true} />
 									<IconSi/>
 								</div>
 
-								<div className="form-control-label" onClick={this.onImSeSwitch}>
+								<div className={'form-control-label' + (this.state.relationsFor && (types[this.state.relationsFor].functions[0] === 'Se' || types[this.state.relationsFor].functions[1] === 'Se') ? ' fits-selected' : '')}
+									onClick={this.onImSeSwitch}>
 									<Checkbox checked={this.state.imElements.Se === true} />
 									<IconSe/>
 								</div>
 							</div>
 							<div className="pair">
-								<div className="form-control-label" onClick={this.onImNiSwitch}>
+								<div className={'form-control-label' + (this.state.relationsFor && (types[this.state.relationsFor].functions[0] === 'Ni' || types[this.state.relationsFor].functions[1] === 'Ni') ? ' fits-selected' : '')}
+									onClick={this.onImNiSwitch}>
 									<Checkbox checked={this.state.imElements.Ni === true} />
 									<IconNi/>
 								</div>
 
-								<div className="form-control-label" onClick={this.onImNeSwitch}>
+								<div className={'form-control-label' + (this.state.relationsFor && (types[this.state.relationsFor].functions[0] === 'Ne' || types[this.state.relationsFor].functions[1] === 'Ne') ? ' fits-selected' : '')}
+									onClick={this.onImNeSwitch}>
 									<Checkbox checked={this.state.imElements.Ne === true} />
 									<IconNe/>
 								</div>
@@ -924,24 +963,36 @@ class App extends Component
 
 						<div className="small-groups">
 							<div className="quadras">
-								<FormControlLabel value="α" control={<Checkbox checked={this.state.smallGroups.quadra === 'α'} onChange={this.onQuadraSwitch} />} label={'1. ' + t('quadras.Alpha')} />
-								<FormControlLabel value="β" control={<Checkbox checked={this.state.smallGroups.quadra === 'β'} onChange={this.onQuadraSwitch} />} label={'2. ' + t('quadras.Beta')} />
-								<FormControlLabel value="δ" control={<Checkbox checked={this.state.smallGroups.quadra === 'δ'} onChange={this.onQuadraSwitch} />} label={'4. ' + t('quadras.Delta')} />
-								<FormControlLabel value="γ" control={<Checkbox checked={this.state.smallGroups.quadra === 'γ'} onChange={this.onQuadraSwitch} />} label={'3. ' + t('quadras.Gamma')} />
+								<FormControlLabel value="α" control={<Checkbox checked={this.state.smallGroups.quadra === 'α'} onChange={this.onQuadraSwitch} />} label={'1. ' + t('quadras.Alpha')}
+								  className={this.state.relationsFor && types[this.state.relationsFor].smallGroups.quadra === 'α' ? 'fits-selected' : ''} />
+								<FormControlLabel value="β" control={<Checkbox checked={this.state.smallGroups.quadra === 'β'} onChange={this.onQuadraSwitch} />} label={'2. ' + t('quadras.Beta')}
+								  className={this.state.relationsFor && types[this.state.relationsFor].smallGroups.quadra === 'β' ? 'fits-selected' : ''} />
+								<FormControlLabel value="δ" control={<Checkbox checked={this.state.smallGroups.quadra === 'δ'} onChange={this.onQuadraSwitch} />} label={'4. ' + t('quadras.Delta')}
+								  className={this.state.relationsFor && types[this.state.relationsFor].smallGroups.quadra === 'δ' ? 'fits-selected' : ''} />
+								<FormControlLabel value="γ" control={<Checkbox checked={this.state.smallGroups.quadra === 'γ'} onChange={this.onQuadraSwitch} />} label={'3. ' + t('quadras.Gamma')}
+								  className={this.state.relationsFor && types[this.state.relationsFor].smallGroups.quadra === 'γ' ? 'fits-selected' : ''} />
 							</div>
 
 							<div className="communication-styles">
-								<FormControlLabel value="coldblooded" control={<Checkbox checked={this.state.smallGroups.communicationStyle === 'coldblooded'} onChange={this.onCommunicationStyleSwitch} />} label={t('communication styles.Cold-blooded')} />
-								<FormControlLabel value="businesslike" control={<Checkbox checked={this.state.smallGroups.communicationStyle === 'businesslike'} onChange={this.onCommunicationStyleSwitch} />} label={t('communication styles.Business-like')} />
-								<FormControlLabel value="sincere" control={<Checkbox checked={this.state.smallGroups.communicationStyle === 'sincere'} onChange={this.onCommunicationStyleSwitch} />} label={t('communication styles.Sincere')} />
-								<FormControlLabel value="passionate" control={<Checkbox checked={this.state.smallGroups.communicationStyle === 'passionate'} onChange={this.onCommunicationStyleSwitch} />} label={t('communication styles.Passionate')} />
+								<FormControlLabel value="coldblooded" control={<Checkbox checked={this.state.smallGroups.communicationStyle === 'coldblooded'} onChange={this.onCommunicationStyleSwitch} />} label={t('communication styles.Cold-blooded')}
+									className={this.state.relationsFor && types[this.state.relationsFor].smallGroups.communicationStyle === 'coldblooded' ? 'fits-selected' : ''} />
+								<FormControlLabel value="businesslike" control={<Checkbox checked={this.state.smallGroups.communicationStyle === 'businesslike'} onChange={this.onCommunicationStyleSwitch} />} label={t('communication styles.Business-like')}
+									className={this.state.relationsFor && types[this.state.relationsFor].smallGroups.communicationStyle === 'businesslike' ? 'fits-selected' : ''} />
+								<FormControlLabel value="sincere" control={<Checkbox checked={this.state.smallGroups.communicationStyle === 'sincere'} onChange={this.onCommunicationStyleSwitch} />} label={t('communication styles.Sincere')}
+									className={this.state.relationsFor && types[this.state.relationsFor].smallGroups.communicationStyle === 'sincere' ? 'fits-selected' : ''} />
+								<FormControlLabel value="passionate" control={<Checkbox checked={this.state.smallGroups.communicationStyle === 'passionate'} onChange={this.onCommunicationStyleSwitch} />} label={t('communication styles.Passionate')}
+									className={this.state.relationsFor && types[this.state.relationsFor].smallGroups.communicationStyle === 'passionate' ? 'fits-selected' : ''} />
 							</div>
 
 							<div className="stimulus">
-								<FormControlLabel value="uniqueness" control={<Checkbox checked={this.state.smallGroups.stimulus === 'uniqueness'} onChange={this.onStimulusSwitch} />} label={t('stimuli.Uniqueness')} />
-								<FormControlLabel value="self-worth" control={<Checkbox checked={this.state.smallGroups.stimulus === 'self-worth'} onChange={this.onStimulusSwitch} />} label={t('stimuli.Self-worth')} />
-								<FormControlLabel value="prestige" control={<Checkbox checked={this.state.smallGroups.stimulus === 'prestige'} onChange={this.onStimulusSwitch} />} label={t('stimuli.Prestige')} />
-								<FormControlLabel value="welfare" control={<Checkbox checked={this.state.smallGroups.stimulus === 'welfare'} onChange={this.onStimulusSwitch} />} label={t('stimuli.Welfare')} />
+								<FormControlLabel value="uniqueness" control={<Checkbox checked={this.state.smallGroups.stimulus === 'uniqueness'} onChange={this.onStimulusSwitch} />} label={t('stimuli.Uniqueness')}
+									className={this.state.relationsFor && types[this.state.relationsFor].smallGroups.stimulus === 'uniqueness' ? 'fits-selected' : ''} />
+								<FormControlLabel value="self-worth" control={<Checkbox checked={this.state.smallGroups.stimulus === 'self-worth'} onChange={this.onStimulusSwitch} />} label={t('stimuli.Self-worth')}
+									className={this.state.relationsFor && types[this.state.relationsFor].smallGroups.stimulus === 'self-worth' ? 'fits-selected' : ''} />
+								<FormControlLabel value="prestige" control={<Checkbox checked={this.state.smallGroups.stimulus === 'prestige'} onChange={this.onStimulusSwitch} />} label={t('stimuli.Prestige')}
+									className={this.state.relationsFor && types[this.state.relationsFor].smallGroups.stimulus === 'prestige' ? 'fits-selected' : ''} />
+								<FormControlLabel value="welfare" control={<Checkbox checked={this.state.smallGroups.stimulus === 'welfare'} onChange={this.onStimulusSwitch} />} label={t('stimuli.Welfare')}
+									className={this.state.relationsFor && types[this.state.relationsFor].smallGroups.stimulus === 'welfare' ? 'fits-selected' : ''} />
 							</div>
 						</div>
 					</div>
