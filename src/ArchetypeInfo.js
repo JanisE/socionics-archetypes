@@ -1,6 +1,6 @@
 import {Component} from "react";
 import React from "react";
-import {IconFi, IconFe, IconTe, IconTi, IconNi, IconNe, IconSi, IconSe} from './IeIcons';
+import {IconFi, IconFe, IconTi, IconTe, IconNi, IconNe, IconSi, IconSe} from './IeIcons';
 
 import { withNamespaces } from 'react-i18next';
 

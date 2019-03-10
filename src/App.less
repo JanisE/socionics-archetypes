@@ -355,9 +355,103 @@ body {
     width: 2 * @introExtraRadius;
     height: 2 * @introExtraRadius;
   }
+
+  .information-elements {
+    div {
+      position: absolute;
+      top: calc(@quadraSize - 2.5rem);
+      left: calc(@quadraSize - 2.6rem);
+      width: 5.2rem;
+
+      visibility: hidden;
+      box-shadow: 0 0 2.5vmin 1.5vmin #ffffff;
+      background-color: rgba(255, 255, 255, 0.7);
+
+      h3 {
+        margin: 0 0 0.2rem;
+        text-align: center;
+        font-size: @zoom * 0.85vmin;
+        font-weight: 900;
+      }
+
+      ol {
+        display: grid;
+        grid-template-columns: [inert] 1rem [contact] 1rem;
+        grid-template-rows: 1rem 1rem 1rem 1rem;
+        grid-column-gap: 0;
+        grid-row-gap: 0;
+        justify-content: center;
+
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+
+        li {
+          margin: 0;
+          padding: 0;
+        }
+
+        li:nth-child(1) {
+          order: 1;
+        }
+
+        li:nth-child(2) {
+          order: 2;
+        }
+
+        li:nth-child(3) {
+          order: 4;
+        }
+
+        li:nth-child(4) {
+          order: 3;
+        }
+
+        li:nth-child(5) {
+          order: 6;
+        }
+
+        li:nth-child(6) {
+          order: 5;
+        }
+
+        li:nth-child(7) {
+          order: 7;
+        }
+
+        li:nth-child(8) {
+          order: 8;
+        }
+      }
+    }
+
+    svg {
+      width: @zoom * 1vmin;
+      height: @zoom * 1vmin;
+    }
+  }
 }
 
 @import "relationships";
+
+.rel-for-EIE .information-elements .EIE,
+.rel-for-EII .information-elements .EII,
+.rel-for-ESE .information-elements .ESE,
+.rel-for-ESI .information-elements .ESI,
+.rel-for-ILE .information-elements .ILE,
+.rel-for-ILI .information-elements .ILI,
+.rel-for-IEE .information-elements .IEE,
+.rel-for-IEI .information-elements .IEI,
+.rel-for-LIE .information-elements .LIE,
+.rel-for-LII .information-elements .LII,
+.rel-for-LSE .information-elements .LSE,
+.rel-for-LSI .information-elements .LSI,
+.rel-for-SLE .information-elements .SLE,
+.rel-for-SLI .information-elements .SLI,
+.rel-for-SEE .information-elements .SEE,
+.rel-for-SEI .information-elements .SEI {
+  visibility: visible;
+}
 
 .switches {
   display: flex;
@@ -372,7 +466,7 @@ body {
     display: block;
     margin-top: 5vh;
     margin-left: 3vmin;
-    min-width: 45vmin;
+    min-width: 19rem;
     height: 94vh;
   }
 

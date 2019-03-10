@@ -1,8 +1,12 @@
 import {Component} from "react";
+import React from "react";
+
 import types from "./types";
 import ArchetypeInfo from "./ArchetypeInfo";
-import React from "react";
-import {withNamespaces} from "react-i18next";
+import TypesIEs from "./TypesIEs";
+
+import { withNamespaces } from 'react-i18next';
+
 
 const classNames = {
 	α: 'alpha',
@@ -51,6 +55,8 @@ class Archetypes extends Component {
 			types.SLI.pos = {col: 2, row: 6};
 		}
 
+
+
 		return (
 			<div className={"archetypes" + (this.props.relationsFor ? ' rel-for-' + this.props.relationsFor : '')}>
 				<div className="quadra-alpha-boundary" onClick={this.props.onRemoveRelations}> </div>
@@ -65,6 +71,10 @@ class Archetypes extends Component {
 				<div className="rationality-marker-horizontal bottom"> </div>
 
 				<div className="intro-extra-boundary" onClick={this.props.onRemoveRelations}> </div>
+
+				<div className="information-elements" onClick={this.props.onRemoveRelations}>
+					<TypesIEs />
+				</div>
 
 				<ul>
 					{Object.keys(types).map(type =>
