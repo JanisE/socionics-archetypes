@@ -23,6 +23,7 @@ module.exports = {
 		},
 		smallGroups: {
 			communicationStyle: 'passionate',
+			perceptiveness: 'dissociative',
 			professionalClub: 'humanitarians',
 			quadra: 'β',
 			stimulus: 'uniqueness'
@@ -49,6 +50,7 @@ module.exports = {
 		},
 		smallGroups: {
 			communicationStyle: 'sincere',
+			perceptiveness: 'dissociative',
 			professionalClub: 'humanitarians',
 			quadra: 'δ',
 			stimulus: 'self-worth'
@@ -75,6 +77,7 @@ module.exports = {
 		},
 		smallGroups: {
 			communicationStyle: 'passionate',
+			perceptiveness: 'distributive',
 			professionalClub: 'socials',
 			quadra: 'α',
 			stimulus: 'prestige'
@@ -101,6 +104,7 @@ module.exports = {
 		},
 		smallGroups: {
 			communicationStyle: 'sincere',
+			perceptiveness: 'distributive',
 			professionalClub: 'socials',
 			quadra: 'γ',
 			stimulus: 'welfare'
@@ -127,6 +131,7 @@ module.exports = {
 		},
 		smallGroups: {
 			communicationStyle: 'businesslike',
+			perceptiveness: 'associative',
 			professionalClub: 'researchers',
 			quadra: 'α',
 			stimulus: 'uniqueness'
@@ -153,6 +158,7 @@ module.exports = {
 		},
 		smallGroups: {
 			communicationStyle: 'coldblooded',
+			perceptiveness: 'associative',
 			professionalClub: 'researchers',
 			quadra: 'γ',
 			stimulus: 'self-worth'
@@ -179,6 +185,7 @@ module.exports = {
 		},
 		smallGroups: {
 			communicationStyle: 'passionate',
+			perceptiveness: 'associative',
 			professionalClub: 'humanitarians',
 			quadra: 'δ',
 			stimulus: 'uniqueness'
@@ -205,6 +212,7 @@ module.exports = {
 		},
 		smallGroups: {
 			communicationStyle: 'sincere',
+			perceptiveness: 'associative',
 			professionalClub: 'humanitarians',
 			quadra: 'β',
 			stimulus: 'self-worth'
@@ -231,6 +239,7 @@ module.exports = {
 		},
 		smallGroups: {
 			communicationStyle: 'businesslike',
+			perceptiveness: 'dissociative',
 			professionalClub: 'researchers',
 			quadra: 'γ',
 			stimulus: 'uniqueness'
@@ -257,6 +266,7 @@ module.exports = {
 		},
 		smallGroups: {
 			communicationStyle: 'coldblooded',
+			perceptiveness: 'dissociative',
 			professionalClub: 'researchers',
 			quadra: 'α',
 			stimulus: 'self-worth'
@@ -283,6 +293,7 @@ module.exports = {
 		},
 		smallGroups: {
 			communicationStyle: 'businesslike',
+			perceptiveness: 'distributive',
 			professionalClub: 'pragmatists',
 			quadra: 'δ',
 			stimulus: 'prestige'
@@ -309,6 +320,7 @@ module.exports = {
 		},
 		smallGroups: {
 			communicationStyle: 'coldblooded',
+			perceptiveness: 'distributive',
 			professionalClub: 'pragmatists',
 			quadra: 'β',
 			stimulus: 'welfare'
@@ -335,6 +347,7 @@ module.exports = {
 		},
 		smallGroups: {
 			communicationStyle: 'businesslike',
+			perceptiveness: 'commutative',
 			professionalClub: 'pragmatists',
 			quadra: 'β',
 			stimulus: 'prestige'
@@ -361,6 +374,7 @@ module.exports = {
 		},
 		smallGroups: {
 			communicationStyle: 'coldblooded',
+			perceptiveness: 'commutative',
 			professionalClub: 'pragmatists',
 			quadra: 'δ',
 			stimulus: 'welfare'
@@ -387,6 +401,7 @@ module.exports = {
 		},
 		smallGroups: {
 			communicationStyle: 'passionate',
+			perceptiveness: 'commutative',
 			professionalClub: 'socials',
 			quadra: 'γ',
 			stimulus: 'prestige'
@@ -413,6 +428,7 @@ module.exports = {
 		},
 		smallGroups: {
 			communicationStyle: 'sincere',
+			perceptiveness: 'commutative',
 			professionalClub: 'socials',
 			quadra: 'α',
 			stimulus: 'welfare'

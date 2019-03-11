@@ -47,6 +47,12 @@
 		"Sincere": "sirsnīgais",
 		"Passionate": "kaislīgais"
 	},
+	"perceptiveness": {
+		"Associative": "uztverošie",
+		"Commutative": "elastīgie",
+		"Dissociative": "apdomīgie",
+		"Distributive": "pamatīgie"
+	},
 	"stimuli": {
 		"Prestige": "prestižs",
 		"Self-worth": "pašizaugsme",

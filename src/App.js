@@ -73,6 +73,7 @@ class App extends Component
 			},
 			smallGroups: {
 				communicationStyle: null,
+				perceptiveness: null,
 				professionalClub: null,
 				quadra: initQuadra,
 				stimulus: null
@@ -124,8 +125,9 @@ class App extends Component
 		this.onImSiSwitch = this.onImSiSwitch.bind(this);
 		this.onImSeSwitch = this.onImSeSwitch.bind(this);
 
-		this.onQuadraSwitch = this.onQuadraSwitch.bind(this);
 		this.onCommunicationStyleSwitch = this.onCommunicationStyleSwitch.bind(this);
+		this.onQuadraSwitch = this.onQuadraSwitch.bind(this);
+		this.onPerceptivenessSwitch = this.onPerceptivenessSwitch.bind(this);
 		this.onStimulusSwitch = this.onStimulusSwitch.bind(this);
 
 		this.onRemoveRelations= this.onRemoveRelations.bind(this);
@@ -598,6 +600,10 @@ class App extends Component
 		this.setState({smallGroups: {...this.state.smallGroups, communicationStyle: event.target.checked ? event.target.value : null}});
 	}
 
+	onPerceptivenessSwitch (event) {
+		this.setState({smallGroups: {...this.state.smallGroups, perceptiveness: event.target.checked ? event.target.value : null}});
+	}
+
 	onStimulusSwitch (event) {
 		this.setState({smallGroups: {...this.state.smallGroups, stimulus: event.target.checked ? event.target.value : null}});
 	}
@@ -982,6 +988,17 @@ class App extends Component
 									className={this.state.relationsFor && types[this.state.relationsFor].smallGroups.communicationStyle === 'sincere' ? 'fits-selected' : ''} />
 								<FormControlLabel value="passionate" control={<Checkbox checked={this.state.smallGroups.communicationStyle === 'passionate'} onChange={this.onCommunicationStyleSwitch} />} label={t('communication styles.Passionate')}
 									className={this.state.relationsFor && types[this.state.relationsFor].smallGroups.communicationStyle === 'passionate' ? 'fits-selected' : ''} />
+							</div>
+
+							<div className="perceptiveness">
+								<FormControlLabel value="distributive" control={<Checkbox checked={this.state.smallGroups.perceptiveness === 'distributive'} onChange={this.onPerceptivenessSwitch} />} label={t('perceptiveness.Distributive')}
+									className={this.state.relationsFor && types[this.state.relationsFor].smallGroups.perceptiveness === 'distributive' ? 'fits-selected' : ''} />
+								<FormControlLabel value="dissociative" control={<Checkbox checked={this.state.smallGroups.perceptiveness === 'dissociative'} onChange={this.onPerceptivenessSwitch} />} label={t('perceptiveness.Dissociative')}
+									className={this.state.relationsFor && types[this.state.relationsFor].smallGroups.perceptiveness === 'dissociative' ? 'fits-selected' : ''} />
+								<FormControlLabel value="associative" control={<Checkbox checked={this.state.smallGroups.perceptiveness === 'associative'} onChange={this.onPerceptivenessSwitch} />} label={t('perceptiveness.Associative')}
+									className={this.state.relationsFor && types[this.state.relationsFor].smallGroups.perceptiveness === 'associative' ? 'fits-selected' : ''} />
+								<FormControlLabel value="commutative" control={<Checkbox checked={this.state.smallGroups.perceptiveness === 'commutative'} onChange={this.onPerceptivenessSwitch} />} label={t('perceptiveness.Commutative')}
+									className={this.state.relationsFor && types[this.state.relationsFor].smallGroups.perceptiveness === 'commutative' ? 'fits-selected' : ''} />
 							</div>
 
 							<div className="stimulus">
