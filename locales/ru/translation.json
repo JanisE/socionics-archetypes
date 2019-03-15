@@ -16,7 +16,21 @@
 		"Positive": "Позитивист",
 		"Negative": "Негативист",
 		"Carefree": "Беспечный",
-		"Farsighted": "Предусмотрительный"
+		"Farsighted": "Предусмотрительный",
+		"Asking": "Квестим",
+		"Declaring": "Деклатим",
+		"Static": "Статик",
+		"Dynamic": "Динамик",
+		"Constructivist":  "Конструктивист",
+		"Emotivist": "Эмотивист",
+		"Tactical": "Тактик",
+		"Strategic": "Стратег",
+		"Judicious": "Рассудительный",
+		"Decisive": "Решительный",
+		"Subjective": "Субъективист",
+		"Objective": "Объективист",
+		"Process": "Процессор",
+		"Result": "Результатер"
 	},
 	"prefs": {
 		"Introverts Inside": "Introverts Inside"
@@ -26,6 +40,24 @@
 		"Beta": "Бета",
 		"Gamma": "Гамма",
 		"Delta": "Дельта"
+	},
+	"communication styles": {
+		"Cold-blooded": "Cold-blooded",
+		"Business-like": "Деловой",
+		"Sincere": "Sincere",
+		"Passionate": "Страстный"
+	},
+	"perceptiveness": {
+		"Associative": "Associative",
+		"Commutative": "Commutative",
+		"Dissociative": "Dissociative",
+		"Distributive": "Distributive"
+	},
+	"stimuli": {
+		"Prestige": "Prestige",
+		"Self-worth": "Self-worth",
+		"Uniqueness": "Uniqueness",
+		"Welfare": "Welfare"
 	},
 	"type info": {
 		"Hamlet": {
