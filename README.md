@@ -34,7 +34,7 @@ node src/generate_relationships.js > src/relationships.less
 
 Tipotāju palīgs socionikas apgūšanā un tipošanā.
 
-![Sociotipu diagramma](/doc/horiz.png)
+![Sociotipu diagramma](/doc/lv-horiz.png)
 
 1. Tipu attēlojums ar vizuāli izšķiramām četrām pamatpazīmēm un kvadrām;
 2. apskaties, kuri tipi atbilst konkrētai pazīmei;
