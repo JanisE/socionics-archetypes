@@ -42,22 +42,22 @@
 		"Delta": "Дельта"
 	},
 	"communication styles": {
-		"Cold-blooded": "Cold-blooded",
+		"Cold-blooded": "Хладнокровный",
 		"Business-like": "Деловой",
-		"Sincere": "Sincere",
+		"Sincere": "Душевный",
 		"Passionate": "Страстный"
 	},
 	"perceptiveness": {
-		"Associative": "Associative",
-		"Commutative": "Commutative",
-		"Dissociative": "Dissociative",
-		"Distributive": "Distributive"
+		"Associative": "ассоциативный",
+		"Commutative": "коммутативный",
+		"Dissociative": "диссоциативный",
+		"Distributive": "дистрибутивный"
 	},
 	"stimuli": {
-		"Prestige": "Prestige",
-		"Self-worth": "Self-worth",
-		"Uniqueness": "Uniqueness",
-		"Welfare": "Welfare"
+		"Prestige": "престиж",
+		"Self-worth": "самоценность",
+		"Uniqueness": "уникальность",
+		"Welfare": "благосостояние"
 	},
 	"type info": {
 		"Hamlet": {
