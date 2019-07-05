@@ -745,3 +745,9 @@ body {
 .preferences-drawer .drawer-content {
   padding: 2vw;
 }
+.preferences-drawer .project-link {
+  position: absolute;
+  bottom: 5vh;
+  left: 50%;
+  transform: translateX(-50%);
+}

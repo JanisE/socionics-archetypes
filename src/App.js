@@ -1052,6 +1052,12 @@ class App extends Component
 								label={t('prefs.Introverts Inside')}
 							/>
 						</FormGroup>
+
+						<div className="project-link">
+							<a href="https://github.com/JanisE/socionics-archetypes" target="_blank" rel="noopener">
+								<img src="GitHub-Mark-32px.png" alt="GitHub" title="Projekts" />
+							</a>
+						</div>
 					</div>
 
 				</SwipeableDrawer>
