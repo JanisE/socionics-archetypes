@@ -22,19 +22,19 @@ function outputStats () {
 
 	// Copy-pasted from collect_types extension.
 	const typeCountsGen = {
-		"Balzaks": 30,
+		"Balzaks": 32,
 		"Dimā": 12,
 		"Donkihots": 22,
 		"Dostojevskis": 11,
 		"Draizers": 10,
-		"Džeks": 12,
-		"Gabēns": 21,
-		"Hakslijs": 18,
+		"Džeks": 14,
+		"Gabēns": 23,
+		"Hakslijs": 17,
 		"Hamlets": 7,
 		"Igo": 12,
-		"Jeseņins": 22,
+		"Jeseņins": 21,
 		"Maksims": 6,
-		"Napoleons": 9,
+		"Napoleons": 10,
 		"Robespjērs": 10,
 		"Štirlics": 8,
 		"Žukovs": 19
