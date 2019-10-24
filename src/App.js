@@ -1021,46 +1021,47 @@ class App extends Component
 					</IconButton>
 				</div>
 
-				<SwipeableDrawer
-					anchor="right"
-					className="preferences-drawer"
-					open={this.state.drawerOpen}
-					onClose={this.toggleDrawer(false)}
-					onOpen={this.toggleDrawer(true)}
-				>
-					<div className="drawer-content">
-						<FormControl component="fieldset">
-							<FormLabel component="legend">{t('controls.Language')}</FormLabel>
-							<RadioGroup
-								value={this.state.language}
-								onChange={this.onLanguageSwitch}
-							>
-								<FormControlLabel value="en" control={<Radio />} label="English" />
-								<FormControlLabel value="lv" control={<Radio />} label="Latviešu" />
-								<FormControlLabel value="ru" control={<Radio />} label="Русский" />
-							</RadioGroup>
-						</FormControl>
+				<div className="swipeable-drawer">
+					<SwipeableDrawer
+						anchor="right"
+						className="preferences-drawer"
+						open={this.state.drawerOpen}
+						onClose={this.toggleDrawer(false)}
+						onOpen={this.toggleDrawer(true)}
+					>
+						<div className="drawer-content">
+							<FormControl component="fieldset">
+								<FormLabel component="legend">{t('controls.Language')}</FormLabel>
+								<RadioGroup
+									value={this.state.language}
+									onChange={this.onLanguageSwitch}
+								>
+									<FormControlLabel value="en" control={<Radio />} label="English" />
+									<FormControlLabel value="lv" control={<Radio />} label="Latviešu" />
+									<FormControlLabel value="ru" control={<Radio />} label="Русский" />
+								</RadioGroup>
+							</FormControl>
 
-						<FormGroup>
-							<FormControlLabel
-								control={
-									<Switch
-										checked={this.state.introvertsInside}
-										onChange={this.handleSwitch('introvertsInside')}
-									/>
-								}
-								label={t('prefs.Introverts Inside')}
-							/>
-						</FormGroup>
+							<FormGroup>
+								<FormControlLabel
+									control={
+										<Switch
+											checked={this.state.introvertsInside}
+											onChange={this.handleSwitch('introvertsInside')}
+										/>
+									}
+									label={t('prefs.Introverts Inside')}
+								/>
+							</FormGroup>
 
-						<div className="project-link">
-							<a href="https://github.com/JanisE/socionics-archetypes" target="_blank" rel="noopener">
-								<img src="GitHub-Mark-32px.png" alt="GitHub" title="Projekts" />
-							</a>
+							<div className="project-link">
+								<a href="https://github.com/JanisE/socionics-archetypes" target="_blank" rel="noopener">
+									<img src="GitHub-Mark-32px.png" alt="GitHub" title="Projekts" />
+								</a>
+							</div>
 						</div>
-					</div>
-
-				</SwipeableDrawer>
+					</SwipeableDrawer>
+				</div>
 			</div>
 		);
 	}

@@ -574,3 +574,13 @@ body {
     transform: translateX(-50%);
   }
 }
+
+@media (hover: hover) and (pointer: fine) {
+  .swipeable-drawer {
+    // Hide the drawer's swipeable area for mouse-enabled computers (desktop),
+    // to not cover the scroll-bar.
+    // The drawer itself is inserted outside this container, so it will be visible fine.
+    display: none;
+  }
+}
+
