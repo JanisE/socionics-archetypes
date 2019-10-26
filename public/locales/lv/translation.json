@@ -53,6 +53,12 @@
 		"Dissociative": "apdomīgie",
 		"Distributive": "pamatīgie"
 	},
+	"professional clubs": {
+		"Humanitarians": "humānists",
+		"Pragmatists": "vadītājs",
+		"Researchers": "pētnieks",
+		"Socials": "sociālists"
+	},
 	"stimuli": {
 		"Prestige": "prestižs",
 		"Self-worth": "pašizaugsme",

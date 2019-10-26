@@ -128,6 +128,7 @@ class App extends Component
 		this.onCommunicationStyleSwitch = this.onCommunicationStyleSwitch.bind(this);
 		this.onQuadraSwitch = this.onQuadraSwitch.bind(this);
 		this.onPerceptivenessSwitch = this.onPerceptivenessSwitch.bind(this);
+		this.onProfessionalClubSwitch = this.onProfessionalClubSwitch.bind(this);
 		this.onStimulusSwitch = this.onStimulusSwitch.bind(this);
 
 		this.onRemoveRelations= this.onRemoveRelations.bind(this);
@@ -604,6 +605,10 @@ class App extends Component
 		this.setState({smallGroups: {...this.state.smallGroups, perceptiveness: event.target.checked ? event.target.value : null}});
 	}
 
+	onProfessionalClubSwitch (event) {
+		this.setState({smallGroups: {...this.state.smallGroups, professionalClub: event.target.checked ? event.target.value : null}});
+	}
+
 	onStimulusSwitch (event) {
 		this.setState({smallGroups: {...this.state.smallGroups, stimulus: event.target.checked ? event.target.value : null}});
 	}
@@ -1010,6 +1015,17 @@ class App extends Component
 									className={this.state.relationsFor && types[this.state.relationsFor].smallGroups.stimulus === 'prestige' ? 'fits-selected' : ''} />
 								<FormControlLabel value="welfare" control={<Checkbox checked={this.state.smallGroups.stimulus === 'welfare'} onChange={this.onStimulusSwitch} />} label={t('stimuli.Welfare')}
 									className={this.state.relationsFor && types[this.state.relationsFor].smallGroups.stimulus === 'welfare' ? 'fits-selected' : ''} />
+							</div>
+
+							<div className="professional-clubs">
+								<FormControlLabel value="humanitarians" control={<Checkbox checked={this.state.smallGroups.professionalClub === 'humanitarians'} onChange={this.onProfessionalClubSwitch} />} label={t('professional clubs.Humanitarians')}
+									className={this.state.relationsFor && types[this.state.relationsFor].smallGroups.professionalClub === 'humanitarians' ? 'fits-selected' : ''} />
+								<FormControlLabel value="pragmatists" control={<Checkbox checked={this.state.smallGroups.professionalClub === 'pragmatists'} onChange={this.onProfessionalClubSwitch} />} label={t('professional clubs.Pragmatists')}
+									className={this.state.relationsFor && types[this.state.relationsFor].smallGroups.professionalClub === 'pragmatists' ? 'fits-selected' : ''} />
+								<FormControlLabel value="researchers" control={<Checkbox checked={this.state.smallGroups.professionalClub === 'researchers'} onChange={this.onProfessionalClubSwitch} />} label={t('professional clubs.Researchers')}
+									className={this.state.relationsFor && types[this.state.relationsFor].smallGroups.professionalClub === 'researchers' ? 'fits-selected' : ''} />
+								<FormControlLabel value="socials" control={<Checkbox checked={this.state.smallGroups.professionalClub === 'socials'} onChange={this.onProfessionalClubSwitch} />} label={t('professional clubs.Socials')}
+									className={this.state.relationsFor && types[this.state.relationsFor].smallGroups.professionalClub === 'socials' ? 'fits-selected' : ''} />
 							</div>
 						</div>
 					</div>

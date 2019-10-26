@@ -53,6 +53,12 @@
 		"Dissociative": "Dissociative",
 		"Distributive": "Distributive"
 	},
+	"professional clubs": {
+		"Humanitarians": "Humanitarians",
+		"Pragmatists": "Pragmatists",
+		"Researchers": "Researchers",
+		"Socials": "Socials"
+	},
 	"stimuli": {
 		"Prestige": "Prestige",
 		"Self-worth": "Self-worth",

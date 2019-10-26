@@ -43,15 +43,21 @@
 	},
 	"communication styles": {
 		"Cold-blooded": "Хладнокровный",
-		"Business-like": "Деловой",
-		"Sincere": "Душевный",
-		"Passionate": "Страстный"
+		"Business-like": "деловой",
+		"Sincere": "душевный",
+		"Passionate": "страстный"
 	},
 	"perceptiveness": {
 		"Associative": "ассоциативный",
 		"Commutative": "коммутативный",
 		"Dissociative": "диссоциативный",
 		"Distributive": "дистрибутивный"
+	},
+	"professional clubs": {
+		"Humanitarians": "гуманист",
+		"Pragmatists": "управленец",
+		"Researchers": "исследователь",
+		"Socials": "социалист"
 	},
 	"stimuli": {
 		"Prestige": "престиж",
