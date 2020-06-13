@@ -41,6 +41,12 @@
 		"Gamma": "Gamma",
 		"Delta": "Delta"
 	},
+	"quadra values labels": {
+		"alpha & beta": "Values for quadras α and β",
+		"beta & gamma": "Values for quadras β and γ",
+		"gamma & delta": "Values for quadras γ and δ",
+		"delta & alpha": "Values for quadras δ and α"
+	},
 	"communication styles": {
 		"Cold-blooded": "Cold-blooded",
 		"Business-like": "Business-like",
