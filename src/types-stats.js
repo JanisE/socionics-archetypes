@@ -21,24 +21,7 @@ function outputStats () {
 //	};
 
 	// Copy-pasted from collect_types extension.
-	const typeCountsGen = {
-		"Balzaks": 32,
-		"Dimā": 12,
-		"Donkihots": 22,
-		"Dostojevskis": 11,
-		"Draizers": 10,
-		"Džeks": 14,
-		"Gabēns": 23,
-		"Hakslijs": 17,
-		"Hamlets": 7,
-		"Igo": 12,
-		"Jeseņins": 21,
-		"Maksims": 6,
-		"Napoleons": 10,
-		"Robespjērs": 10,
-		"Štirlics": 8,
-		"Žukovs": 19
-	};
+	const typeCountsGen = {"Balzaks":43,"Dimā":18,"Donkihots":29,"Dostojevskis":12,"Draizers":12,"Džeks":24,"Gabēns":28,"Hakslijs":22,"Hamlets":8,"Igo":12,"Jeseņins":26,"Maksims":8,"Napoleons":12,"Robespjērs":14,"Štirlics":13,"Žukovs":28};
 
 	const typeCounts = {
 		'Balzac': typeCountsGen['Balzaks'],
