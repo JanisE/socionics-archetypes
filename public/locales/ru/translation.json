@@ -41,6 +41,12 @@
 		"Gamma": "Гамма",
 		"Delta": "Дельта"
 	},
+	"quadra values labels": {
+		"alpha & beta": "Ценности типов квадр α и β",
+		"beta & gamma": "Ценности типов квадр β и γ",
+		"gamma & delta": "Ценности типов квадр γ и δ",
+		"delta & alpha": "Ценности типов квадр δ и α"
+	},
 	"communication styles": {
 		"Cold-blooded": "Хладнокровный",
 		"Business-like": "деловой",

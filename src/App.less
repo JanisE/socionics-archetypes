@@ -48,6 +48,9 @@ body {
   @cellSize: @typeInfoSize - @cellDiff;
   @quadraSpace: @cellDiff / 2;
 
+  @introExtraCenter: @quadraSize;
+  @introExtraRadius: 2 * @cellSize + abs(@cellSize - @typeInfoSize) * 2.5;
+
   @alphaColour: #e3fe5f;
   @betaColour: #ffe4e1;
   @gammaColour: #e6e6fa;
@@ -345,9 +348,6 @@ body {
   }
 
   .intro-extra-boundary {
-    @introExtraCenter: @quadraSize;
-    @introExtraRadius: 2 * @cellSize + abs(@cellSize - @typeInfoSize) * 2.5;
-
     position: absolute;
     left: @introExtraCenter - @introExtraRadius;
     top: @introExtraCenter - @introExtraRadius;
@@ -355,6 +355,63 @@ body {
     border-radius: @introExtraRadius;
     width: 2 * @introExtraRadius;
     height: 2 * @introExtraRadius;
+  }
+
+  .quadra-values {
+    .icon {
+      @iconSize: 1rem;
+
+      position: absolute;
+      width: @iconSize;
+
+      @firstFromEdge: (@quadraSize - @introExtraRadius) / 5;
+      @secondFromEdge: calc(@firstFromEdge + 1.5 * @iconSize);
+      @middle: calc(@quadraSize - @iconSize / 2);
+
+      &.fe {
+        top: @firstFromEdge;
+        left: @middle;
+      }
+
+      &.ti {
+        top: @secondFromEdge;
+        left: @middle;
+      }
+
+      &.se {
+        top: @middle;
+        right: @secondFromEdge;
+      }
+
+      &.ni {
+        top: @middle;
+        right: @firstFromEdge;
+      }
+
+      &.te {
+        bottom: @firstFromEdge;
+        left: @middle;
+      }
+
+      &.fi {
+        bottom: @secondFromEdge;
+        left: @middle;
+      }
+
+      &.si {
+        top: @middle;
+        left: @firstFromEdge;
+      }
+
+      &.ne {
+        top: @middle;
+        left: @secondFromEdge;
+      }
+
+      svg {
+        opacity: 0.7;
+      }
+    }
   }
 
   .information-elements {

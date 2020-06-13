@@ -41,6 +41,12 @@
 		"Gamma": "Gamma",
 		"Delta": "Delta"
 	},
+	"quadra values labels": {
+		"alpha & beta": "Kvadru α un β vērtības",
+		"beta & gamma": "Kvadru β un γ vērtības",
+		"gamma & delta": "Kvadru γ un δ vērtības",
+		"delta & alpha": "Kvadru δ un α vērtības"
+	},
 	"communication styles": {
 		"Cold-blooded": "informatīvais",
 		"Business-like": "lietišķais",

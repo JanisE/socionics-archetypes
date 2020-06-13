@@ -3,6 +3,7 @@ import React from "react";
 
 import types from "./types";
 import ArchetypeInfo from "./ArchetypeInfo";
+import QuadraValues from "./QuadraValues";
 import TypesIEs from "./TypesIEs";
 
 import { withNamespaces } from 'react-i18next';
@@ -36,7 +37,8 @@ class Archetypes extends Component {
 			types.SEI.pos = {col: 2, row: 3};
 			types.SLE.pos = {col: 5, row: 1};
 			types.SLI.pos = {col: 2, row: 4};
-		} else {
+		}
+		else {
 			types.EIE.pos = {col: 4, row: 2};
 			types.EII.pos = {col: 1, row: 5};
 			types.ESE.pos = {col: 3, row: 2};
@@ -74,6 +76,10 @@ class Archetypes extends Component {
 
 				<div className="information-elements" onClick={this.props.onRemoveRelations}>
 					<TypesIEs />
+				</div>
+
+				<div className="quadra-values">
+					<QuadraValues />
 				</div>
 
 				<ul>

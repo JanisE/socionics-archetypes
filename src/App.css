@@ -283,6 +283,45 @@ body {
   width: 74.36666667vmin;
   height: 74.36666667vmin;
 }
+.archetypes .quadra-values .icon {
+  position: absolute;
+  width: 1rem;
+}
+.archetypes .quadra-values .icon.fe {
+  top: 2.56333333vmin;
+  left: calc(50vmin - 1rem / 2);
+}
+.archetypes .quadra-values .icon.ti {
+  top: calc(2.56333333vmin + 1.5 * 1rem);
+  left: calc(50vmin - 1rem / 2);
+}
+.archetypes .quadra-values .icon.se {
+  top: calc(50vmin - 1rem / 2);
+  right: calc(2.56333333vmin + 1.5 * 1rem);
+}
+.archetypes .quadra-values .icon.ni {
+  top: calc(50vmin - 1rem / 2);
+  right: 2.56333333vmin;
+}
+.archetypes .quadra-values .icon.te {
+  bottom: 2.56333333vmin;
+  left: calc(50vmin - 1rem / 2);
+}
+.archetypes .quadra-values .icon.fi {
+  bottom: calc(2.56333333vmin + 1.5 * 1rem);
+  left: calc(50vmin - 1rem / 2);
+}
+.archetypes .quadra-values .icon.si {
+  top: calc(50vmin - 1rem / 2);
+  left: 2.56333333vmin;
+}
+.archetypes .quadra-values .icon.ne {
+  top: calc(50vmin - 1rem / 2);
+  left: calc(2.56333333vmin + 1.5 * 1rem);
+}
+.archetypes .quadra-values .icon svg {
+  opacity: 0.7;
+}
 .archetypes .information-elements div {
   position: absolute;
   top: calc(50vmin - 2.5rem);
