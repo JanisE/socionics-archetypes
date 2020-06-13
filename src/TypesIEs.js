@@ -26,11 +26,11 @@ class TypesIEs extends Component {
 			const elements = [];
 			for (let i = 0; i < types[type].functions.length; i++) {
 				const Icon = ieIcons[types[type].functions[i]];
-				elements.push(<li><Icon/></li>);
+				elements.push(<li key={i}><Icon/></li>);
 			}
 
 			return (
-				<div className={type}>
+				<div className={type} key={type}>
 					<h3>{t([
 						'type info.' + types[type].epithet + '.epithet',
 						'type info.' + types[type].epithet + '.epithet - full'
